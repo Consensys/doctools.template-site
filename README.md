@@ -1,4 +1,4 @@
-# Dummy documentation [![Documentation Status](https://readthedocs.org/projects/ethsigner/badge/?version=latest)](https://docs.dummy.consensys.net/en/latest/?badge=latest)
+# Dummy documentation [![Documentation Status](https://readthedocs.com/projects/pegasys-docdumy/badge/?version=latest)](https://pegasys-docdumy.readthedocs-hosted.com/en/latest/?badge=latest)
 
 [Dummy] is a fake doc project to test things without breaking a real site.
 
