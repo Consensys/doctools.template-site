@@ -1,6 +1,6 @@
 # Dummy documentation [![Documentation Status](https://readthedocs.com/projects/pegasys-docdumy/badge/?version=latest)](https://pegasys-docdumy.readthedocs-hosted.com/en/latest/?badge=latest)
 
-[Dummy] is a fake doc project to test things without breaking a real site.
+Dummy is a fake doc project to test things without breaking a real site.
 
 This repository only contains the sources for [Dummy documentation website hosted by ReadTheDocs].
 
