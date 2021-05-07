@@ -11,7 +11,7 @@
 
 # Project information
 site_name: Dummy
-site_url: https://docs.dummy.consensys.net/
+site_url: {{site.protocol}}}://{{site.domain}}/{{site.lang}}/{{site.version}}/
 site_description: Dummy documentation.
 site_author: ConsenSys
 copyright: Dummy and its documentation are licensed under Apache 2.0 license
