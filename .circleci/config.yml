@@ -10,13 +10,13 @@ executors:
       - image: circleci/python:3.7.4
         auth:
           username: $DOCKER_USER_RO
-          password: $DOCKER_PASSWORD_RO        
+          password: $DOCKER_PASSWORD_RO
   node_executor:
     docker:
       - image: circleci/node:12.9.0-stretch
         auth:
           username: $DOCKER_USER_RO
-          password: $DOCKER_PASSWORD_RO        
+          password: $DOCKER_PASSWORD_RO
 
 commands:
   prepare:
@@ -65,7 +65,7 @@ jobs:
       - run:
           name: Install dependencies
           command: |
-            curl -sfL https://install.goreleaser.com/github.com/ValeLint/vale.sh | sh -s v2.4.2
+            curl -sfL https://install.goreleaser.com/github.com/ValeLint/vale.sh | sh -s v2.10.2
       - run:
           name: Run Vale
           command: |
@@ -137,16 +137,16 @@ workflows:
     jobs:
       - build:
           context:
-            - dockerhub-quorumengineering-ro      
+            - dockerhub-quorumengineering-ro
       - vale:
           context:
-            - dockerhub-quorumengineering-ro      
+            - dockerhub-quorumengineering-ro
       - markdownlint:
           context:
-            - dockerhub-quorumengineering-ro      
+            - dockerhub-quorumengineering-ro
       - linkchecker:
           context:
-            - dockerhub-quorumengineering-ro      
+            - dockerhub-quorumengineering-ro
   nightly:
     triggers:
       - schedule: # GMT
