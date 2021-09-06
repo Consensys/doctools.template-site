@@ -10,20 +10,20 @@
 # specific language governing permissions and limitations under the License.
 
 # Project information
-site_name: Dummy
-site_url: "https://{{site.domain}}/{{site.lang}}/{{site.version}}/"
+site_name: Dummy doc site
+#site_url: "https://{{site.domain}}/{{site.lang}}/{{site.version}}/"
 site_description: Dummy documentation.
 site_author: ConsenSys
 copyright: Dummy and its documentation are licensed under Apache 2.0 license
 
 #extra project info and template customisation
 extra:
-  logo_is_text: true
-  latest_version_warning:
-    url_contains: /latest/
-    text: 'You are reading Dummy development version documentation and
-    some displayed features may not be available in the stable release.
-    You can switch to stable version using the version box at screen bottom.'
+  logo_is_text: false
+#  latest_version_warning:
+#    url_contains: /latest/
+#    text: 'You are reading Dummy development version documentation and
+#    some displayed features may not be available in the stable release.
+#    You can switch to stable version using the version box at screen bottom.'
   support:
     tool: Discord
     channel: https://discord.gg/5U9Jwp7
@@ -33,8 +33,12 @@ extra:
     issues: https://github.com/Consensys/doc.dummy/issues
     faq: https://consensys.net/quorum/faq
   google:
-    site_verification: 'VL2MgMm7Gj-fEOH3SkAuP4eXOY7rIShFFbTI5RktuA0'
+    site_verification:
+    - 'VL2MgMm7Gj-fEOH3SkAuP4eXOY7rIShFFbTI5RktuA0'
     tag_manager: 'GTM-PBFNGBR'
+  languages:
+    en: English (en)
+    zh: 简体 (zh)
 
 # Software Repository
 repo_name: Consensys/doc.dummy
@@ -43,11 +47,17 @@ repo_url: https://github.com/Consensys/doc.dummy
 theme:
   name: material
   custom_dir: common/custom_theme
-  palette:
-    primary: red
-    accent: orange
+  palette: "consensys"
   logo: 'images/logo.svg'
   favicon: 'images/favicon.svg'
+  features:
+    - search.suggest
+
+extra_css:
+  - assets/stylesheets/custom.css
+extra_javascript:
+  - assets/javascripts/custom.js
+
 nav:
   - Tutorials:
       - Simple one: tutorial/tutorial.md
