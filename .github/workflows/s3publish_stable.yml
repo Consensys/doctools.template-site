@@ -1,15 +1,18 @@
-name: Publish on AWS S3 bucket
+name: Publish latest on AWS S3 bucket
 
 # Controls when the action will run.
+# Trigger the workflow on release activity
 on:
-  push:
-    branches:
-      - master
+  release:
+    types: [published]
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+      - run: echo ::set-output name=tag::${GITHUB_REF#refs/*/}
+        name: 'Set output'
+        id: 'vars'
       - uses: actions/checkout@v2
         with:
           submodules: 'true'
@@ -29,4 +32,14 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: ${{ secrets.AWS_SECRET_REGION }}   # optional: defaults to us-east-1
           SOURCE_DIR: 'site'      # optional: defaults to entire repository
-          DEST_DIR: 'dummy/en/latest/'
+          DEST_DIR: 'dummy/en/stable/'
+      - uses: jakejarvis/s3-sync-action@master
+        with:
+          args: --acl public-read --follow-symlinks --delete
+        env:
+          AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: ${{ secrets.AWS_SECRET_REGION }}   # optional: defaults to us-east-1
+          SOURCE_DIR: 'site'      # optional: defaults to entire repository
+          DEST_DIR: "dummy/en/${{ steps.vars.outputs.tag }}/"
