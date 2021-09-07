@@ -1,4 +1,4 @@
-name: Publish latest on AWS S3 bucket
+name: Publish stable and tag on AWS S3 bucket
 
 # Controls when the action will run.
 # Trigger the workflow on release activity
@@ -9,6 +9,10 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    env:
+      project: dummy
+      language: en
+      source-dir: site
     steps:
       - run: echo ::set-output name=tag::${GITHUB_REF#refs/*/}
         name: 'Set output'
@@ -22,8 +26,11 @@ jobs:
           python-version: '3.7'
           architecture: 'x64'
       - run: 'pip install -r common/build_tools/requirements.txt'
+        name: 'Install requirements'
       - run: 'mkdocs build -s'
+        name: 'Build doc'
       - uses: jakejarvis/s3-sync-action@master
+        name: 'Upload ${{ env.language }}/stable to AWS'
         with:
           args: --acl public-read --follow-symlinks --delete
         env:
@@ -31,9 +38,10 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: ${{ secrets.AWS_SECRET_REGION }}   # optional: defaults to us-east-1
-          SOURCE_DIR: 'site'      # optional: defaults to entire repository
-          DEST_DIR: 'dummy/en/stable/'
+          SOURCE_DIR: ${{ env.source-dir }}      # optional: defaults to entire repository
+          DEST_DIR: "${{ env.project }}/${{ env.language }}/stable/"
       - uses: jakejarvis/s3-sync-action@master
+        name: "Upload ${{ env.language }}/${{ steps.vars.outputs.tag }} to AWS"
         with:
           args: --acl public-read --follow-symlinks --delete
         env:
@@ -41,5 +49,5 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: ${{ secrets.AWS_SECRET_REGION }}   # optional: defaults to us-east-1
-          SOURCE_DIR: 'site'      # optional: defaults to entire repository
-          DEST_DIR: "dummy/en/${{ steps.vars.outputs.tag }}/"
+          SOURCE_DIR: ${{ env.source-dir }}      # optional: defaults to entire repository
+          DEST_DIR: "${{ env.project }}/${{ env.language }}/${{ steps.vars.outputs.tag }}/"
