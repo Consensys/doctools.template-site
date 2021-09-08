@@ -10,24 +10,36 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     env:
-      project: dummy
-      language: en
-      source-dir: site
+      PROJECT: dummy
+      LANGUAGE: en
+      VERSION: 'latest'
+      BASE_SITE_URL: 'consensys.net/docs'
+      SOURCE-DIR: site
+
     steps:
       - uses: actions/checkout@v2
+        name: 'checkout code from repos'
         with:
           submodules: 'true'
+#      - uses: c-py/action-dotenv-to-setenv@v2
+#        name: 'set environment from .env file'
+#        with:
+#          env-file: .env
       - uses: actions/setup-python@v2
         name: 'Setup python 3.7'
         with:
           python-version: '3.7'
           architecture: 'x64'
-      - run: 'pip install -r common/build_tools/requirements.txt'
+      - run: 'pip install -r requirements.txt'
         name: 'Install requirements'
+      - uses: vafinvr/template-env-action@master
+        name: 'replace values with env vars in mkdocs.yml'
+        with:
+          filename: mkdocs.yml
       - run: 'mkdocs build -s'
         name: 'Build doc'
       - uses: jakejarvis/s3-sync-action@master
-        name: 'Upload ${{ env.language }}/latest to AWS'
+        name: 'Upload ${{ env.LANGUAGE }}/${{ env.VERSION }} to AWS'
         with:
           args: --acl public-read --follow-symlinks --delete
         env:
@@ -35,5 +47,5 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: ${{ secrets.AWS_SECRET_REGION }}   # optional: defaults to us-east-1
-          SOURCE_DIR: ${{ env.source-dir }}      # optional: defaults to entire repository
-          DEST_DIR: "${{ env.project }}/${{ env.language }}/latest/"
+          SOURCE_DIR: ${{ env.SOURCE-DIR }}      # optional: defaults to entire repository
+          DEST_DIR: "${{ env.PROJECT }}/${{ env.LANGUAGE }}/${{ env.VERSION }}/"

@@ -1,0 +1,34 @@
+{% extends "main.html" %}
+
+<!-- Content block -->
+{% block content %}
+
+<p style="text-align: center;font-size: 3em">
+  {% if config.extra.inverted_logo %}
+    <img src="{{ config.extra.inverted_logo | url }}" alt="logo">
+  {% elif config.theme.logo %}
+    <img src="{{ config.theme.logo | url }}" alt="logo">
+  {% else %}
+    {% set icon = config.theme.icon.logo or "material/library" %}
+    {% include ".icons/" ~ icon ~ ".svg" %}
+  {% endif %}
+</p>
+
+<h1 id="404-page-not-found" style="text-align: center">404</h1>
+<p style="text-align: center"><strong>Sorry but we can't find the page you asked for.</strong></p>
+<p style="text-align: center">
+  Try the <a href="/">homepage</a>, or use the search field on the top of this page.
+</p>
+<p style="text-align: center">
+  {% if config.extra.support.paid %}
+  If you think we made a mistake and deleted a page that should be here, then please tell <a href="{{config.extra.support.website}}">{{config.extra.support.company}}</a> at
+  <a href="mailto:{{config.extra.support.email}}">{{config.extra.support.email}}</a>.
+{% else %}
+  If you think we made a mistake and deleted a page that should be here, then please tell us on
+  <a href="{{config.extra.support.channel}}">{{config.site_name}} {{config.extra.support.tool}} channel</a> or create an issue in
+  <a href="{{config.extra.support.issues}}">issues</a>.
+{% endif %}
+
+</p>
+
+{% endblock %}

@@ -10,9 +10,9 @@
 # specific language governing permissions and limitations under the License.
 
 # Project information
-site_name: Dummy doc site
-#site_url: "https://{{site.domain}}/{{site.lang}}/{{site.version}}/"
-site_description: Dummy documentation.
+site_name: 'Dummy doc site ${LANGUAGE}-${VERSION}'
+site_url: 'https://${BASE_SITE_URL}/${PROJECT}/${LANGUAGE}/${VERSION}/'
+site_description: 'Dummy documentation ${LANGUAGE}-${VERSION}'
 site_author: ConsenSys
 copyright: Dummy and its documentation are licensed under Apache 2.0 license
 
@@ -46,7 +46,8 @@ repo_url: https://github.com/Consensys/doc.dummy
 
 theme:
   name: material
-  custom_dir: common/custom_theme
+  custom_dir: custom_theme
+  language: en
   palette: "consensys"
   logo: 'images/logo.svg'
   favicon: 'images/favicon.svg'
@@ -92,8 +93,15 @@ markdown_extensions:
 plugins:
   - search:
       lang: 'en'
-      separator: '[\s]+'
+      separator: '[\s\-\.\_]+'
   - markdownextradata
+# uncomment to exclude a folder in /docs from final render.
+# useful for include files
+#  - exclude:
+#      glob:
+#        - cmd/*
+  - git-revision-date-localized:
+      locale: en
   - redirects:
       redirect_maps:
         # Configure redirects using key:value pairs:
