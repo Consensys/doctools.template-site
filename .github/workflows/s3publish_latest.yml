@@ -10,31 +10,42 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+      - uses: docker/setup-buildx-action@v1
+        name: Set up Docker Buildx
+
       - uses: actions/checkout@v2
         name: 'checkout code from repos'
         with:
           fetch-depth: 0
+
       - uses: c-py/action-dotenv-to-setenv@v2
         name: 'set environment vars from .env file'
         with:
           env-file: '.env'
+
       - uses: actions/setup-python@v2
-        name: 'Setup python 3.7'
+        name: 'Setup Python 3.7'
         with:
           python-version: '3.7'
           architecture: 'x64'
+
       - uses: actions/cache@v2
+        name: 'Load Python cache'
         with:
           path: ${{ env.pythonLocation }}
           key: ${{ env.pythonLocation }}-${{ hashFiles('requirements.txt') }}
+
       - run: 'pip install -r requirements.txt'
         name: 'Install requirements'
+
       - uses: vafinvr/template-env-action@master
         name: 'replace values with env vars in mkdocs.yml'
         with:
           filename: 'mkdocs.yml'
+
       - run: 'mkdocs build -s'
         name: "Build doc for [${{ env.LANGUAGE }}] ${{ env.LATEST_VERSION }}"
+
       - uses: jakejarvis/s3-sync-action@master
         name: 'Upload ${{ env.LANGUAGE }}/${{ env.LATEST_VERSION }} to AWS'
         with:
