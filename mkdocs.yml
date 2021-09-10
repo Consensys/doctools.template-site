@@ -36,9 +36,9 @@ extra:
     site_verification:
     - 'VL2MgMm7Gj-fEOH3SkAuP4eXOY7rIShFFbTI5RktuA0'
     tag_manager: 'GTM-PBFNGBR'
-  languages:
-    en: English (en)
-    zh: 简体 (zh)
+#  languages:
+#    en: English (en)
+#    zh: 简体 (zh)
 
 # Software Repository
 repo_name: Consensys/doc.dummy
@@ -47,7 +47,7 @@ repo_url: https://github.com/Consensys/doc.dummy
 theme:
   name: material
   custom_dir: custom_theme
-  language: en
+  language: ${LANGUAGE}
   palette: "consensys"
   logo: 'images/logo.svg'
   favicon: 'images/favicon.svg'
@@ -62,6 +62,8 @@ extra_javascript:
 nav:
   - Tutorials:
       - Simple one: tutorial/tutorial.md
+  - Playground: playground.md
+
 markdown_extensions:
   - toc:
       permalink: 
@@ -92,7 +94,7 @@ markdown_extensions:
 
 plugins:
   - search:
-      lang: 'en'
+      lang: '${LANGUAGE}'
       separator: '[\s\-\.\_]+'
   - markdownextradata
 # uncomment to exclude a folder in /docs from final render.
@@ -101,7 +103,7 @@ plugins:
 #      glob:
 #        - cmd/*
   - git-revision-date-localized:
-      locale: en
+      locale: ${LANGUAGE}
   - redirects:
       redirect_maps:
         # Configure redirects using key:value pairs:
