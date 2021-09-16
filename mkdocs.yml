@@ -14,10 +14,14 @@
 INHERIT: ./site.yml
 
 nav:
-  - index.md
+  - Overview: index.md
+  - New features: new.md
   - Tutorials:
       - Simple one: tutorial/tutorial.md
   - Playground: playground.md
+  - Reference:
+      - CLI: reference/cli.md
+      - API: reference/api.md
 
 plugins:
   redirects:

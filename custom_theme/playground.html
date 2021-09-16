@@ -1,0 +1,13 @@
+{% extends "main.html" %}
+
+<!-- Content -->
+{% block content %}
+  <script src="https://www.katacoda.com/embed.js"></script>
+  {% for item in page.meta.katacoda %}
+  <div id="katacoda-scenario-1"
+       data-katacoda-id="{{ item }}"
+       data-katacoda-hidefinish="false"
+       data-katacoda-hideintro="false"
+       style="height: 600px; padding-top: 20px;"></div>
+  {% endfor %}
+{% endblock %}

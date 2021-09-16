@@ -42,24 +42,27 @@ theme:
       toggle:
         icon: material/toggle-switch
         name: Switch to light mode
-  font:
-    text: Roboto
-  logo: 'images/logo.svg'
-  favicon: 'images/favicon.svg'
+  logo: 'assets/logo.svg'
+  favicon: 'asssets/favicon.svg'
   features:
     - search.suggest
     - search.highlight
     - search.share
+    - navigation.instant
+    - navigation.tabs
+    - navigation.top
 
 extra_css:
   - assets/stylesheets/custom.css
+  - https://fonts.googleapis.com/icon?family=Material+Icons
 extra_javascript:
   - assets/javascripts/custom.js
   - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML
 
 markdown_extensions:
   - toc:
-      permalink: 
+      permalink: true
+      permalink_title: Link to this section
       toc_depth: 4
   - codehilite
   - pymdownx.tabbed

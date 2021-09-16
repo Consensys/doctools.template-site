@@ -34,3 +34,8 @@
 
 {% endblock %}
 
+{% if config.extra.announce %}
+  {% block announce %}
+    {{ config.extra.announce }}
+  {% endblock %}
+{% endif %}

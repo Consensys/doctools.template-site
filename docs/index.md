@@ -1,4 +1,5 @@
 ---
+template: home.html
 title: Dummy
 description: Dummy is a fake doc project to test things without breaking a real site.
 ---
@@ -7,4 +8,4 @@ description: Dummy is a fake doc project to test things without breaking a real 
 
 Dummy is a fake doc project to test things without breaking a real site.
 
-![Dummy at work](images/dummy.jpg)
+![Dummy at work](assets/images/dummy.jpg)
