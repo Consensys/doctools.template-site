@@ -72,6 +72,7 @@ markdown_extensions:
   - admonition
   - footnotes
   - def_list
+  - attr_list
   - abbr
   - pymdownx.arithmatex
   - pymdownx.betterem:
@@ -94,6 +95,11 @@ plugins:
     separator: '[\s\-\.\_]+'
     prebuild_index: true
   markdownextradata: {}
+  minify:
+    minify_html: true
+    minify_js: true
+    htmlmin_opts:
+      remove_comments: true
 # uncomment to exclude a folder in /docs from final render.
 # useful for include files
 #  - exclude:
