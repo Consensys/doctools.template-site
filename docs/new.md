@@ -6,11 +6,9 @@ hide:
   - toc
 ---
 
-# Dummy
+# What's new?
 
-Dummy is a template doc project to test things without breaking a real site.
-
-## New features
+The new documentation system provides the following features:
 
 * Light and dark themes
 * Site search widget
@@ -19,11 +17,14 @@ Dummy is a template doc project to test things without breaking a real site.
     * Searched terms highlighted on page
     * Search terms now able to be visible in analytics
 * Last update of page on all sites
-* New home page design
+* New [home page design](index.md)
 * Go back to top button, great for long pages like API docs
 * Instant navigation (faster search and reduce bandwidth usage)
-* Easy katacoda.com integration (other to come on demand)
+* [Easy katacoda.com integration](playground.md) (other to come on demand)
+* [Easy ReDoc REST API doc](reference/api.md) from a JSON or YAML spec (local or remote).
 * Integration for Asciinema?
+* Integration of Youtube videos
+    * ![type:video](https://www.youtube.com/embed/ttdvxAOO50E)
 * Simpler configuration file for contributors: only nav and redirects
 * Only requires Docker to build (no more Python version issues)
 * New consistent branding
@@ -34,4 +35,4 @@ Dummy is a template doc project to test things without breaking a real site.
 * Sites hosted under consensys.net/docs/[project name]/[language]/[version]
 * Standard compliant sites accessibility
 * Navigation tabs
-* Home pages
+* Home pages (like landing pages)

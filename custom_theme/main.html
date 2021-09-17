@@ -1,5 +1,12 @@
 {% extends "base.html" %}
 
+{% block libs %}
+<script
+  src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+  integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+  crossorigin="anonymous"></script>
+{% endblock %}
+
 {% block hero %}
 {% if config.extra.latest_version_warning %}
 {# hero is not used, so use it for warning banner #}

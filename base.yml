@@ -16,11 +16,11 @@ copyright: This documentation is licensed under Apache 2.0 license
 
 extra:
   logo_is_text: false
-  #  latest_version_warning:
-  #    url_contains: /latest/
-  #    text: 'You are reading Dummy development version documentation and
-  #    some displayed features may not be available in the stable release.
-  #    You can switch to stable version using the version box at screen bottom.'
+  latest_version_warning:
+    url_contains: /latest/
+    text: 'You are reading the development version of the documentation and
+    some displayed features may not be available in the stable release.
+    You can switch to stable version using the switch in the header.'
   support:
     company: Consensys
   analytics:
@@ -43,7 +43,7 @@ theme:
         icon: material/toggle-switch
         name: Switch to light mode
   logo: 'assets/logo.svg'
-  favicon: 'asssets/favicon.svg'
+  favicon: 'assets/favicon.svg'
   features:
     - search.suggest
     - search.highlight
@@ -56,6 +56,7 @@ extra_css:
   - assets/stylesheets/custom.css
   - https://fonts.googleapis.com/icon?family=Material+Icons
 extra_javascript:
+  - assets/javascripts/accessiBe.js
   - assets/javascripts/custom.js
   - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML
 
@@ -95,11 +96,11 @@ plugins:
     separator: '[\s\-\.\_]+'
     prebuild_index: true
   markdownextradata: {}
-  minify:
-    minify_html: true
-    minify_js: true
-    htmlmin_opts:
-      remove_comments: true
+#  minify:
+#    minify_html: true
+#    minify_js: true
+#    htmlmin_opts:
+#      remove_comments: true
 # uncomment to exclude a folder in /docs from final render.
 # useful for include files
 #  - exclude:
@@ -107,3 +108,6 @@ plugins:
 #        - cmd/*
   git-revision-date-localized:
     locale: !ENV [LANGUAGE, 'en']
+  mkdocs-video:
+    css_style:
+      weight: "50%"

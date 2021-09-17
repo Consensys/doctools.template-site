@@ -1,0 +1,51 @@
+.md-header {
+  position: initial
+}
+
+.md-main__inner {
+  margin: 0
+}
+
+.md-content {
+  display: none
+}
+
+@media screen and (min-width: 60em) {
+  .md-sidebar--secondary {
+    display: none
+  }
+}
+
+@media screen and (min-width: 76.25em) {
+  .md-sidebar--primary {
+    display: none
+  }
+}
+
+.mdx-container {
+  padding-top: 2rem;
+  background: var(--md-wave-background);
+}
+
+.mdx-hero {
+  margin: 0 2rem;
+  color: var(--md-primary-bg-color);
+}
+
+.mdx-hero h1 {
+  margin-bottom: 2rem;
+  color: var(--md-primary-fg-color--dark);
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.mdx-hero__content {
+  padding-bottom: 4rem;
+  color: var(--md-primary-fg-color--dark);
+}
+
+.mdx-hero__image {
+  order: 1;
+  width: 10rem;
+  transform: translateX(4rem);
+}

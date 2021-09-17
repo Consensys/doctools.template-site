@@ -89,48 +89,30 @@
 [data-md-color-scheme="consensys"] {
   --md-primary-fg-color:        #2C56DD;
   --md-primary-fg-color--light: #ABBBF1;
-  --md-primary-fg-color--dark:  #2C56DD;
+  --md-primary-fg-color--dark:  #000;
   --md-default-bg-color: #fff;
+  --md-wave-background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1123 258'><path d='M1124,2c0,0 0,256 0,256l-1125,0l0,-48c0,0 16,5 55,5c116,0 197,-92 325,-92c121,0 114,46 254,46c140,0 214,-167 572,-166Z' style='fill: hsla(0, 0%, 100%, 1)' /></svg>") no-repeat bottom,
+  linear-gradient(
+    to bottom,
+    var(--md-primary-fg-color),
+      /*hsla(280, 67%, 55%, 1) 99%,*/
+    var(--md-default-bg-color) 99%
+  );
 }
 
 [data-md-color-scheme="consensys-dark"] {
   --md-primary-fg-color: #2C56DD;
   --md-primary-fg-color--light: #fff;
-  --md-primary-fg-color--dark:  #2C56DD;
+  --md-primary-fg-color--dark:  #fff;
   --md-default-bg-color: #0a1331;
   --md-typeset-color: #fff;
   --md-default-fg-color--light: #fff;
-}
-
-.mdx-container {
-  padding-top: 2rem;
-  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1123 258'><path d='M1124,2c0,0 0,256 0,256l-1125,0l0,-48c0,0 16,5 55,5c116,0 197,-92 325,-92c121,0 114,46 254,46c140,0 214,-167 572,-166Z' style='fill: hsla(0, 0%, 100%, 1)' /></svg>") no-repeat bottom,
+  --md-wave-background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1123 258'><path d='M1124,2c0,0 0,256 0,256l-1125,0l0,-48c0,0 16,5 55,5c116,0 197,-92 325,-92c121,0 114,46 254,46c140,0 214,-167 572,-166Z' style='fill: hsla(226, 66%, 12%, 0.2)' /></svg>") no-repeat bottom,
   linear-gradient(
     to bottom,
     var(--md-primary-fg-color),
-    /*hsla(280, 67%, 55%, 1) 99%,*/
+      /*hsla(280, 67%, 55%, 1) 99%,*/
     var(--md-default-bg-color) 99%
   );
-}
 
-.mdx-hero {
-  margin: 0 2rem;
-  color: var(--md-primary-bg-color);
-}
-
-.mdx-hero h1 {
-  margin-bottom: 2rem;
-  color: currentColor;
-  font-weight: 700;
-  font-size: 2rem;
-}
-
-.mdx-hero__content {
-     padding-bottom: 4rem
-}
-
-.mdx-hero__image {
-     order: 1;
-     width: 10rem;
-     transform: translateX(4rem);
 }
