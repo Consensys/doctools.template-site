@@ -4,7 +4,7 @@ name: Publish latest on AWS S3 bucket
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   deploy:
@@ -15,11 +15,13 @@ jobs:
         with:
           fetch-depth: 0
 
+      # TODO move this env step in docker image
       - uses: c-py/action-dotenv-to-setenv@v2
         name: 'set environment vars from .env file'
         with:
           env-file: '.env'
 
+      # TODO move this env step in docker image
       - uses: vafinvr/template-env-action@master
         name: 'replace values with env vars in mkdocs.yml'
         with:

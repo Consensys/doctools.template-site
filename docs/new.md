@@ -36,3 +36,4 @@ The new documentation system provides the following features:
 * Standard compliant sites accessibility
 * Navigation tabs
 * Home pages (like landing pages)
+* Accessibility compliance tool (via AccessiBe)

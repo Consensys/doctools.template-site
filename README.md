@@ -1,11 +1,13 @@
-# Dummy documentation [![Documentation Status](https://readthedocs.com/projects/pegasys-docdumy/badge/?version=latest)](https://pegasys-docdumy.readthedocs-hosted.com/en/latest/?badge=latest)
+# Consensys Doctools template documentation site
 
-Dummy is a fake doc project to test things without breaking a real site.
+Consensys Doctools is a suite of tools to help build enterprise grade documentation.
 
-This repository only contains the sources for [Dummy documentation website hosted by ReadTheDocs].
+This template doc site project can be used to generate new sites.
 
-This repository uses a Git submodule. Please refer to the [common tools wiki] for explanation about
-how to build and contribute to this documentation.
+[Rendered template site] preview available and published on AWS S3.
 
-[common tools wiki]: https://github.com/Consensys/doc.common/wiki
-[Dummy documentation website hosted by ReadTheDocs]: https://docs.dummy.consensys.net/
+Please refer to the [Consensys Doctools wiki] for explanation about
+how to use this tool and contribute to the documentation.
+
+[Consensys Doctools wiki]: https://github.com/Consensys/doctools.template-site/wiki
+[Rendered template site]: https://consensys.net/docs/doctools/en/latest/

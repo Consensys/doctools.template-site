@@ -14,12 +14,12 @@
 INHERIT: ./base.yml
 
 # Project information
-site_name: Dummy doc site TEST
-site_description: Dummy documentation
+site_name: Doctools
+site_description: Doctools documentation template
 
 # Software Repository
-repo_name: Consensys/doc.dummy
-repo_url: https://github.com/Consensys/doc.dummy
+repo_name: Consensys/doctools.template-site
+repo_url: https://github.com/Consensys/doctools.template-site
 
 #extra project info and template customisation
 extra:
