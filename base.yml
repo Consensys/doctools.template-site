@@ -92,7 +92,7 @@ markdown_extensions:
 
 plugins:
   search:
-    lang: !ENV [LANGUAGE, 'en']
+    lang: en
     separator: '[\s\-\.\_]+'
     prebuild_index: true
   markdownextradata: {}
