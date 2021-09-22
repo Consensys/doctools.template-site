@@ -19,18 +19,23 @@ site_description: Doctools documentation template
 
 # Software Repository
 repo_name: Consensys/doctools.template-site
-repo_url: https://github.com/Consensys/doctools.template-site
+repo_url: https://github.com/Consensys/doctools.template-site.git
 
 #extra project info and template customisation
 extra:
-  announce: New doc system, new features available for your doc sites!
+  announce: New doc system, new features available for your doc sites! Check the demo video.
   support:
     tool: Discord
     channel: https://discord.gg/5U9Jwp7
     email: quorum@consensys.net
     website: https://consensys.net/quorum/developers
-    issues: https://github.com/Consensys/doc.dummy/issues
+    issues: https://github.com/Consensys/doctools.template-site/issues
     faq: https://consensys.net/quorum/faq
   social:
     - icon: fontawesome/brands/discord
       link: https://discord.gg/5U9Jwp7
+  versions:
+    languages:
+      en: English (en)
+      zh: 中文 (zh)
+    release: {}

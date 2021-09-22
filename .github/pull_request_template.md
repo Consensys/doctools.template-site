@@ -1,5 +1,5 @@
 <!-- Thanks for sending a pull request! Please check out our contribution guidelines: -->
-<!-- https://github.com/Consensys/doc.dummy/blob/master/CONTRIBUTING.md -->
+<!-- https://github.com/Consensys/doctools.template-site/wiki -->
 
 ## Pull Request Description
 

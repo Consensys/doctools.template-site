@@ -8,30 +8,24 @@ on:
 
 jobs:
   deploy:
+    name: Build and publish latest site
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-        name: 'checkout code from repos'
+      - name: 'checkout code from repos'
+        uses: actions/checkout@v2
         with:
           fetch-depth: 0
 
-      # TODO move this env step in docker image
-      - uses: c-py/action-dotenv-to-setenv@v2
-        name: 'set environment vars from .env file'
+      - name: 'set environment vars from .env file'
+        uses: c-py/action-dotenv-to-setenv@v2
         with:
           env-file: '.env'
 
-      # TODO move this env step in docker image
-      - uses: vafinvr/template-env-action@master
-        name: 'replace values with env vars in mkdocs.yml'
-        with:
-          filename: 'mkdocs.yml'
+      - name: "Build doc for [${{ env.LANGUAGE }}] ${{ env.LATEST_VERSION }}"
+        uses: ConsenSys/doctools.action-builder@main
 
-      - uses: NicolasMassart/doctool-action-builder@main
-        name: "Build doc for [${{ env.LANGUAGE }}] ${{ env.LATEST_VERSION }}"
-
-      - uses: jakejarvis/s3-sync-action@master
-        name: 'Upload ${{ env.LANGUAGE }}/${{ env.LATEST_VERSION }} to AWS'
+      - name: 'Upload ${{ env.LANGUAGE }}/${{ env.LATEST_VERSION }} to AWS'
+        uses: jakejarvis/s3-sync-action@master
         with:
           args: '--acl public-read --follow-symlinks --delete'
         env:

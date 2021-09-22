@@ -4,7 +4,7 @@ Consensys Doctools is a suite of tools to help build enterprise grade documentat
 
 This template doc site project can be used to generate new sites.
 
-[Rendered template site] preview available and published on AWS S3.
+[Rendered template site] preview available.
 
 Please refer to the [Consensys Doctools wiki] for explanation about
 how to use this tool and contribute to the documentation.

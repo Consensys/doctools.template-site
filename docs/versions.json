@@ -1,0 +1,7 @@
+{
+  "project": "doctools",
+  "versions": {
+    "en": ["latest","stable", "1.0.0"],
+    "zh": ["latest"]
+  }
+}
