@@ -37,3 +37,4 @@ The new documentation system provides the following features:
 * Navigation tabs
 * Home pages (like landing pages)
 * Accessibility compliance tool (via AccessiBe)
+* Per page TOC depth configuration (See tutorial.md page meta)
