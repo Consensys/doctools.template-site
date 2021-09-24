@@ -17,11 +17,13 @@ nav:
   - Overview: index.md
   - New features: new.md
   - Tutorials:
+      - tutorial/index.md
       - Simple one: tutorial/tutorial.md
   - Playground: playground.md
   - Reference:
       - CLI: reference/cli.md
       - API: reference/api.md
+  - Support: support.md
 
 plugins:
   redirects:

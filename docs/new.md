@@ -34,7 +34,8 @@ The new documentation system provides the following features:
 * New hosting (bye bye RTD, hello AWS S3)
 * Sites hosted under consensys.net/docs/[project name]/[language]/[version]
 * Standard compliant sites accessibility
-* Navigation tabs
+* Sticky navigation tabs
+* Section indexes (no need to create an "overview" page anymore, see [the tutorial section](tutorial/index.md) for an example.)
 * Home pages (like landing pages)
 * Accessibility compliance tool (via AccessiBe)
 * Per page TOC depth configuration (See tutorial.md page meta)

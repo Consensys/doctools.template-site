@@ -1,6 +1,6 @@
 {% import "partials/language.html" as lang with context %}
-{% if config.extra.versions.languages and config.extra.versions.languages | length > 1 %}
-  {% set languages_list = config.extra.versions.languages %}
+{% if config.extra.languages and config.extra.languages | length > 1 %}
+  {% set languages_list = config.extra.languages %}
   {% set current_language = config.theme.language %}
   <div class="md-header__option"></form>
     <div class="md-select">

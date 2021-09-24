@@ -26,6 +26,10 @@ extra:
   analytics:
     provider: gtm
     gtmid: !ENV GTM_ID
+  languages:
+    en: English (en)
+    zh: 中文 (zh)
+  version: !ENV [VERSION ,'latest']
 
 theme:
   name: material
@@ -50,14 +54,18 @@ theme:
     - search.share
     - navigation.instant
     - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.top
+    - navigation.indexes
 
 extra_css:
   - assets/stylesheets/custom.css
+  - assets/stylesheets/version.css
   - https://fonts.googleapis.com/icon?family=Material+Icons
 extra_javascript:
   - assets/javascripts/accessiBe.js
   - assets/javascripts/custom.js
+  - assets/javascripts/version.js
   - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML
 
 markdown_extensions:
@@ -80,7 +88,12 @@ markdown_extensions:
       smart_enable: all
   - pymdownx.keys
   - pymdownx.details
-  - pymdownx.emoji
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+      options:
+        custom_icons:
+          - overrides/.icons
   - pymdownx.magiclink
   - pymdownx.mark
   - pymdownx.smartsymbols

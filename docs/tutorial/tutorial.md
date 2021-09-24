@@ -1,6 +1,7 @@
 ---
 title: Tutorial
 description: Dummy is a fake doc project to test things without breaking a real site.
+toc_depth: 4
 ---
 
 # Tutorial
@@ -8,7 +9,21 @@ description: Dummy is a fake doc project to test things without breaking a real 
 !!! example "This is an example block"
     Dummy is a fake doc project to test things without breaking a real site.
 
-## This is a second header
+## This is a level 2
+
+This is a level 2
+
+### This is a level 3
+
+This is a level 3
+
+#### This is a level 4
+
+This is a level 4
+
+##### This is a level 5
+
+This is a level 5
 
 !!! example "Example JS code"
 
