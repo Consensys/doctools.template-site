@@ -28,6 +28,10 @@
         </div>
       </div>
     </div>
+
+    <!-- Site version selector -->
+    {% include "partials/version_selector.html" %}
+
     {% if not config.theme.palette is mapping %}
       <form class="md-header__option" data-md-component="palette">
         {% for option in config.theme.palette %}

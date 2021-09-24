@@ -52,7 +52,6 @@ theme:
     - search.suggest
     - search.highlight
     - search.share
-    - navigation.instant
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.top
@@ -63,10 +62,9 @@ extra_css:
   - assets/stylesheets/version.css
   - https://fonts.googleapis.com/icon?family=Material+Icons
 extra_javascript:
-  - assets/javascripts/accessiBe.js
-  - assets/javascripts/custom.js
   - assets/javascripts/version.js
   - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML
+  - assets/javascripts/accessiBe.js
 
 markdown_extensions:
   - toc:

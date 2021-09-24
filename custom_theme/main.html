@@ -8,11 +8,8 @@
 {% endblock %}
 
 {% block hero %}
-  {{ super() }}
-  {% if config.extra.latest_version_warning %}
-    {# hero is not used, so use it for warning banner #}
-    <script>const latestWarningTrigger = "{{config.extra.latest_version_warning.url_contains}}";</script>
-    <div class="latest-warning">{{config.extra.latest_version_warning.text}}</div>
+  {% if page and page.meta and page.meta.hero %}
+    Test hero
   {% endif %}
 {% endblock %}
 

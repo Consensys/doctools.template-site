@@ -1,6 +1,6 @@
 {% if config.extra.version and config.theme.language %}
   <script>
-    const site_version_json = '{{config.site_url|replace("0.0.0.0", "localhost") + "versions.json" }}'
+    const site_version_json = '{{config.site_url + "versions.json" }}'
     const site_current_language = '{{config.theme.language}}';
     const site_current_version = '{{config.extra.version}}';
   </script>

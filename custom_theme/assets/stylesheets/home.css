@@ -52,7 +52,7 @@
     align-items: stretch;
   }
   .mdx-hero__content {
-    max-width: 22rem;
+    max-width: 24rem;
     margin-top: 3.5rem;
     padding-bottom: 14vw;
   }
@@ -62,11 +62,11 @@
     transform: translateX(4rem);
   }
 }
-@media screen and (min-width: 76.25em) {
-  .mdx-hero__image {
-    transform: translateX(8rem);
-  }
-}
+/*@media screen and (min-width: 76.25em) {*/
+/*  .mdx-hero__image {*/
+/*    transform: translateX(8rem);*/
+/*  }*/
+/*}*/
 .mdx-hero .md-button {
   margin-top: 0.5rem;
   margin-right: 0.5rem;
@@ -91,8 +91,7 @@
   linear-gradient(
     to bottom,
     var(--md-primary-fg-color),
-      /*var(--md-default-bg-color) 60%,*/
-    rgb(255 255 255) 50%
+    #fff 100%
   );
   --mdx-hero-color: var(--md-footer-bg-color);
 }
@@ -103,7 +102,6 @@
   linear-gradient(
     to bottom,
     var(--md-primary-fg-color),
-    /*var(--md-default-bg-color) 60%,*/
     var(--md-footer-bg-color) 100%
   );
   --mdx-hero-color: #fff;
