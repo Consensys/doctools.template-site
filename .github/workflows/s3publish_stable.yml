@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Set output
-        run: "echo ::set-output name=tag::${GITHUB_REF#refs/*/}"
+        run: echo ::set-output name=tag::"${GITHUB_REF#refs/*/}"
         id: vars
 
       - name: checkout code from repos

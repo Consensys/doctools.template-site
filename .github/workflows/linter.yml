@@ -23,3 +23,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           LINTER_RULES_PATH: /CI/lint/
           MARKDOWN_CONFIG_FILE: markdown.yml
+          LOG_LEVEL: ERROR
