@@ -1,7 +1,7 @@
 name: 'Publish to AWS'
 description: 'Composite action to publish site to AWS'
 inputs:
-  version:
+  VERSION:
     description: 'name for version to publish'
     required: true
     default: 'latest'
@@ -15,7 +15,7 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - name: Upload [${{ env.LANGUAGE }}] ${{ inputs.version }} to ${{ env.AWS_S3_BUCKET }} S3
+    - name: Upload [${{ env.LANGUAGE }}] ${{ inputs.VERSION }} to ${{ env.AWS_S3_BUCKET }} S3
       uses: jakejarvis/s3-sync-action@master
       with:
         args: --acl public-read --follow-symlinks --delete
@@ -25,4 +25,4 @@ runs:
         AWS_S3_BUCKET: ${{ env.AWS_S3_BUCKET  }}
         AWS_REGION: ${{ env.AWS_REGION }}
         SOURCE_DIR: ${{ env.SOURCE_DIR }}
-        DEST_DIR: ${{ env.PROJECT }}/${{ env.LANGUAGE }}/${{ inputs.version }}/
+        DEST_DIR: ${{ env.PROJECT }}/${{ env.LANGUAGE }}/${{ inputs.VERSION }}/

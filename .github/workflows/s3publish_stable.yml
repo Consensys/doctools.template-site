@@ -29,26 +29,16 @@ jobs:
       - name: Build doc for [${{ env.LANGUAGE }}] ${{ env.LATEST_VERSION }}
         uses: ConsenSys/doctools.action-builder@main
 
-      - name: Upload [${{ env.LANGUAGE }}] ${{ env.STABLE_VERSION }} to ${{ env.AWS_S3_BUCKET }} S3
-        uses: jakejarvis/s3-sync-action@master
+      - name: Publish to AWS
+        uses: ./.github/actions/publish-aws
         with:
-          args: --acl public-read --follow-symlinks --delete
-        env:
-          AWS_S3_BUCKET: ${{ env.AWS_S3_BUCKET }}
+          version: ${{ env.STABLE_VERSION }}
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_REGION: ${{ env.AWS_REGION }}
-          SOURCE_DIR: ${{ env.SOURCE_DIR }}
-          DEST_DIR: ${{ env.PROJECT }}/${{ env.LANGUAGE }}/${{ env.STABLE_VERSION }}/
 
-      - name: Upload [${{ env.LANGUAGE }}] ${{ steps.vars.outputs.tag }}to ${{ env.AWS_S3_BUCKET }} S3
-        uses: jakejarvis/s3-sync-action@master
+      - name: Publish to AWS
+        uses: ./.github/actions/publish-aws
         with:
-          args: --acl public-read --follow-symlinks --delete
-        env:
-          AWS_S3_BUCKET: ${{ env.AWS_S3_BUCKET }}
+          version: ${{ steps.vars.outputs.tag }}
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_REGION: ${{ env.AWS_REGION }}
-          SOURCE_DIR: ${{ env.SOURCE_DIR }}
-          DEST_DIR: ${{ env.PROJECT }}/${{ env.LANGUAGE }}/${{ steps.vars.outputs.tag }}/

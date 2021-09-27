@@ -1,0 +1,35 @@
+---
+name: Publish PR on AWS S3 bucket
+
+# Controls when the action will run.
+on:
+  pull_request_target:
+    branches: [ main ]
+
+env:
+  PR_NUMBER: ${{ github.event.number }}
+
+jobs:
+  deploy:
+    name: Build and publish PR preview
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'checkout code from repos'
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: 'set environment vars from .env file'
+        uses: c-py/action-dotenv-to-setenv@v2
+        with:
+          env-file: '.env'
+
+      - name: "Build doc for [${{ env.LANGUAGE }}] ${{ env.LATEST_VERSION }}"
+        uses: ConsenSys/doctools.action-builder@main
+
+      - name: Publish to AWS
+        uses: ./.github/actions/publish-aws
+        with:
+          VERSION: ${{ env.PR_NUMBER }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
