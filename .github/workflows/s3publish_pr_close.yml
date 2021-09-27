@@ -23,10 +23,7 @@ jobs:
           echo "delete ${{ env.PR_LABEL }}"
           rm -Rf "${{ env.PR_LABEL }}"
 
-      - name: Deploy Preview
-        uses: JamesIves/github-pages-deploy-action@4.1.5
+      - name: Commit and push
+        uses: actions-js/push@master
         with:
-          branch: gh-pages
-          folder: ${{ github.workspace }}
-          commit-message: Remove preview for ${{ env.PR_LABEL }}
-          single-commit: true
+          github_token: ${{ secrets.GITHUB_TOKEN }}

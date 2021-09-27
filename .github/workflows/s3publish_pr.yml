@@ -2,7 +2,7 @@
 name: Publish PR on GH Pages
 
 # Controls when the action will run.
-on: [ push ]
+on: [ pull_request  ]
 
 env:
   PR_LABEL: PR-${{ github.event.number }}
