@@ -3,19 +3,14 @@ name: Publish latest on AWS S3 bucket
 
 # Controls when the action will run.
 on:
-  workflow_run:
-    workflows:
-      - "Validate Katacoda scenarios"
-      - "Check links in changed Markdown files"
-      - "Lint Code Base"
-    types:
-      - completed
+  push:
+    branches: [main]
 
 jobs:
   deploy:
     name: Build and publish latest site
     runs-on: ubuntu-latest
-    if: github.event.repository.fork == false && github.event.workflow_run.conclusion == 'success'
+    if: github.event.repository.fork == false
     steps:
       - name: checkout code from repos
         uses: actions/checkout@v2

@@ -2,20 +2,15 @@
 name: Publish stable and tag on AWS S3 bucket
 
 on:
-  workflow_run:
-    workflows:
-      - "Validate Katacoda scenarios"
-      - "Check links in changed Markdown files"
-      - "Lint Code Base"
-    types:
-      - completed
+  release:
+    types: [published]
+    branches: [main]
 
 jobs:
   deploy:
     name: Build and publish released site
     runs-on: ubuntu-latest
-    # Trigger the job on release activity only and when other tests are done
-    if: github.event.repository.fork == false && github.event.type == 'published' && github.event.workflow_run.conclusion == 'success'
+    if: github.event.repository.fork == false
     steps:
       - name: Set output
         run: echo ::set-output name=tag::"${GITHUB_REF#refs/*/}"
