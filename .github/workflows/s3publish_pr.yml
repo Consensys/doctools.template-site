@@ -2,7 +2,7 @@
 name: Publish PR on GH Pages
 
 # Controls when the action will run.
-on: [ pull_request ]
+on: [ push ]
 
 env:
   PR_LABEL: PR-${{ github.event.number }}
@@ -11,7 +11,6 @@ jobs:
   deploy:
     name: Build and publish PR preview
     runs-on: ubuntu-latest
-    if: github.event.repository.fork == true
     steps:
       - name: 'checkout code from repos'
         uses: actions/checkout@v2

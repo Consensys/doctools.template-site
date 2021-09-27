@@ -1,7 +1,7 @@
 ---
 name: Check links in changed Markdown files
 
-on: [push, pull_request]
+on: [push]
 
 jobs:
   markdown-link-check:

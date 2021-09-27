@@ -39,3 +39,4 @@ The new documentation system provides the following features:
 * Home pages (like landing pages)
 * Accessibility compliance tool (via AccessiBe)
 * Per page TOC depth configuration (See tutorial.md page meta)
+* New code linter for Markdown but also all other files, config files.
