@@ -1,3 +1,4 @@
+---
 name: Validate Katacoda scenarios
 on: push
 jobs:
@@ -16,8 +17,3 @@ jobs:
         name: Validate Katacoda scenarios
         run: |
           echo "${{ github.workspace }}/katacoda-preview-doc" | katacoda scenarios:validate
-      - id: validate-markdown
-        name: Validate Katacoda Markdown
-        run: |
-          sudo gem install mdl
-          mdl ${{ github.workspace }}/katacoda-preview-doc

@@ -1,3 +1,4 @@
+---
 name: Publish stable and tag on AWS S3 bucket
 
 # Controls when the action will run.
@@ -11,24 +12,24 @@ jobs:
     name: Build and publish released site
     runs-on: ubuntu-latest
     steps:
-      - run: echo ::set-output name=tag::${GITHUB_REF#refs/*/}
-        name: 'Set output'
-        id: 'vars'
+      - name: Set output
+        run: "echo ::set-output name=tag::${GITHUB_REF#refs/*/}"
+        id: vars
 
-      - name: 'checkout code from repos'
+      - name: checkout code from repos
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
 
-      - name: 'set environment vars from .env file'
+      - name: set environment vars from .env file
         uses: c-py/action-dotenv-to-setenv@v2
         with:
           env-file: '.env'
 
-      - name: "Build doc for [${{ env.LANGUAGE }}] ${{ env.LATEST_VERSION }}"
+      - name: Build doc for [${{ env.LANGUAGE }}] ${{ env.LATEST_VERSION }}
         uses: ConsenSys/doctools.action-builder@main
 
-      - name: 'Upload [${{ env.LANGUAGE }}] ${{ env.STABLE_VERSION }} to ${{ env.AWS_S3_BUCKET }} S3'
+      - name: Upload [${{ env.LANGUAGE }}] ${{ env.STABLE_VERSION }} to ${{ env.AWS_S3_BUCKET }} S3
         uses: jakejarvis/s3-sync-action@master
         with:
           args: --acl public-read --follow-symlinks --delete
@@ -38,9 +39,9 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: ${{ env.AWS_REGION }}
           SOURCE_DIR: ${{ env.SOURCE_DIR }}
-          DEST_DIR: "${{ env.PROJECT }}/${{ env.LANGUAGE }}/${{ env.STABLE_VERSION }}/"
+          DEST_DIR: ${{ env.PROJECT }}/${{ env.LANGUAGE }}/${{ env.STABLE_VERSION }}/
 
-      - name: "Upload [${{ env.LANGUAGE }}] ${{ steps.vars.outputs.tag }}to ${{ env.AWS_S3_BUCKET }} S3"
+      - name: Upload [${{ env.LANGUAGE }}] ${{ steps.vars.outputs.tag }}to ${{ env.AWS_S3_BUCKET }} S3
         uses: jakejarvis/s3-sync-action@master
         with:
           args: --acl public-read --follow-symlinks --delete
@@ -50,4 +51,4 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: ${{ env.AWS_REGION }}
           SOURCE_DIR: ${{ env.SOURCE_DIR }}
-          DEST_DIR: "${{ env.PROJECT }}/${{ env.LANGUAGE }}/${{ steps.vars.outputs.tag }}/"
+          DEST_DIR: ${{ env.PROJECT }}/${{ env.LANGUAGE }}/${{ steps.vars.outputs.tag }}/

@@ -6,15 +6,15 @@
   "details": {
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Step 1 - Fork the doc repos.",
         "text": "step1.md"
       },
       {
-        "title": "Step 2",
+        "title": "Step 2 - pull the Docker image.",
         "text": "step2.md"
       },
       {
-        "title": "Step 3",
+        "title": "Step 3 - Build the doc",
         "text": "step3.md"
       }
     ],
