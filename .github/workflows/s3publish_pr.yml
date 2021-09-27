@@ -1,13 +1,11 @@
 ---
-name: Publish PR on AWS S3 bucket
+name: Publish PR on GH Pages
 
 # Controls when the action will run.
-on:
-  pull_request_target:
-    branches: [ main ]
+on: [ pull_request ]
 
 env:
-  PR_NUMBER: ${{ github.event.number }}
+  PR_LABEL: PR-${{ github.event.number }}
 
 jobs:
   deploy:
@@ -27,9 +25,12 @@ jobs:
       - name: "Build doc for [${{ env.LANGUAGE }}] ${{ env.LATEST_VERSION }}"
         uses: ConsenSys/doctools.action-builder@main
 
-      - name: Publish to AWS
-        uses: ./.github/actions/publish-aws
+      - name: Deploy Preview
+        uses: JamesIves/github-pages-deploy-action@4.1.5
         with:
-          VERSION: ${{ env.PR_NUMBER }}
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          branch: gh-pages # The branch the action should deploy to.
+          folder: site # The folder the action should deploy.
+          target-folder: ${{ env.PR_LABEL }}
+          commit-message: Preview for ${{ env.PR_LABEL }}
+          single-commit: true
+
