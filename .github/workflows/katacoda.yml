@@ -1,19 +1,18 @@
 ---
 name: Validate Katacoda scenarios
-on: push
+
+on: [push, pull_request]
+
 jobs:
   build:
     name: Validate
     runs-on: ubuntu-latest
     steps:
-      - id: checkout-code
-        name: Checkout code
+      - name: Checkout code
         uses: actions/checkout@v2
-      - id: install-katacoda-cli
-        name: Install Katacoda CLI
+      - name: Install Katacoda CLI
         run: |
           sudo npm i katacoda-cli --global
-      - id: validate
-        name: Validate Katacoda scenarios
+      - name: Validate Katacoda scenarios
         run: |
           echo "${{ github.workspace }}/katacoda-preview-doc" | katacoda scenarios:validate

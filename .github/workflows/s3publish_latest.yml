@@ -4,13 +4,13 @@ name: Publish latest on AWS S3 bucket
 # Controls when the action will run.
 on:
   push:
-    branches:
-      - main
+    branches: [main]
 
 jobs:
   deploy:
     name: Build and publish latest site
     runs-on: ubuntu-latest
+    if: github.event.repository.fork == false
     steps:
       - name: checkout code from repos
         uses: actions/checkout@v2

@@ -1,16 +1,16 @@
 ---
 name: Publish stable and tag on AWS S3 bucket
 
-# Controls when the action will run.
-# Trigger the workflow on release activity
 on:
   release:
     types: [published]
+    branches: [main]
 
 jobs:
   deploy:
     name: Build and publish released site
     runs-on: ubuntu-latest
+    if: github.event.repository.fork == false
     steps:
       - name: Set output
         run: echo ::set-output name=tag::"${GITHUB_REF#refs/*/}"

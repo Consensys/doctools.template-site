@@ -1,0 +1,33 @@
+---
+name: Remove PR Preview from GH Pages
+
+on:
+  pull_request:
+    types: [closed]
+
+env:
+  PR_LABEL: PR-${{ github.event.number }}
+
+jobs:
+  deploy:
+    name: Remove PR preview from pages
+    runs-on: ubuntu-latest
+    if: github.event.repository.fork == true
+    steps:
+      - name: 'checkout code from repos'
+        uses: actions/checkout@v2
+        with:
+          ref: gh-pages
+
+      - name: Delete from AWS
+        run: |
+          echo "delete ${{ env.PR_LABEL }}"
+          rm -Rf "${{ env.PR_LABEL }}"
+
+      - name: Deploy Preview
+        uses: JamesIves/github-pages-deploy-action@4.1.5
+        with:
+          branch: gh-pages
+          folder: ${{ github.workspace }}
+          commit-message: Remove preview for ${{ env.PR_LABEL }}
+          single-commit: true
