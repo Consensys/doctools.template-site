@@ -40,3 +40,4 @@ The new documentation system provides the following features:
 * Accessibility compliance tool (via AccessiBe)
 * Per page TOC depth configuration (See tutorial.md page meta)
 * New code linter for Markdown but also all other files, config files.
+* Github-pages PR preview
