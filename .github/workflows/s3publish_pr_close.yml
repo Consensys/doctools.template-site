@@ -2,7 +2,7 @@
 name: Remove PR Preview from GH Pages
 
 on:
-  pull_request:
+  pull_request_target:
     types: [closed]
 
 env:
@@ -23,10 +23,9 @@ jobs:
           echo "delete ${{ env.PR_LABEL }}"
           rm -Rf "${{ env.PR_LABEL }}"
 
-      - name: Deploy Preview
-        uses: JamesIves/github-pages-deploy-action@4.1.5
-        with:
-          branch: gh-pages
-          folder: ${{ github.workspace }}
-          commit-message: Remove preview for ${{ env.PR_LABEL }}
-          single-commit: true
+      - name: Commit deletion
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -am "Automated deletion"
+          git push

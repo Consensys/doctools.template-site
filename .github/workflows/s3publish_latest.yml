@@ -15,7 +15,7 @@ jobs:
       - name: checkout code from repos
         uses: actions/checkout@v2
         with:
-          fetch-depth: 0
+          fetch-depth: 0 # Required for mkdocs to be able to display pages last update info
 
       - name: set environment vars from .env file
         uses: c-py/action-dotenv-to-setenv@v2
