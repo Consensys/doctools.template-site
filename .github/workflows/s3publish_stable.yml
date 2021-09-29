@@ -26,7 +26,7 @@ jobs:
         with:
           env-file: '.env'
 
-      - name: Build doc for [${{ env.LANGUAGE }}] ${{ env.LATEST_VERSION }}
+      - name: Build doc for [${{ env.LANGUAGE }}] ${{ env.STABLE_VERSION }}
         uses: ConsenSys/doctools.action-builder@main
 
       - name: Publish to AWS
