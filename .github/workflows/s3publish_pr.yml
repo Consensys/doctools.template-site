@@ -43,4 +43,5 @@ jobs:
           header: ${{ env.PR_LABEL }}
           recreate: true
           message: |
-            PR #${{ github.event.number }} commit ${{ env.CI_SHA_SHORT }} doc preview available at https://${{ env.CI_REPOSITORY_OWNER }}.github.io/${{ env.CI_REPOSITORY_NAME }}/${{ env.PR_LABEL }}/
+            Doc preview available at https://${{ env.CI_REPOSITORY_OWNER }}.github.io/${{ env.CI_REPOSITORY_NAME }}/${{ env.PR_LABEL }}/
+            For PR #${{ github.event.number }} at commit ${{ env.CI_SHA_SHORT }}
