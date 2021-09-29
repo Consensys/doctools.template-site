@@ -35,3 +35,11 @@ jobs:
           commit-message: Preview for ${{ env.PR_LABEL }}
           single-commit: true
 
+      - uses: FranzDiebold/github-env-vars-action@v2
+
+      - name: Add comment to preview doc link
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          header: ${{ env.PR_LABEL }}
+          message: |
+            PR #${{ github.event.number }} doc preview available at https://${{ env.CI_REPOSITORY_OWNER_SLUG }}.github.com/${{ env.CI_REPOSITORY_NAME_SLUG }}/${{ env.PR_LABEL }}/
