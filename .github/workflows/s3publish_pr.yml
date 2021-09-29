@@ -16,7 +16,6 @@ jobs:
         uses: actions/checkout@v2
         with:
           fetch-depth: 0 # Required for mkdocs to be able to display pages last update info
-          persist-credentials: false # Required to enable pushing to gh-pages with bot credentials
 
       - name: 'set environment vars from .env file'
         uses: c-py/action-dotenv-to-setenv@v2
