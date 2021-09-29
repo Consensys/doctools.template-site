@@ -41,6 +41,6 @@ jobs:
         uses: marocchino/sticky-pull-request-comment@v2
         with:
           header: ${{ env.PR_LABEL }}
-          append: true
+          recreate: true
           message: |
-            PR #${{ github.event.number }} doc preview available at https://${{ env.CI_REPOSITORY_OWNER }}.github.io/${{ env.CI_REPOSITORY_NAME }}/${{ env.PR_LABEL }}/
+            PR #${{ github.event.number }} commit ${{ env.CI_SHA_SHORT }} doc preview available at https://${{ env.CI_REPOSITORY_OWNER }}.github.io/${{ env.CI_REPOSITORY_NAME }}/${{ env.PR_LABEL }}/
