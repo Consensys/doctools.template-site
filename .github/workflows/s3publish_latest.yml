@@ -17,13 +17,10 @@ jobs:
         with:
           fetch-depth: 0 # Required for mkdocs to be able to display pages last update info
 
-      - name: set environment vars from .env file
-        uses: c-py/action-dotenv-to-setenv@v2
+      - name: Build doc
+        uses: ./.github/actions/build
         with:
-          env-file: '.env'
-
-      - name: Build doc for [${{ env.LANGUAGE }}] ${{ env.LATEST_VERSION }}
-        uses: ConsenSys/doctools.action-builder@main
+          version: ${{ env.LATEST_VERSION }}
 
       - name: Publish to AWS
         uses: ./.github/actions/publish-aws

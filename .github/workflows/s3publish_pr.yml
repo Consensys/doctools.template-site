@@ -12,18 +12,15 @@ jobs:
     name: Build and publish PR preview
     runs-on: ubuntu-latest
     steps:
-      - name: 'checkout code from repos'
+      - name: checkout code from repos
         uses: actions/checkout@v2
         with:
           fetch-depth: 0 # Required for mkdocs to be able to display pages last update info
 
-      - name: 'set environment vars from .env file'
-        uses: c-py/action-dotenv-to-setenv@v2
+      - name: Build doc
+        uses: ./.github/actions/build
         with:
-          env-file: '.env'
-
-      - name: "Build doc for [${{ env.LANGUAGE }}] ${{ env.LATEST_VERSION }}"
-        uses: ConsenSys/doctools.action-builder@main
+          version: ${{ env.LATEST_VERSION }}
 
       - name: Deploy Preview
         uses: JamesIves/github-pages-deploy-action@4.1.5
