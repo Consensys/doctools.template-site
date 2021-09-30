@@ -11,7 +11,7 @@
 
 # More configuration for the site can be found in base.yml which is common to all our doc sites
 # But most of this site specific changes should only need changes here.
-INHERIT: ./base.yml
+INHERIT: ./common/custom_theme/base.yml
 
 # Project information
 site_name: Doctools

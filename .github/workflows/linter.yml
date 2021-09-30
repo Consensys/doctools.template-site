@@ -21,6 +21,7 @@ jobs:
           VALIDATE_ALL_CODEBASE: false
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          LINTER_RULES_PATH: /CI/lint/
+          LINTER_RULES_PATH: /common/config/lint/
           MARKDOWN_CONFIG_FILE: markdown.yml
           LOG_LEVEL: ERROR
+          FILTER_REGEX_EXCLUDE: /common

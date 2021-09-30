@@ -33,7 +33,7 @@ extra:
 
 theme:
   name: material
-  custom_dir: custom_theme
+  custom_dir: common/custom_theme
   language: !ENV [LANGUAGE, 'en']
   palette:
     - media: "(prefers-color-scheme: light)"

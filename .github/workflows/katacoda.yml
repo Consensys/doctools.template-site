@@ -11,8 +11,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Install Katacoda CLI
-        run: |
-          sudo npm i katacoda-cli --global
+        run: sudo npm i katacoda-cli --global
       - name: Validate Katacoda scenarios
-        run: |
-          find . -iname 'katacoda*' -type d -exec sh -c 'echo $1 | katacoda scenarios:validate' shell {} \;
+        run: find . -iname 'katacoda*' -type d -exec sh -c 'echo $1 | katacoda scenarios:validate' shell {} \;
