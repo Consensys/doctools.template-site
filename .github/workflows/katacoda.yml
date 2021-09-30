@@ -15,4 +15,4 @@ jobs:
           sudo npm i katacoda-cli --global
       - name: Validate Katacoda scenarios
         run: |
-          echo "${{ github.workspace }}/katacoda-preview-doc" | katacoda scenarios:validate
+          find . -iname 'katacoda*' -type d -exec sh -c 'echo $1 | katacoda scenarios:validate' shell {} \;
