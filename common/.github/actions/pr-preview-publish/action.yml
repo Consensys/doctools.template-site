@@ -38,5 +38,5 @@ runs:
         header: ${{ steps.vars.outputs.PR_VERSION }}
         recreate: true
         message: |
-          Doc preview available at https://${{ env.CI_REPOSITORY_OWNER }}.github.io/${{ env.CI_REPOSITORY_NAME }}/$${{ steps.vars.outputs.PR_VERSION }}/
+          Doc preview available at https://${{ env.CI_REPOSITORY_OWNER }}.github.io/${{ env.CI_REPOSITORY_NAME }}/${{ steps.vars.outputs.PR_VERSION }}/
           For PR #${{ github.event.number }} at commit ${{ env.CI_SHA_SHORT }}
