@@ -16,4 +16,4 @@ jobs:
           ref: gh-pages
 
       - name: Delete PR preview
-        uses: ./common/.github/actions/publish-pr-close
+        uses: ./common/.github/actions/pr_preview_delete

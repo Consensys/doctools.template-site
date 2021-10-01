@@ -11,7 +11,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Validate Katacoda
-        uses: ./common/.github/actions/katacoda
+        uses: ./common/.github/actions/tests/katacoda
 
   lint:
     name: Lint Code Base
@@ -22,7 +22,7 @@ jobs:
           # Full git history is needed to get a proper list of changed files within `super-linter`
           fetch-depth: 0
       - name: Lint code
-        uses: ./common/.github/actions/lint
+        uses: ./common/.github/actions/tests/lint
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -33,4 +33,4 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Links check
-        uses: ./common/.github/actions/links
+        uses: ./common/.github/actions/tests/links

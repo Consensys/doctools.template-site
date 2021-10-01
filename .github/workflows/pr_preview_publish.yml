@@ -15,4 +15,4 @@ jobs:
           fetch-depth: 0 # Required for mkdocs to be able to display pages last update info
 
       - name: Build and publish PR preview
-        uses: ./common/.github/actions/publish-pr-preview
+        uses: ./common/.github/actions/pr-preview-publish
