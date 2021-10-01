@@ -1,0 +1,51 @@
+---
+name: Test the doc
+
+on: [push, pull_request]
+
+jobs:
+  katacoda:
+    name: Validate Katacoda scenarios
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Install Katacoda CLI
+        run: sudo npm i katacoda-cli --global
+      - name: Validate Katacoda scenarios
+        run: find . -iname 'katacoda*' -type d -exec sh -c 'echo $1 | katacoda scenarios:validate' shell {} \;
+
+  lint:
+    name: Lint Code Base
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          # Full git history is needed to get a proper list of changed files within `super-linter`
+          fetch-depth: 0
+
+      - name: Lint Code Base
+        uses: github/super-linter/slim@v4
+        env:
+          VALIDATE_ALL_CODEBASE: false
+          DEFAULT_BRANCH: main
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          LINTER_RULES_PATH: /common/config/lint/
+          MARKDOWN_CONFIG_FILE: markdown.yml
+          LOG_LEVEL: ERROR
+          FILTER_REGEX_EXCLUDE: /common
+
+  links-check:
+    name: Check links
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Test links
+        uses: gaurav-nelson/github-action-markdown-link-check@v1
+        with:
+          use-quiet-mode: yes
+          use-verbose-mode: yes
+          check-modified-files-only: yes
+          base-branch: main
+          config-file: ./common/config/link-check.json
