@@ -20,7 +20,7 @@ runs:
     - name: Build doc
       uses: ./common/.github/actions/build
       with:
-        VERSION: ${{ env.LATEST_VERSION }}
+        SITE_URL: ${{ env.SITE_URL_BASE }}${{ env.LANGUAGE }}/${{ env.LATEST_VERSION }}/
 
     - name: Publish to AWS
       uses: ./common/.github/actions/publish-aws

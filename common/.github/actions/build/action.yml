@@ -2,13 +2,16 @@
 name: 'Build doc'
 description: 'Composite action to build doc site'
 inputs:
-  VERSION:
-    description: 'name for version to build'
+  SITE_URL:
+    description: 'url to be used as base-ref for all contents and links'
     required: true
-    default: latest
 
 runs:
   using: "composite"
   steps:
-    - name: Build doc for [${{ env.LANGUAGE }}] ${{ inputs.VERSION }}
+    - name: Set SITE_URL env vars
+      shell: sh
+      run: |
+        echo "SITE_URL=${{ inputs.SITE_URL }}" >> $GITHUB_ENV
+    - name: Build doc for ${{ env.SITE_URL }}
       uses: ConsenSys/doctools.action-builder@main

@@ -5,15 +5,15 @@ description: 'Composite action to delete PR preview'
 runs:
   using: "composite"
   steps:
-    - name: Define PR version
-      shell: sh
-      run: echo ::set-output name=PR_VERSION::"PR-${{ github.event.number }}"
-      id: vars
-
-    - name: Delete ${{ steps.vars.outputs.PR_VERSION }} preview
+    - name: Set additional env vars
       shell: sh
       run: |
-        rm -Rf "${{ steps.vars.outputs.PR_VERSION }}"
+        echo "PR_VERSION=PR-${{ github.event.number }}" >> $GITHUB_ENV
+
+    - name: Delete ${{ env.PR_VERSION }} preview
+      shell: sh
+      run: |
+        rm -Rf "${{ env.PR_VERSION }}"
 
     - name: Commit and push to gh-pages
       shell: sh
@@ -26,6 +26,6 @@ runs:
     - name: Remove comment to preview doc link
       uses: marocchino/sticky-pull-request-comment@v2
       with:
-        header: ${{ steps.vars.outputs.PR_VERSION }}
+        header: ${{ env.PR_VERSION }}
         delete: true
 

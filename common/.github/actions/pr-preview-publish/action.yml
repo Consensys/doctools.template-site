@@ -13,37 +13,30 @@ runs:
     - name: Get additional Github env vars
       uses: FranzDiebold/github-env-vars-action@v2
 
-    - name: Define PR version
-      shell: sh
-      run: echo ::set-output name=PR_VERSION::"PR-${{ github.event.number }}"
-      id: vars
-
-    - name: Set additional env vars
+    - name: Set PR_VERSION env vars
       shell: sh
       run: |
-        echo "SITE_URL=https://${{ env.CI_REPOSITORY_OWNER_SLUG }}.github.io/${{ env.CI_REPOSITORY_NAME }}/" >> $GITHUB_ENV
         echo "PR_VERSION=PR-${{ github.event.number }}" >> $GITHUB_ENV
-        echo "steps.vars.outputs.PR_VERSION: ${{ steps.vars.outputs.PR_VERSION }}"
 
     - name: Build doc
       uses: ./common/.github/actions/build
       with:
-        VERSION: ${{ steps.vars.outputs.PR_VERSION }}
+        SITE_URL: https://${{ env.CI_REPOSITORY_OWNER_SLUG }}.github.io/${{ env.CI_REPOSITORY_NAME }}/${{ env.PR_VERSION }}/
 
     - name: Deploy Preview
       uses: JamesIves/github-pages-deploy-action@4.1.5
       with:
         branch: gh-pages # The branch the action should deploy to.
         folder: site # The folder the action should deploy.
-        target-folder: ${{ steps.vars.outputs.PR_VERSION }}
-        commit-message: Preview for ${{ steps.vars.outputs.PR_VERSION }}
+        target-folder: ${{ env.PR_VERSION }}
+        commit-message: Preview for ${{ env.PR_VERSION }}
         single-commit: true
 
     - name: Add comment with link to preview doc
       uses: marocchino/sticky-pull-request-comment@v2
       with:
-        header: ${{ steps.vars.outputs.PR_VERSION }}
+        header: ${{ env.PR_VERSION }}
         recreate: true
         message: |
-          Doc preview available at https://${{ env.CI_REPOSITORY_OWNER }}.github.io/${{ env.CI_REPOSITORY_NAME }}/${{ steps.vars.outputs.PR_VERSION }}/
+          Doc preview available at https://${{ env.CI_REPOSITORY_OWNER }}.github.io/${{ env.CI_REPOSITORY_NAME }}/${{ env.PR_VERSION }}/
           For PR #${{ github.event.number }} at commit ${{ env.CI_SHA_SHORT }}
