@@ -1,5 +1,5 @@
 ---
-name: Publish stable and tag on AWS S3 bucket
+name: Publish release doc site
 
 on:
   release:

@@ -1,5 +1,5 @@
 ---
-name: Publish latest on AWS S3 bucket
+name: Publish latest doc site
 
 # Controls when the action will run.
 on:

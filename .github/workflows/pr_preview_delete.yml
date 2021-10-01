@@ -1,5 +1,5 @@
 ---
-name: Remove PR Preview from GH Pages
+name: Delete PR preview
 
 on:
   pull_request_target:
