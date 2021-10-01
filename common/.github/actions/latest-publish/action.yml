@@ -21,6 +21,7 @@ runs:
       uses: ./common/.github/actions/build
       with:
         SITE_URL: ${{ env.SITE_URL_BASE }}${{ env.LANGUAGE }}/${{ env.LATEST_VERSION }}/
+        VERSION: ${{ env.LATEST_VERSION }}
 
     - name: Publish to AWS
       uses: ./common/.github/actions/publish-aws
