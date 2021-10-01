@@ -38,6 +38,7 @@ extra:
     en: English (en)
     zh: 中文 (zh)
   version: !ENV [VERSION ,'latest']
+  # TODO Add a version file path here to be used in version JS
   announce: !ENV [ANNOUNCE ,'']
   social:
     - icon: fontawesome/brands/discord
