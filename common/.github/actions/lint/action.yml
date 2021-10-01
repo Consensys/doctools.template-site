@@ -1,0 +1,22 @@
+---
+name: 'lint all code'
+description: 'Composite action to lint all kind of files in doc'
+
+inputs:
+  GITHUB_TOKEN:
+    description: 'Github secret Token'
+    required: true
+
+runs:
+  using: "composite"
+  steps:
+    - name: Lint Code Base
+      uses: github/super-linter/slim@v4
+      env:
+        VALIDATE_ALL_CODEBASE: "false"
+        DEFAULT_BRANCH: main
+        GITHUB_TOKEN: ${{ inputs.GITHUB_TOKEN }}
+        LINTER_RULES_PATH: /common/config/lint/
+        MARKDOWN_CONFIG_FILE: markdown.yml
+        LOG_LEVEL: ERROR
+        FILTER_REGEX_EXCLUDE: /common

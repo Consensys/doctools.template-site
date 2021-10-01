@@ -1,0 +1,14 @@
+---
+name: 'validate Katacode scripts'
+description: 'Composite action to validate Katacoda playground scripts syntax'
+
+runs:
+  using: "composite"
+  steps:
+    - name: Install Katacoda CLI
+      shell: sh
+      run: sudo npm i katacoda-cli --global
+
+    - name: Validate Katacoda scenarios
+      shell: sh
+      run: katacoda validate:all --repo ${{ github.workspace }}
