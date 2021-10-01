@@ -15,5 +15,10 @@ jobs:
         with:
           ref: gh-pages
 
+      - name: Checkout actions
+        uses: actions/checkout@v2
+        with:
+          path: actions
+
       - name: Delete PR preview
-        uses: ./common/.github/actions/pr_preview_delete
+        uses: ./actions/common/.github/actions/pr_preview_delete
