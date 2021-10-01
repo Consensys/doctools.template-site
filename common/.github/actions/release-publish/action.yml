@@ -26,15 +26,16 @@ runs:
       uses: ./common/.github/actions/build
       with:
         SITE_URL: ${{ env.SITE_URL_BASE }}${{ env.LANGUAGE }}/${{ env.TAG }}/
+        VERSION: ${{ env.TAG }}
 
-    - name: Publish ${{ env.STABLE_VERSION }} to AWS
+    - name: Publish stable version to AWS
       uses: ./common/.github/actions/publish-aws
       with:
         VERSION: ${{ env.STABLE_VERSION }}
         AWS_ACCESS_KEY_ID: ${{ inputs.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ inputs.AWS_SECRET_ACCESS_KEY }}
 
-    - name: Publish ${{ env.TAG }} to AWS
+    - name: Publish tag version to AWS
       uses: ./common/.github/actions/publish-aws
       with:
         VERSION: ${{ env.TAG }}
