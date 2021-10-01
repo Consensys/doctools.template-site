@@ -26,6 +26,7 @@ runs:
       uses: ./common/.github/actions/build
       with:
         SITE_URL: ${{ env.SITE_URL_BASE }}${{ env.LANGUAGE }}/${{ env.TAG }}/
+        VERSION: ${{ env.TAG }}
 
     - name: Publish stable version to AWS
       uses: ./common/.github/actions/publish-aws

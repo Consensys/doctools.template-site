@@ -5,6 +5,10 @@ inputs:
   SITE_URL:
     description: 'url to be used as base-ref for all contents and links'
     required: true
+  VERSION:
+    description: 'doc version'
+    required: true
+    default: latest
 
 runs:
   using: "composite"
@@ -13,5 +17,6 @@ runs:
       shell: sh
       run: |
         echo "SITE_URL=${{ inputs.SITE_URL }}" >> $GITHUB_ENV
+        echo "VERSION=${{ inputs.VERSION }}" >> $GITHUB_ENV
     - name: Build doc site
       uses: ConsenSys/doctools.action-builder@main
