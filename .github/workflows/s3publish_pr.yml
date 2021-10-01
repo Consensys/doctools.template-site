@@ -4,9 +4,6 @@ name: Publish PR on GH Pages
 # Controls when the action will run.
 on: [ pull_request_target ]
 
-env:
-  PR_LABEL: PR-${{ github.event.number }}
-
 jobs:
   deploy:
     name: Build and publish PR preview
@@ -17,27 +14,5 @@ jobs:
         with:
           fetch-depth: 0 # Required for mkdocs to be able to display pages last update info
 
-      - name: Build doc
-        uses: ./common/.github/actions/build
-        with:
-          version: ${{ env.LATEST_VERSION }}
-
-      - name: Deploy Preview
-        uses: JamesIves/github-pages-deploy-action@4.1.5
-        with:
-          branch: gh-pages # The branch the action should deploy to.
-          folder: site # The folder the action should deploy.
-          target-folder: ${{ env.PR_LABEL }}
-          commit-message: Preview for ${{ env.PR_LABEL }}
-          single-commit: true
-
-      - uses: FranzDiebold/github-env-vars-action@v2
-
-      - name: Add comment to preview doc link
-        uses: marocchino/sticky-pull-request-comment@v2
-        with:
-          header: ${{ env.PR_LABEL }}
-          recreate: true
-          message: |
-            Doc preview available at https://${{ env.CI_REPOSITORY_OWNER }}.github.io/${{ env.CI_REPOSITORY_NAME }}/${{ env.PR_LABEL }}/
-            For PR #${{ github.event.number }} at commit ${{ env.CI_SHA_SHORT }}
+      - name: Build and publish PR preview
+        uses: ./common/.github/actions/publish-pr-preview

@@ -1,18 +1,14 @@
+---
 name: 'Build doc'
 description: 'Composite action to build doc site'
 inputs:
   VERSION:
     description: 'name for version to build'
     required: true
-    default: 'latest'
+    default: latest
 
 runs:
   using: "composite"
   steps:
-    - name: set environment vars from .env file
-      uses: c-py/action-dotenv-to-setenv@v2
-      with:
-        env-file: '.env'
-
     - name: Build doc for [${{ env.LANGUAGE }}] ${{ inputs.VERSION }}
       uses: ConsenSys/doctools.action-builder@main

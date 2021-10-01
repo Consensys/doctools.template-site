@@ -1,0 +1,30 @@
+---
+name: 'Build and publish latest doc'
+description: 'Composite action to build and publish latest doc site'
+inputs:
+  AWS_ACCESS_KEY_ID:
+    description: 'AWS secrets id'
+    required: true
+  AWS_SECRET_ACCESS_KEY:
+    description: 'AWS secrets key'
+    required: true
+
+runs:
+  using: "composite"
+  steps:
+    - name: set environment vars from .env file
+      uses: c-py/action-dotenv-to-setenv@v2
+      with:
+        env-file: '.env'
+
+    - name: Build doc
+      uses: ./common/.github/actions/build
+      with:
+        VERSION: ${{ env.LATEST_VERSION }}
+
+    - name: Publish to AWS
+      uses: ./common/.github/actions/publish-aws
+      with:
+        VERSION: ${{ env.LATEST_VERSION }}
+        AWS_ACCESS_KEY_ID: ${{ inputs.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ inputs.AWS_SECRET_ACCESS_KEY }}

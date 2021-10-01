@@ -5,9 +5,6 @@ on:
   pull_request_target:
     types: [closed]
 
-env:
-  PR_LABEL: PR-${{ github.event.number }}
-
 jobs:
   deploy:
     name: Remove PR preview from pages
@@ -18,19 +15,5 @@ jobs:
         with:
           ref: gh-pages
 
-      - name: Delete ${{ env.PR_LABEL }} preview
-        run: |
-          rm -Rf "${{ env.PR_LABEL }}"
-
-      - name: Commit and push to gh-pages
-        run: |
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git commit -am "Automated deletion"
-          git push
-
-      - name: Remove comment to preview doc link
-        uses: marocchino/sticky-pull-request-comment@v2
-        with:
-          header: ${{ env.PR_LABEL }}
-          delete: true
+      - name: Delete PR preview
+        uses: ./common/.github/actions/publish-pr-close
