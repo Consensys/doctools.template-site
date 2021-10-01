@@ -18,13 +18,13 @@ runs:
         env-file: '.env'
 
     - name: Isolate TAG
-      run: echo "${GITHUB_REF#refs/*/}" > TAG
       shell: sh
+      run: echo ::set-output name=TAG::"${GITHUB_REF#refs/*/}"
 
     - name: Build doc
       uses: ./common/.github/actions/build
       with:
-        VERSION: ${{ env.TAG }}
+        VERSION: ${{ steps.vars.outputs.TAG }}
 
     - name: Publish ${{ env.STABLE_VERSION }} to AWS
       uses: ./common/.github/actions/publish-aws
@@ -33,9 +33,9 @@ runs:
         AWS_ACCESS_KEY_ID: ${{ inputs.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ inputs.AWS_SECRET_ACCESS_KEY }}
 
-    - name: Publish ${{ env.TAG }} to AWS
+    - name: Publish ${{ steps.vars.outputs.TAG }} to AWS
       uses: ./common/.github/actions/publish-aws
       with:
-        VERSION: ${{ env.TAG }}
+        VERSION: ${{ steps.vars.outputs.TAG }}
         AWS_ACCESS_KEY_ID: ${{ inputs.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ inputs.AWS_SECRET_ACCESS_KEY }}
