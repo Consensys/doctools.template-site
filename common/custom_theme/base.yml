@@ -10,19 +10,27 @@
 # specific language governing permissions and limitations under the License.
 
 # Project information
-site_url: !ENV [SITE_URL, 'http://127.0.0.1:8000/']
-site_author: ConsenSys
-copyright: This documentation is licensed under Apache 2.0 license
+site_name: !ENV [SITE_NAME, 'Doctools']
+site_description: !ENV [SITE_DESCRIPTION, 'Doctools documentation template']
+
+# Software Repository
+repo_name: !ENV [REPOS_NAME, 'Consensys/doctools.template-site']
+repo_url: !ENV [REPOS_URL, 'https://github.com/Consensys/doctools.template-site']
+
+# Project information
+site_url: !ENV [SITE_URL, 'http://0.0.0.0:8000/']
+site_author: !ENV [COMPANY ,'ConsenSys']
+copyright: !ENV [COPYRIGHT ,'This documentation is licensed under Apache 2.0 license']
 
 extra:
-  logo_is_text: false
+  logo_is_text: !ENV [LOGO_IS_TEXT ,false]
   latest_version_warning:
     url_contains: /latest/
-    text: 'You are reading the development version of the documentation and
+    text: 'You are reading the development version of this documentation and
     some displayed features may not be available in the stable release.
     You can switch to stable version using the switch in the header.'
   support:
-    company: Consensys
+    company: !ENV [COMPANY ,'ConsenSys']
   analytics:
     provider: gtm
     gtmid: !ENV GTM_ID
@@ -30,7 +38,14 @@ extra:
     en: English (en)
     zh: 中文 (zh)
   version: !ENV [VERSION ,'latest']
-
+  announce: !ENV [ANNOUNCE ,'']
+  social:
+    - icon: fontawesome/brands/discord
+      link: !ENV [SOCIAL_DISCORD ,'https://discord.gg/5U9Jwp7']
+    - icon: fontawesome/solid/envelope
+      link: !ENV [SOCIAL_EMAIL ,'mailto:quorum@consensys.net']
+    - icon: material/web
+      link: !ENV [SOCIAL_WEB ,'https://consensys.net/quorum/developers']
 theme:
   name: material
   custom_dir: common/custom_theme
