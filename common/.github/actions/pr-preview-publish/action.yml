@@ -32,7 +32,7 @@ runs:
     - name: Get additional Github env vars
       uses: FranzDiebold/github-env-vars-action@v2
 
-    - name: Add comment to preview doc link
+    - name: Add comment with link to preview doc
       uses: marocchino/sticky-pull-request-comment@v2
       with:
         header: ${{ steps.vars.outputs.PR_VERSION }}
