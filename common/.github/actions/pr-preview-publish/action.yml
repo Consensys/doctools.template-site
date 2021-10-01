@@ -11,21 +11,22 @@ runs:
         env-file: '.env'
 
     - name: Define PR version
-      run: echo "PR-${{ github.event.number }}" > PR_VERSION
       shell: sh
+      run: echo ::set-output name=PR_VERSION::"PR-${{ github.event.number }}"
+      id: vars
 
     - name: Build doc
       uses: ./common/.github/actions/build
       with:
-        VERSION: ${{ env.PR_VERSION }}
+        VERSION: ${{ steps.vars.outputs.PR_VERSION }}
 
     - name: Deploy Preview
       uses: JamesIves/github-pages-deploy-action@4.1.5
       with:
         branch: gh-pages # The branch the action should deploy to.
         folder: site # The folder the action should deploy.
-        target-folder: ${{ env.PR_VERSION }}
-        commit-message: Preview for ${{ env.PR_VERSION }}
+        target-folder: ${{ steps.vars.outputs.PR_VERSION }}
+        commit-message: Preview for ${{ steps.vars.outputs.PR_VERSION }}
         single-commit: true
 
     - name: Get additional Github env vars
@@ -34,8 +35,8 @@ runs:
     - name: Add comment to preview doc link
       uses: marocchino/sticky-pull-request-comment@v2
       with:
-        header: ${{ env.PR_VERSION }}
+        header: ${{ steps.vars.outputs.PR_VERSION }}
         recreate: true
         message: |
-          Doc preview available at https://${{ env.CI_REPOSITORY_OWNER }}.github.io/${{ env.CI_REPOSITORY_NAME }}/${{ env.PR_VERSION }}/
+          Doc preview available at https://${{ env.CI_REPOSITORY_OWNER }}.github.io/${{ env.CI_REPOSITORY_NAME }}/$${{ steps.vars.outputs.PR_VERSION }}/
           For PR #${{ github.event.number }} at commit ${{ env.CI_SHA_SHORT }}
