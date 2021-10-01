@@ -19,6 +19,7 @@ runs:
       id: vars
 
     - name: Set additional env vars
+      shell: sh
       run: |
         echo "SITE_URL=https://${{ env.CI_REPOSITORY_OWNER_SLUG }}.github.io/${{ env.CI_REPOSITORY_NAME }}/" >> $GITHUB_ENV
         echo "PR_VERSION=PR-${{ github.event.number }}" >> $GITHUB_ENV
