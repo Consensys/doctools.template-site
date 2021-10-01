@@ -17,6 +17,13 @@ runs:
       with:
         env-file: '.env'
 
+    # TODO remove this is debug
+    - name: Set SITE_URL env vars
+      shell: sh
+      run: |
+        echo "SITE_URL_BASE=http://docshosting.s3-website.us-east-2.amazonaws.com/doctools/" >> $GITHUB_ENV
+        echo "VERSION=0.0.1" >> $GITHUB_ENV
+
     - name: Build doc
       uses: ./common/.github/actions/build
       with:

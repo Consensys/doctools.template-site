@@ -1,5 +1,6 @@
 {% if config.extra.version and config.theme.language %}
   <script>
+    // TODO Has to be targeting the root /docs/
     const site_version_json = '{{config.site_url + "versions.json" }}'
     const site_current_language = '{{config.theme.language}}';
     const site_current_version = '{{config.extra.version}}';
