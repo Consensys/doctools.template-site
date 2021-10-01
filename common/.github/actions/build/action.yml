@@ -13,5 +13,5 @@ runs:
       shell: sh
       run: |
         echo "SITE_URL=${{ inputs.SITE_URL }}" >> $GITHUB_ENV
-    - name: Build doc for ${{ env.SITE_URL }}
+    - name: Build doc site
       uses: ConsenSys/doctools.action-builder@main

@@ -10,7 +10,7 @@ runs:
       run: |
         echo "PR_VERSION=PR-${{ github.event.number }}" >> $GITHUB_ENV
 
-    - name: Delete ${{ env.PR_VERSION }} preview
+    - name: Delete preview
       shell: sh
       run: |
         rm -Rf "${{ env.PR_VERSION }}"
