@@ -21,6 +21,12 @@ runs:
       shell: sh
       run: echo ::set-output name=TAG::"${GITHUB_REF#refs/*/}"
 
+    - name: DEBUG
+      run: |
+        echo "${GITHUB_REF}"
+        echo "${GITHUB_REF#refs/*/}"
+      shell: sh
+
     - name: Build doc
       uses: ./common/.github/actions/build
       with:

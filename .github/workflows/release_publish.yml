@@ -17,8 +17,8 @@ jobs:
         with:
           fetch-depth: 0 # Required for mkdocs to be able to display pages last update info
 
-      - name: Publish stable version to AWS
-        uses: ./common/.github/actions/publish-stable
+      - name: Publish release version to AWS
+        uses: ./common/.github/actions/publish-release
         with:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
