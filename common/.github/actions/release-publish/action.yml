@@ -20,11 +20,13 @@ runs:
     - name: Isolate TAG
       shell: sh
       run: echo ::set-output name=TAG::"${GITHUB_REF#refs/*/}"
+      id: vars
 
     - name: DEBUG
       run: |
         echo "${GITHUB_REF}"
         echo "${GITHUB_REF#refs/*/}"
+        echo "${{ steps.vars.outputs.TAG }}"
       shell: sh
 
     - name: Build doc
