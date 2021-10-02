@@ -18,7 +18,8 @@ jobs:
           fetch-depth: 0 # Required for mkdocs to be able to display pages last update info
 
       - name: Publish latest version to AWS
-        uses: ./common/.github/actions/latest-publish
+        uses: ConsenSys/doctools.action-builder/actions/latest-publish@main
         with:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          SITE_URL_BASE: ${{ secrets.SITE_URL_BASE }}

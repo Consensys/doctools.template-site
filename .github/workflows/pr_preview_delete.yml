@@ -21,4 +21,4 @@ jobs:
           path: actions
 
       - name: Delete PR preview
-        uses: ./actions/common/.github/actions/pr_preview_delete
+        uses: ConsenSys/doctools.action-builder/actions/pr_preview_delete@main

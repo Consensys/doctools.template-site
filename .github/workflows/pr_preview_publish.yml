@@ -14,5 +14,10 @@ jobs:
         with:
           fetch-depth: 0 # Required for mkdocs to be able to display pages last update info
 
+      - uses: actions/checkout@v2
+        with:
+          repository: ConsenSys/doctools.action-builder
+          path: doctools
+
       - name: Build and publish PR preview
-        uses: ./common/.github/actions/pr-preview-publish
+        uses: ConsenSys/doctools.action-builder/actions/pr-preview-publish@main
