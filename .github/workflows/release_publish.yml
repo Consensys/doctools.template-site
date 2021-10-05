@@ -17,11 +17,6 @@ jobs:
         with:
           fetch-depth: 0 # Required for mkdocs to be able to display pages last update info
 
-      - uses: actions/checkout@v2
-        with:
-          repository: ConsenSys/doctools.action-builder
-          path: doctools
-
       - name: Publish release version to AWS
         uses: ConsenSys/doctools.action-builder/actions/release-publish@main
         with:

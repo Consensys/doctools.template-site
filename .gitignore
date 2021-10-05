@@ -3,8 +3,8 @@ site/
 env/
 *.out
 node_modules/
-.circleci/process.yml
 .DS_Store
 **/.DS_Store
 *.iml
 common/
+.doctools.action-builder
