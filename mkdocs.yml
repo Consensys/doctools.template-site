@@ -11,6 +11,7 @@
 # specific language governing permissions and limitations under the License.
 
 # This configuration must inherit the base configuration file available in the Doctools docker image.
+# See source at https://github.com/ConsenSys/doctools.action-builder/blob/main/common/custom_theme/base.yml
 # Do not modify this INHERIT line.
 INHERIT: /common/custom_theme/base.yml
 
