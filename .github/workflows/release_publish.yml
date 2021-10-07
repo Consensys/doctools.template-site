@@ -10,7 +10,9 @@ jobs:
   deploy:
     name: Build and publish released site
     runs-on: ubuntu-latest
-    if: github.event.repository.fork == false
+    # secrets are not usable from outside ConsenSys org
+    # The workflow will then be disabled for non ConsenSys repositories to prevent useless failure.
+    if: github.event.repository.fork == false && github.repository_owner == 'ConsenSys'
     steps:
       - name: checkout code from repos
         uses: actions/checkout@v2
