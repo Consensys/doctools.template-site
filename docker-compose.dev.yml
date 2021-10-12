@@ -7,7 +7,7 @@ services:
       - "0.0.0.0:8000:8000"
     image: ghcr.io/consensys/doctools-builder:latest
     working_dir: /workspace/
-    env_file: .env
+    env_file: .env.dev
     volumes:
       - type: bind
         source: .
