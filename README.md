@@ -8,10 +8,8 @@ Consensys Doctools is a suite of tools to help build enterprise grade documentat
 
 This template doc site project can be used to generate new sites.
 
-[Rendered template site] preview available.
-
-Please refer to the [Consensys Doctools wiki] for explanation about
+Please refer to the [Consensys Doctools website] for explanation about
 how to use this tool and contribute to the documentation.
 
 [Consensys Doctools wiki]: https://github.com/Consensys/doctools.template-site/wiki
-[Rendered template site]: https://consensys.net/docs/doctools/en/latest/
+[Consensys Doctools website]: https://consensys.net/docs/doctools/en/latest/
