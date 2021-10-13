@@ -13,5 +13,5 @@ services:
         source: .
         target: /workspace
       - type: bind
-        source: ../doctool-action-builder/common
+        source: ../doctool.action-builder/common
         target: /common
