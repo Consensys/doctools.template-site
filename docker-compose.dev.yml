@@ -5,7 +5,7 @@ services:
     container_name: mkdocs-serve-dev
     ports:
       - "0.0.0.0:8000:8000"
-    image: ghcr.io/consensys/doctools-builder:latest
+    image: ghcr.io/consensys/doctools-builder:${DOCTOOLS_IMAGE_VERSION:-latest}
     working_dir: /workspace/
     env_file: .env.dev
     volumes:
@@ -13,5 +13,5 @@ services:
         source: .
         target: /workspace
       - type: bind
-        source: ../doctool.action-builder/common
+        source: ../doctools.action-builder/common
         target: /common
