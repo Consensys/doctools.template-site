@@ -20,6 +20,6 @@ extra:
   # If announce is removed or commented, the banner will be hidden
   announce: 'Improved version of the Consensys doc system, read about the new features!'
   # If languages are removed, commented or only contain one language, the language switch will be hidden
-  languages:
-    en: English (en)
-    zh: 中文 (zh)
+#  languages:
+#    en: English (en)
+#    zh: 中文 (zh)
