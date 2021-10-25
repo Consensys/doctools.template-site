@@ -13,7 +13,7 @@
 # This configuration must inherit the base configuration file available in the Doctools docker image.
 # See source at https://github.com/ConsenSys/doctools.action-builder/blob/main/common/custom_theme/base.yml
 # Do not modify this INHERIT line.
-INHERIT: /common/custom_theme/base.yml
+INHERIT: mkdocs.exclude.yml
 
 extra:
   # Announce can contain HTML but limit it to small images or links. NO BIG DIRTY HACKS PLEASE.

@@ -13,26 +13,10 @@
 # This configuration must inherit the base configuration file available in the Doctools docker image.
 # See source at https://github.com/ConsenSys/doctools.action-builder/blob/main/common/custom_theme/base.yml
 # Do not modify this INHERIT line.
-INHERIT: mkdocs.redirects.yml
+INHERIT: /common/custom_theme/base.yml
 
-nav:
-  - Overview: index.md
-  - New features: changelog.md
-  - Getting started: getting_started.md
-  - How To:
-      - howto/index.md
-      - Create a new doc site: howto/setup_new_doc_repos.md
-      - Configure MkDocs: howto/configure_mkdocs.md
-      - Preview the doc site:
-        - howto/preview_the_doc_site/index.md
-        - Doc preview demo: howto/preview_the_doc_site/demo.md
-      - Publish the doc site: howto/publish_the_doc_site.md
-      - Advanced use:
-        - Contribute to Doctools: howto/advanced/contributing.md
-  - Examples:
-    - examples/index.md
-    - CLI reference: examples/write_cli_reference.md
-    - API reference: examples/write_rest_api_reference.md
-    - Support page: examples/support.md
-  - Reference:
-      - MarkDown syntax: reference/markdown.md
+plugins:
+  exclude:
+      glob:
+        - examples/excluded_file.md
+#        - examples/*

@@ -88,28 +88,31 @@ hide:
   - toc
 ```
 
-### Include
+### Include and exclude
+
+#### Include a file in another one
 
 If you have content to be repeated on multiple pages, you can create it in a common page in and include
 it in all required pages.
 
 Example:
-To include the content of the "test_accounts.md" page in the "/docs/global" directory in another page, use:
+To include the content of the `examples/excluded_file.txt` in another page, use:
 
-```markdown
-{% raw %}
-{!global/test_accounts.md!}
-{% endraw %}
-```
+=== "Result"
+    {!examples/excluded_file.md!}
 
-!!!important
-    An [exclude plugin](https://github.com/apenwarr/mkdocs-exclude) is installed
-    (see `mkdocs.yml` file for the config of exclusions).
-    It excludes pages from the final rendered site as otherwise every .md file is rendered and copied.
-    Pages will still be in the source repository but they won't be copied in the final site and won't
-    appear in the search results even if you did not link them from the navigation. It's handy to
-    prevent include files to be reachable as standalone pages as they are intended to be included in
-    other pages.
+=== "Syntax"
+    ![Syntax](include.png){: width="300em"}
+
+#### Exclude a file
+
+An [exclude plugin](https://github.com/apenwarr/mkdocs-exclude) is installed
+(see `mkdocs.exclude.yml` file for the config of exclusions).
+It excludes pages from the final rendered site as otherwise every .md file is rendered and copied.
+Pages will still be in the source repository but they won't be copied in the final site and won't
+appear in the search results even if you did not link them from the navigation. It's handy to
+prevent include files to be reachable as standalone pages as they are intended to be included in
+other pages.
 
 ### Admonition
 
