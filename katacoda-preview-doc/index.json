@@ -14,8 +14,12 @@
         "text": "step2.md"
       },
       {
-        "title": "Step 3 - Build the doc",
+        "title": "Step 3 - Preview the doc",
         "text": "step3.md"
+      },
+      {
+        "title": "Step 4 - Stop the preview",
+        "text": "step4.md"
       }
     ],
     "intro": {
@@ -26,7 +30,7 @@
     }
   },
   "environment": {
-    "uilayout": "editor-terminal"
+    "uilayout": "terminal"
   },
   "backend": {
     "imageid": "ubuntu:1804"

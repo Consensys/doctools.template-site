@@ -1,6 +1,3 @@
+You can move to something else, this demo environment will be deleted automatically
 
-Thanks for your help by contributing to the documentation.
-
-You will find more about the writing guidelines and the review processes on our wiki.
-
-Do no hesitate to join our Discord server to ask questions!
+You will find more about how to write content for this doc system on this site.

@@ -8,3 +8,5 @@ node_modules/
 *.iml
 common/
 .doctools.action-builder
+docker-compose.dev.yml
+.env.dev

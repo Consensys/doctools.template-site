@@ -1,4 +1,4 @@
-Now you have ot pull the ConsenSys Doctools Docker image.
+Now you have ot pull the latest ConsenSys Doctools Docker image.
 
 ## Task
 

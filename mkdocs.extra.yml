@@ -13,25 +13,13 @@
 # This configuration must inherit the base configuration file available in the Doctools docker image.
 # See source at https://github.com/ConsenSys/doctools.action-builder/blob/main/common/custom_theme/base.yml
 # Do not modify this INHERIT line.
-INHERIT: mkdocs.redirects.yml
+INHERIT: /common/custom_theme/base.yml
 
-nav:
-  - Overview: index.md
-  - New features: changelog.md
-  - Getting started: getting_started.md
-  - How To:
-      - howto/index.md
-      - Create a new doc site: howto/setup_new_doc_repos.md
-      - Configure MkDocs: howto/configure_mkdocs.md
-      - Preview the doc site:
-        - howto/preview_the_doc_site/index.md
-        - Doc preview demo: howto/preview_the_doc_site/demo.md
-      - Advanced use:
-        - Contribute to Doctools: howto/advanced/contributing.md
-  - Examples:
-    - examples/index.md
-    - CLI reference: examples/write_cli_reference.md
-    - API reference: examples/write_rest_api_reference.md
-    - Support page: examples/support.md
-  - Reference:
-      - MarkDown syntax: reference/markdown.md
+extra:
+  # Announce can contain HTML but limit it to small images or links. NO BIG DIRTY HACKS PLEASE.
+  # If announce is removed or commented, the banner will be hidden
+  announce: 'Improved version of the Consensys doc system, read about the new features!'
+  # If languages are removed, commented or only contain one language, the language switch will be hidden
+  languages:
+    en: English (en)
+    zh: 中文 (zh)
