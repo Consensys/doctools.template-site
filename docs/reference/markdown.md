@@ -3,91 +3,26 @@ title: MkDocs And Custom Markdown Guide
 description: How to write MarkDown for the Doctools system
 ---
 
+# MkDocs And Custom Markdown Guide
+
 ConsenSys documentation is written using [Markdown](https://daringfireball.net/projects/markdown/) syntax.
 
 However, we use two flavours of this syntax:
 
-* One for pages inside the [/docs] directory that will be rendered by [MkDocs] as described below
+* One for pages inside the `/docs` directory that will be rendered by [MkDocs] as described below
   in the [Installed Markdown Extensions](#installed-markdown-extensions) section.
 * Another using the [Github syntax](https://guides.github.com/features/mastering-markdown/)
-  for pages outside of this documentation directory. These are mainly files to support our
-  [open source community](https://github.com/PegaSysEng/doc.ethsigner/community).
-
-## Table of content of this page
-
-- [Documentation Website](#documentation-website)
-  - [/docs Directory](#-docs-directory)
-  - [MkDocs Configuration](#mkdocs-configuration)
-  - [Preview The Documentation](#preview-the-documentation)
-- [Formatting Markdown For Doc Site](#formatting-markdown-for-doc-site)
-- [Installed Markdown Extensions](#installed-markdown-extensions)
-  - [TOC](#toc)
-  - [Include](#include)
-  - [Admonition](#admonition)
-  - [Footnotes](#footnotes)
-  - [Definitions List](#definitions-list)
-  - [Extra data variables](#extra-data-variables)
-  - [Abbreviations](#abbreviations)
-  - [Math](#math)
-  - [Plant UML](#plant-uml)
-  - [Better Emphasis](#better-emphasis)
-  - [Keyboard Shortcuts](#keyboard-shortcuts)
-  - [Folding Details Blocks](#folding-details-blocks)
-  - [Emojis](#emojis)
-  - [Magic Links](#magic-links)
-  - [Highlight Content](#highlight-content)
-  - [Strike Through](#strike-through)
-  - [Symbols](#symbols)
-  - [Task lists](#task-lists)
-  - [Code Samples And Examples With SuperFences](#code-samples-and-examples-with--superfences-)
-    - [Format The Code](#format-the-code)
-    - [Including Code in the Documentation](#including-code-in-the-documentation)
-    - [Tabbed Code Blocks](#tabbed-code-blocks)
-    - [Line Numbers On Long Code Samples](#line-numbers-on-long-code-samples)
-    - [Code Syntax Highlight](#code-syntax-highlight)
-
+  for content outside of this `/docs` directory. These are mainly files to support our
+  open source community like `README.md`.
 
 ## Documentation Website
-
-ConsenSys documentation websites are maintained by ConsenSys from
-the content of the [/docs] directory of each doc repository.
 
 ### /docs Directory
 
 The [/docs] directory in the ConsenSys doc repository contains all the documentation that
-is generated into a static HTML website using [MkDocs] and the [Mkdocs Material] theme and hosted by [readthedocs.com].
+is generated into a static HTML website using [MkDocs] and the [Mkdocs Material].
 
-The documentation is automatically updated using [WebHooks](https://docs.readthedocs.io/en/stable/webhooks.html)
-linking GitHub to the readthedocs sites when you merge a pull-request in the master branch of the Pegasys doc repos.
-
-The system also detects tags in the Github repository and takes care of making the latest stable release
-and previous versions available.
-
-If any issues occur, contact the maintainers of the documentation project.
-
-### MkDocs Configuration
-
-[MkDocs] is a Python tool that generates the static HTML website that is published.
-
-Our [MkDocs] setup uses a [Mkdocs Material] theme to render the html pages. It also comes with a number of useful extensions.
-
-[MkDocs] in configured in the [mdkocs.yml](./mkdocs.yml) file.
-
-This file configures:
-
-* Site meta data and variables
-* Theme configuration
-* Page navigation
-* Extensions
-* Plugins
-* Page redirects
-
-**If you add pages to the documentation** (rather than updating existing pages), update the "nav" section
-to add your page and specify the page name.
-
-**If you move an existing page to another location or rename it**, the public path will change. Create a redirection in the configuration file (see instructions after the `redirects` plugin section at the end of the mkdocs.yml file).
-
-## Formatting Markdown For Doc Site
+## Formatting Markdown for doc site
 
 Final documentation rendering is essential, but the format of the Markdown files is also important.
 
@@ -97,19 +32,21 @@ A few basic rules:
 
 * Each file must contain a header composed of [meta-data](https://squidfunk.github.io/mkdocs-material/extensions/metadata/)
   and limited by 3 dashes `---`.
-  Ex:
 
-  ```markdown
-    ---
-    title: Installation overview
-    description: Overview and requirements to install the software
-    ---
-  ```
+
+!!! example
+
+    ```markdown
+      ---
+      title: Installation overview
+      description: Overview and requirements to install the software
+      ---
+    ```
 
 * [As for other code](https://google.github.io/styleguide/javaguide.html#s4.4-column-limit),
   each line of Markdown code should (not an error but just a warning) be limited to 100 columns long to be readable on any editor.
   Lines have to be wrapped without cutting the line in the middle of a word. A line break displays as a space.
-* No HTML markup can be used inside a Markdown document.
+* No HTML markup MUST be used inside a Markdown document.
   We provide [a lot of extensions](#installed-markdown-extensions) that are able to do the same thing
   without HTML. If you think one is missing, just discuss it with the team on [Discord] and we'll
   decide together if it's worth adding an extension.
@@ -120,7 +57,7 @@ A few basic rules:
 * Code blocks require the language type.
 * Code examples can be copied and pasted and work directly without modifying it.
 
-## Installed Markdown Extensions
+## Installed Markdown extensions
 
 >**Important**
 > Extensions are only available for the docs under [/docs] directory.
@@ -143,6 +80,14 @@ It displays titles to the third level (`###`). After the third level, titles won
 This extension also displays a link on the right of any title called "permalink".
 This link can be used to point directly to the title from another website.
 
+Toc and navigation can also be hidden using the following meta in the page header
+
+```yml
+hide:
+  - navigation
+  - toc
+```
+
 ### Include
 
 If you have content to be repeated on multiple pages, you can create it in a common page in and include
@@ -152,30 +97,38 @@ Example:
 To include the content of the "test_accounts.md" page in the "/docs/global" directory in another page, use:
 
 ```markdown
-\{!global/test_accounts.md!\}
+{% raw %}
+{!global/test_accounts.md!}
+{% endraw %}
 ```
 
->**Important**
-> An [exclude plugin](https://github.com/apenwarr/mkdocs-exclude) is installed
-> (see [mkdocs.yml](mkdocs.yml) file for the config of exclusions).
-> It excludes pages from the final rendered site as otherwise every .md file is rendered and copied.
-> Pages will still be in the source repository but they won't be copied in the final site and won't
-> appear in the search results even if you did not link them from the navigation. It's handy to
-> prevent include files to be reachable as standalone pages as they are intended to be included in
-> other pages.
+!!!important
+    An [exclude plugin](https://github.com/apenwarr/mkdocs-exclude) is installed
+    (see `mkdocs.yml` file for the config of exclusions).
+    It excludes pages from the final rendered site as otherwise every .md file is rendered and copied.
+    Pages will still be in the source repository but they won't be copied in the final site and won't
+    appear in the search results even if you did not link them from the navigation. It's handy to
+    prevent include files to be reachable as standalone pages as they are intended to be included in
+    other pages.
 
 ### Admonition
 
 The [Admonition extension](https://squidfunk.github.io/mkdocs-material/extensions/admonition/#admonition)
 enables information, warning, and danger blocks.
 
-Example:
+!!!example
 
-````markdown
-!!! note
-    This is a multi line note
-    in the EthSigner documentation.
-````
+    ````markdown
+    !!! note
+        This is a multi line note
+        in the EthSigner documentation.
+    ````
+
+    renders as
+
+    !!! note
+        This is a multi line note
+        in the EthSigner documentation.
 
 The 4 spaces indentation is required for the content to be part of the admonition.
 
@@ -198,32 +151,61 @@ in our documentation:
   Ex: "Never use the development private keys for production use".
 * **Example** : used to display an example. We usually use it with a single or tabbed code-block:
 
-````markdown
-!!! example
-    This example shows how to use the `net_listening` RPC method.
+!!! exemple
 
-    === "curl HTTP request"
+    ````markdown
+    !!! example
+        This example shows how to use the `net_listening` RPC method.
 
-        ```bash
-        curl -X POST --data '{"jsonrpc":"2.0","method":"net_listening","params":[],"id":53}' <JSON-RPC-http-endpoint:port>
-        ```
+        === "curl HTTP request"
 
-    === "wscat WS request"
+            ```bash
+            curl -X POST --data '{"jsonrpc":"2.0","method":"net_listening","params":[],"id":53}' <JSON-RPC-http-endpoint:port>
+            ```
 
-        ```json
-        {"jsonrpc":"2.0","method":"net_listening","params":[],"id":53}
-        ```
+        === "wscat WS request"
 
-    === "JSON result"
+            ```json
+            {"jsonrpc":"2.0","method":"net_listening","params":[],"id":53}
+            ```
 
-        ```json
-        {
-          "jsonrpc" : "2.0",
-          "id" : 53,
-          "result" : true
-        }
-        ```
-````
+        === "JSON result"
+
+            ```json
+            {
+              "jsonrpc" : "2.0",
+              "id" : 53,
+              "result" : true
+            }
+            ```
+    ````
+
+    renders as
+
+    !!! example
+        This example shows how to use the `net_listening` RPC method.
+
+        === "curl HTTP request"
+
+            ```bash
+            curl -X POST --data '{"jsonrpc":"2.0","method":"net_listening","params":[],"id":53}' <JSON-RPC-http-endpoint:port>
+            ```
+
+        === "wscat WS request"
+
+            ```json
+            {"jsonrpc":"2.0","method":"net_listening","params":[],"id":53}
+            ```
+
+        === "JSON result"
+
+            ```json
+            {
+              "jsonrpc" : "2.0",
+              "id" : 53,
+              "result" : true
+            }
+            ```
 
 ### Footnotes
 
@@ -232,6 +214,22 @@ adding footnotes.
 
 Footnotes display content at the end of the page and a numbered link inside the text to go to this content.
 The extension also adds a link at the end of the footnote back to the text.
+
+!!! example
+
+    ```markdown
+    Here is a footnote[^1] that will take you to the bottom of the page if you click on it.
+
+    [^1]:
+        This is the footnote, click on the arrow to go back to the text.
+    ```
+
+    renders as
+
+    Here is a footnote[^1] that will take you to the bottom of the page if you click on it.
+
+    [^1]:
+        This is the footnote, click on the arrow to go back to the text.
 
 ### Definitions List
 
@@ -254,7 +252,9 @@ extra:
 You can display the email in any pages with the following code:
 
 ```markdown
+{% raw %}
 {{support.email}}
+{% endraw %}
 ```
 
 ### Abbreviations
@@ -263,31 +263,26 @@ Avoid the use of abbreviations but some like "PoW" for proof-of-work or "dApp" f
 decentralized application are now part of the Ethereum jargon. The [Abbreviation extension](https://python-markdown.github.io/extensions/abbreviations/)
 enables a tool tip hint to be provided for abbreviations.
 
-Place abbreviations at the end of the Markdown file just before the end of file blank line.
+Preferably place abbreviations at the end of the Markdown file just before the end of file blank line to have them all in one place.
 
-Example:
+!!! example
 
-```markdown
----
-description: This is an example page
----
+    ```markdown
+    This page explains PoA networks.
+    *[PoA]: Proof of Work
+    ```
 
-# My Example
+    will render the abbreviation as
 
-This page explains PoA networks.
-
-... more text
-
-*[PoA]: Proof of Work
-
-```
+    This page explains PoA networks.
+    *[PoA]: Proof of Work
 
 ### Math
 
 [Arithmatex extension](https://squidfunk.github.io/mkdocs-material/extensions/pymdown/#arithmatex-mathjax )
 uses [MathJax](https://www.mathjax.org/) to enables math formulas in the documentation using [the provided syntax](https://www.mathjax.org/#demo).
 
-!!!example
+!!! example
 
     ```markdown
     $\sigma=\displaystyle\prod_{k=1}^t\sigma_{i_k}^{L_{i_k}(0)}$
@@ -335,25 +330,34 @@ automatically applied to your bold and italic content.
 The [Keys syntax](https://facelessuser.github.io/pymdown-extensions/extensions/keys/) extension enables
 displaying keyboard shortcuts.
 
-Example:
+!!! example
 
-```markdown
-++ctrl+C++
-```
+    ```markdown
+    ++ctrl+c++
+    ```
+
+    renders ++ctrl+c++
 
 ### Folding Details Blocks
 
 You can use a folding block to hide content. The block can be closed by default or open.
 This pattern helps reduce the content length and enables a faster overview of the whole page.
 
-Ex:
+!!! example
 
-```markdown
-???+ note "Folding details"
-    This is the detail of my content.
-    The plus sign makes it unfolded by default.
-    Remove the plus sign and it will be folded by default.
-```
+    ```markdown
+    ???+ note "Folding details"
+        This is the detail of my content.
+        The plus sign makes it unfolded by default.
+        Remove the plus sign and it will be folded by default.
+    ```
+
+    renders:
+
+    ???+ note "Folding details"
+        This is the detail of my content.
+        The plus sign makes it unfolded by default.
+        Remove the plus sign and it will be folded by default.
 
 ### Emojis
 
@@ -363,9 +367,8 @@ Try to use only neutral emojis like :warning:
 Refer to a [supported full list of available emojis](https://www.webfx.com/tools/emoji-cheat-sheet/)
 to find the suitable code.
 
-Example:
-
-`:warning:` displays :warning:
+!!! example
+    `:warning:` displays :warning:
 
 ### Magic Links
 
@@ -379,31 +382,34 @@ content.
 
 Text surrounded by double equals is highlighted in yellow.
 
-Example:
+!!! example
 
-```markdown
-==This is highlighted text==
-```
+    ```markdown
+    ==This is highlighted text==
+    ```
+
+    renders ==This is highlighted text==
 
 ### Strike Through
 
 The [tilde syntax](https://squidfunk.github.io/mkdocs-material/extensions/pymdown/#tilde) extensions enables text
 strike through to be displayed.
 
-Example:
+!!! example
 
-```markdown
-~~This is the wrong way to do~~
-```
+    ```markdown
+    ~~This is the wrong way to do~~
+    ```
+
+    renders ~~This is the wrong way to do~~
 
 ### Symbols
 
 The [Smart symbols syntax](https://facelessuser.github.io/pymdown-extensions/extensions/smartsymbols/) enables
 the inclusion of symbols.
 
-Ex:
-
-`-->` will draw a nice right arrow.
+!!! example
+    `-->` will draw a nice right arrow: -->.
 
 ### Task lists
 
@@ -428,17 +434,36 @@ documentation.
 
 A basic code-block uses triple back ticks and the language name to enable syntax highlighting.
 
-For example, a JSON result is written as:
+!!!example
+    a JSON result is written as:
 
-````markdown
-```json
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "result": true
-}
-```
-````
+    ````text
+    ```json
+    {
+      "jsonrpc": "2.0",
+      "id": 1,
+      "result": true
+    }
+    ```
+    ````
+
+    and renders as
+
+    ```json
+    {
+      "jsonrpc": "2.0",
+      "id": 1,
+      "result": true
+    }
+    ```
+
+Codehilite extension enables automatic syntax highlighting of code blocks. Define the language after
+the code block delimiter to ensure correct highlighting.
+If you don't provide the language name, the extension attempts to automatically discover it
+but this can lead to errors.
+
+Pygment is the implementation for this extension, refer to [Pygment website](https://pygments.org/)
+for a list of the supported languages.
 
 #### Tabbed Code Blocks
 
@@ -446,19 +471,35 @@ For example, a JSON result is written as:
 
 For example, to group the usage syntax and a usage example in the same block with tabs:
 
-````markdown
-=== "Syntax"
+!!! example
 
-    ```bash
-    ethsigner --chain-id=<chainId>
-    ```
+    ````markdown
+    === "Syntax"
 
-=== "Example"
+        ```bash
+        ethsigner --chain-id=<chainId>
+        ```
 
-    ```bash
-    ethsigner --chain-id=1337
-    ```
-````
+    === "Example"
+
+        ```bash
+        ethsigner --chain-id=1337
+        ```
+    ````
+
+    renders as
+
+    === "Syntax"
+
+        ```bash
+        ethsigner --chain-id=<chainId>
+        ```
+
+    === "Example"
+
+        ```bash
+        ethsigner --chain-id=1337
+        ```
 
 Be careful about line increment and always surround code blocks with blank lines. Code blocks also always have to be defined with the language type. Here `bash`. See [Code Syntax Highlight](#code-syntax-highlight)
 
@@ -469,41 +510,52 @@ to the code sample which makes it easier when discussing the code the sample.
 
 The line numbers will only appear on the code block that uses the `linenums="1"` parameter.
 
-Example:
+!!! example
 
-````markdown
+    ````markdown
+        ```javascript linenums="1"
+        window.MathJax = {
+          tex: {
+            inlineMath: [["\\(", "\\)"]],
+            displayMath: [["\\[", "\\]"]],
+            processEscapes: true,
+            processEnvironments: true
+          },
+          options: {
+            ignoreHtmlClass: ".*|",
+            processHtmlClass: "arithmatex"
+          }
+        };
+
+        document$.subscribe(() => {
+
+          MathJax.typesetPromise()
+        })
+        ```
+    ````
+
+    renders as
+
     ```javascript linenums="1"
-    // A very long javascript sample code
+    window.MathJax = {
+      tex: {
+        inlineMath: [["\\(", "\\)"]],
+        displayMath: [["\\[", "\\]"]],
+        processEscapes: true,
+        processEnvironments: true
+      },
+      options: {
+        ignoreHtmlClass: ".*|",
+        processHtmlClass: "arithmatex"
+      }
+    };
+
+    document$.subscribe(() => {
+
+      MathJax.typesetPromise()
+    })
     ```
-````
 
-#### Code Syntax Highlight
-
-Codehilite extension enables automatic syntax highlighting of code blocks. Define the language after
-the code block delimiter to ensure correct highlighting.
-If you don't provide the language name, the extension attempts to automatically discover it
-but this can lead to errors.
-
-Example:
-
-````markdown
-```json
-{
-  "jsonrpc" : "2.0",
-  "id" : 51,
-  "result" : {
-    "startingBlock" : "0x5a0",
-    "currentBlock" : "0xad9",
-    "highestBlock" : "0xad9"
-  }
-}
-```
-````
-
-Pygment is the implementation for this extension, refer to [Pygment website](https://pygments.org/)
-for a list of the supported languages.
-
-[/docs]: ./docs
 [MkDocs]: https://www.mkdocs.org/
 [readthedocs.com]: https://readthedocs.com/
 [Mkdocs Material]: https://squidfunk.github.io/mkdocs-material/

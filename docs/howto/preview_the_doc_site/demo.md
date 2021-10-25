@@ -8,7 +8,7 @@ hide:
 # Doc preview demo
 
 <div id="katacoda"
-       data-katacoda-id="nicolasmassart/katacoda-preview-doc"
+       data-katacoda-id="consensys/katacoda-preview-doc"
        data-katacoda-hidefinish="false"
        data-katacoda-hideintro="false"
        data-katacoda-color="213fa4"

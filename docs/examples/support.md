@@ -1,9 +1,6 @@
 ---
 title: Support
 description: How to get support for this project
-hide:
-  - navigation
-  - toc
 ---
 
 # Support

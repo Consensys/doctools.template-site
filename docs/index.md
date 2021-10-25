@@ -3,12 +3,12 @@ template: home.html
 title: Technical documentation for ConsenSys products
 description: Start your ConsenSys doc site project in 5 minutes.
 links:
-  - link: new/
+  - link: changelog/
     title: New Features
-  - link: tutorial/tutorial/
-    title: Tutorial
-  - link: playground/
-    title: Playground
+  - link: examples/
+    title: Examples
+  - link: howto/preview_the_doc_site/
+    title: Preview your doc
 ---
 
 This is a landing page, you can not add markdown content directly.
