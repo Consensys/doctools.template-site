@@ -11,7 +11,13 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: check if repos contains Katacoda
+        id: katacoda
+        shell: sh
+        run: echo "::set-output name=found::$(find . -name 'katacoda-*' -type d)"
+
       - name: Validate Katacoda
+        if: contains(steps.katacoda.outputs.found, 'katacoda')
         uses: ConsenSys/doctools.action-builder/actions/tests/katacoda@main
 
   lint:
