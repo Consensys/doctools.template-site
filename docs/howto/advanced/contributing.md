@@ -11,6 +11,18 @@ Contributing to the Doctool documentation system can be done by using the [Docto
 
 - have [Docker](https://docs.docker.com/get-docker/) installed
 
+## Docker settings
+
+Docker configuration will change the speed at which your site preview is rebuilt.
+To get the best from the system, consider having the following settings[^1]:
+
+- 6 CPUs
+- 6GB RAM
+- 1GB swap
+
+[^1]:
+    These settings were tested on a MacBook Pro (15-inch, 2018) - 2,6 GHz 6-Core Intel Core i7 - 16 GB 2400 MHz DDR4.
+
 ## Modify or create new templates
 
 The Doctools system enables to contribute to the templates by updating them or creating new ones.Doctools
@@ -76,7 +88,7 @@ Create a new file in your `doctools.template-site` directory with the following 
     version: '3.2'
     services:
       mkdocs:
-        container_name: mkdocs-serve-dev
+        container_name: mkdocs-serve-dev-${PROJECT:-project}-${LANGUAGE:-en}
         ports:
           - "0.0.0.0:8000:8000"
         image: ghcr.io/consensys/doctools-builder:${DOCTOOLS_IMAGE_VERSION:-latest}
