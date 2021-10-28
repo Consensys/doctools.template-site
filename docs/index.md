@@ -3,10 +3,8 @@ template: home.html
 title: Technical documentation for ConsenSys products
 description: Start your ConsenSys doc site project in 5 minutes.
 links:
-  - link: changelog/
-    title: New Features
-  - link: examples/
-    title: Examples
+  - link: getting_started/
+    title: Start now!
   - link: howto/preview_the_doc_site/
     title: Preview your doc
 ---

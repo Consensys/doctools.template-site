@@ -5,14 +5,13 @@ description: This howto explains how to create a new doc repository from this te
 
 # How to create a new doc site
 
-## Requirements
+!!! info "Requirements"
+    Creating a new doc site from the template requires to:
 
-Creating a new doc site from the template requires to:
-
-* have access to [Github](https://github.com/).
-* have [the tools to handle Git repositories](https://git-scm.com/downloads/guis).
-* have the right to create a new repository in the [ConsenSys Github organisation](https://github.com/ConsenSys).
-* have a modern text editor[^1], preferably with MarkDown[^3] and YAML[^4] support.
+    * have access to [Github](https://github.com/).
+    * have [the tools to handle Git repositories](https://git-scm.com/downloads/guis).
+    * have the right to create a new repository in the [ConsenSys Github organisation](https://github.com/ConsenSys).
+    * have a modern text editor[^1], preferably with MarkDown[^3] and YAML[^4] support.
 
 [^1]:
     UFT-8 and linux end-of-lines capable.
