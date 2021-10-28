@@ -4,22 +4,6 @@ name: Test the doc
 on: [push, pull_request]
 
 jobs:
-  katacoda:
-    name: Validate Katacoda scenarios
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: check if repos contains Katacoda
-        id: katacoda
-        shell: sh
-        run: echo "::set-output name=found::$(find . -name 'katacoda-*' -type d)"
-
-      - name: Validate Katacoda
-        if: contains(steps.katacoda.outputs.found, 'katacoda')
-        uses: ConsenSys/doctools.action-builder/actions/tests/katacoda@main
-
   lint:
     name: Lint Code Base
     runs-on: ubuntu-latest

@@ -8,8 +8,8 @@ hide:
 # Doc preview demo
 
 <div id="katacoda"
-       data-katacoda-id="consensys/katacoda-preview-doc"
-       data-katacoda-hidefinish="false"
-       data-katacoda-hideintro="false"
-       data-katacoda-color="213fa4"
-       style="height: 600px;"></div>
+  data-katacoda-id="consensys/doctools-doc-preview"
+  data-katacoda-hidefinish="false"
+  data-katacoda-hideintro="false"
+  data-katacoda-color="213fa4"
+  style="height: 600px;"></div>
