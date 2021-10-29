@@ -27,3 +27,4 @@ jobs:
 
       - name: Links check
         uses: ConsenSys/doctools.action-builder/actions/tests/links@main
+

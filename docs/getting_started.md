@@ -29,14 +29,14 @@ The doc team will also help you to get ready:
 All the Doctools doc sites content is written using MarkDown. BUt we added some sugar and we allow some
 more flexible syntax. You can start browsing these features on our [MarkDown reference page](reference/markdown.md).
 
-## Step 3 - Write the doc!
+## Step 3 - Write your doc
 
-Once your doc site is created and configures, that you made yourself familiar with the syntax, you can
+Once your doc site is created and configured, that you made yourself familiar with the MarkDown syntax, you can
 start writing your doc!
 
-Don't forget that the doc team is here to help not only to start the doc, but also if you need a review of your content.Doctools
+Our doc team is here to help you, not only to start the doc, but also if you need a review of your content.
 
-Finally, this template doc site is also built with Doctools. If reading it is not enough for you, feel free to look at [the source code](https://github.com/Consensys/doctools.template-site/) and pick the features that you need!
+Finally, this template doc site is also built with Doctools. If reading the Doctool doc is not enough for you, feel free to look at [the source code](https://github.com/Consensys/doctools.template-site/) and pick code pieces for the features that you need!
 
 [^1]:
     UFT-8 and linux end-of-lines capable.
@@ -44,4 +44,4 @@ Finally, this template doc site is also built with Doctools. If reading it is no
     It has to be raw text capable, no Word or Google Docs
 
 [^2]:
-    Ask on Consensys Slack #documentation channel.
+    Ask on ConsenSys Slack #documentation channel.
