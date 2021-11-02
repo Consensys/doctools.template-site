@@ -22,4 +22,4 @@ plugins:
       # old_path.md: new_path.md
       # you can't use an already redirected path as an old_path.
       # new_path can be a file inside the docs/ folder or any URL (http://...)
-
+      support.md: examples/support.md

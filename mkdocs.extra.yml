@@ -16,6 +16,8 @@
 INHERIT: mkdocs.exclude.yml
 
 extra:
+  support: /support/
+  inverted_logo: 'assets/logo_inverted.svg'
   # Announce can contain HTML but limit it to small images or links. NO BIG DIRTY HACKS PLEASE.
   # If announce is removed or commented, the banner will be hidden
   announce: 'Improved version of the Consensys doc system, read about the new features!'
