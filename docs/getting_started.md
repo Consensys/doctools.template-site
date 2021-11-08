@@ -12,8 +12,7 @@ We will support you un creating and configuring your doc site using Doctools.
 
 The doc team will also help you to get ready:
 
-!!! info "Click to unfold the list of requirements"
-    Creating a new doc site from the template requires to:
+!!! info "Creating a new doc site from the template requires to:"
 
     - [x] have access to [Github](https://github.com/).
     - [x] have [the tools to handle Git repositories](https://git-scm.com/downloads/guis).
