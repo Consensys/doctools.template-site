@@ -12,10 +12,19 @@
 
 # This configuration must inherit the base configuration file available in the Doctools docker image.
 # See source at https://github.com/ConsenSys/doctools.action-builder/blob/main/common/custom_theme/base.yml
-INHERIT: /common/custom_theme/base.yml # DO NOT MODIFY THIS LINE
+INHERIT: mkdocs.redirects.yml # DO NOT MODIFY THIS LINE
 
-plugins:
-  exclude:
-      glob:
-        - examples/excluded_file.md
-#        - examples/*
+theme:
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: consensys
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: consensys-dark
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+  logo: 'assets/logo.svg'
+  favicon: 'assets/favicon.svg'

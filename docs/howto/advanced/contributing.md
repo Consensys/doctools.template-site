@@ -20,6 +20,9 @@ To get the best from the system, consider having the following settings[^1]:
 - 6GB RAM
 - 1GB swap
 
+!!! warning
+    If you are using a macOS machine, do not activate the experimental Docker Desktop "Use the new Virtualization framework". It will slow down builds by at least 3 times. A normal build time is around 5 seconds for this website for instance.
+
 [^1]:
     These settings were tested on a MacBook Pro (15-inch, 2018) - 2,6 GHz 6-Core Intel Core i7 - 16 GB 2400 MHz DDR4.
 
@@ -88,12 +91,15 @@ Create a new file in your `doctools.template-site` directory with the following 
     version: '3.2'
     services:
       mkdocs:
-        container_name: mkdocs-serve-dev-${PROJECT:-project}-${LANGUAGE:-en}
+        container_name: mkdocs-serve-dev-${PROJECT:-project}
         ports:
           - "0.0.0.0:8000:8000"
-        image: ghcr.io/consensys/doctools-builder:${DOCTOOLS_IMAGE_VERSION:-latest}
+        image: ghcr.io/consensys/doctools-builder:${DOCTOOLS_IMAGE_VERSION:-dev}
+        build:
+          context: ../doctools.action-builder/
         working_dir: /workspace/
         env_file: .env.dev
+        command: ["serve", "--watch-theme" ,"--dev-addr", "0.0.0.0:8000"]
         volumes:
           - type: bind
             source: .
@@ -115,34 +121,36 @@ Copy your `.env` file to a `.env.dev` file
 To preview the doc site locally, go to your doc site code source directory and run:
 
 ```bash
-docker compose -f docker-compose.dev.yml up-d
+docker compose -f docker-compose.dev.yml --env-file ./.env.dev up
 ```
 
 Then open [`http://0.0.0.0:8000`](http://0.0.0.0:8000){: target="_blank} in your browser and navigate the preview.
 
 ### Stropping the preview
 
-To stop and remove containers, run
+To stop the service, type ++ctrl+c++ and then remove containers by running
+
 ```bash
-docker compose -f docker-compose.dev.yml down
+docker compose down mkdocs
 ```
 
 ### Reloading on changes
 
-If you keep the Docker compose service running in background,
+If you keep the Docker compose service running,
 the website preview will reload and display changes automatically for:
 
 - content (all `.md` files, modification, deletions or new pages if added to navigation)
-- configuration (changes on entries in `mkdocs.yml`)
+- configuration (changes on entries in `mkdocs.yml` and all `mkdocs.*.yml`)
+- theme templates (in the ``../doctools.action-builder/common/custom_theme` directory)
 
 !!!important
-    If you make changes on the `.env.dev` or any HTML template file or assets outside of your repos `docs` folder,
+    If you make changes on the `.env.dev` or assets outside of your repos `docs` folder,
     the system is not yet able to reload automatically and you will have to restart the docker-compose service.
 
     Run:
 
     ```bash
-    docker compose -f docker-compose.dev.yml restart
+    docker compose restart mkdocs
     ```
 
 [Doctools action builder]: https://github.com/ConsenSys/doctools.action-builder

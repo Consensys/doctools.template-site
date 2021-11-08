@@ -12,16 +12,25 @@
 
 # This configuration must inherit the base configuration file available in the Doctools docker image.
 # See source at https://github.com/ConsenSys/doctools.action-builder/blob/main/common/custom_theme/base.yml
-# Do not modify this INHERIT line.
-INHERIT: mkdocs.exclude.yml
+INHERIT: mkdocs.exclude.yml # DO NOT MODIFY THIS LINE
 
+# Extra data configures some specific aspect of the theme.
+# You can find a full description of the values in the Doctool doc site:
+# https://consensys.net/docs/doctools/en/latest/howto/advanced/extra-configuration
 extra:
-  support: /support/
-  inverted_logo: 'assets/logo_inverted.svg'
+  support: /support/ # The path to the default support page, for instance displayed in 404 pages
+  inverted_logo: 'assets/logo_inverted.svg' # Path for a colour inverted logo, for instance displayed in 404 pages
   # Announce can contain HTML but limit it to small images or links. NO BIG DIRTY HACKS PLEASE.
   # If announce is removed or commented, the banner will be hidden
   announce: 'Improved version of the Consensys doc system, read about the new features!'
-  # If languages are removed, commented or only contain one language, the language switch will be hidden
-#  languages:
-#    en: English (en)
-#    zh: 中文 (zh)
+  logo_is_text: false # indicates if logo is using text or is only a shape and if we have to add the project name as text.
+  analytics: # information for Analytics. Default is Google Tag manager.
+    gtmid: GTM-PBFNGBR
+  social: # list of social media links and icons to display ion the pages footer.
+  # See https://squidfunk.github.io/mkdocs-material/setup/setting-up-the-footer/?h=social#configuration
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/5U9Jwp7
+    - icon: fontawesome/solid/envelope
+      link: mailto:quorum@consensys.net
+    - icon: material/web
+      link: https://consensys.net/quorum/developers
