@@ -141,7 +141,7 @@ the website preview will reload and display changes automatically for:
 
 - content (all `.md` files, modification, deletions or new pages if added to navigation)
 - configuration (changes on entries in `mkdocs.yml` and all `mkdocs.*.yml`)
-- theme templates (in the ``../doctools.action-builder/common/custom_theme` directory)
+- theme templates and assets ( all files in the ``../doctools.action-builder/common/custom_theme` directory)
 
 !!!important
     If you make changes on the `.env.dev` or assets outside of your repos `docs` folder,

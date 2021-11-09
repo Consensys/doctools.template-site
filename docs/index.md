@@ -4,7 +4,7 @@ title: Technical documentation for ConsenSys products
 description: Start your ConsenSys doc site project in 5 minutes.
 links:
   - link: getting_started/
-    title: Start now!
+    title: Create a new doc site
   - link: howto/preview_the_doc_site/
     title: Preview your doc
 ---
