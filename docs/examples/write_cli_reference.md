@@ -3,6 +3,39 @@ title: CLI spec
 description: Dummy is a template doc project.
 ---
 
+{% macro cli_option(name, type="INTEGER", example="", description="", default="") -%}
+
+### `{{name}}`
+
+=== "Syntax"
+
+    ```bash
+    --{{name}}=<{{type}}>
+    ```
+
+=== "Example"
+
+    ```bash
+    --{{name}}={{example}}
+    ```
+
+=== "Environment Variable"
+
+    ```bash
+    {{name | cli_to_env }}={{example}}
+    ```
+
+=== "Example Configuration File"
+
+    ```bash
+    {{name}}={{example}}
+    ```
+
+{{description}}
+The default is `{{default}}`.
+
+{%- endmacro %}
+
 # Example command line
 
 This reference describes the syntax of a sample Command Line Interface (CLI) options
@@ -47,34 +80,9 @@ To start the tool, run:
 deep-thought [OPTIONS] [COMMAND]
 ```
 
-### `my-option`
-
-=== "Syntax"
-
-    ```bash
-    --my-option=<INTEGER>
-    ```
-
-=== "Example"
-
-    ```bash
-    --my-option=42
-    ```
-
-=== "Environment Variable"
-
-    ```bash
-    MY_OPTION=42
-    ```
-
-=== "Example Configuration File"
-
-    ```bash
-    my-option=42
-    ```
-
-This option provides the expected answer to life, universe and everything.
-The default is `42`.
+{{ cli_option('my-option','INTEGER', '42', 'This option provides the expected answer to life, universe and everything.', '42') }}
 
 !!! tip
     The default can also be used to provide the result of $6 \times 7$
+
+{{ cli_option('my-other-option','STRING', 'hello world', 'This option provides the base code example.', 'Hello World') }}

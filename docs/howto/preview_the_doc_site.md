@@ -1,4 +1,5 @@
 ---
+template: katacoda.html
 title: Preview the doc site
 description: How to preview the doc site
 ---
@@ -7,9 +8,12 @@ description: How to preview the doc site
 
 ## Try the online demo
 
-Try the [doc site preview using our Katacoda playgound](demo.md).
+Learn how to preview using our Katacoda playgound.
 
 No requirement at all to test this in the playgound.
+
+<!-- The followin uses the Katacoda pluglet available for all sites using the build image. -->
+{{ katacoda('consensys/doctools-doc-preview') }}
 
 ## Preview locally
 
