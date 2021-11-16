@@ -37,7 +37,7 @@ Creating templates is done in the [Doctools action builder] repository in the `/
 
 !!! warning
     This process is not for users who only want to preview their doc site.
-    If you want to preview, please refer to [the preview documentation](../preview_the_doc_site/index.md).
+    If you want to preview, please refer to [the preview documentation](../preview_the_doc_site.md).
 
 To be able to develop templates, you will have to run that repos alongside the template repos.
 
