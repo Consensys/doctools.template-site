@@ -21,7 +21,9 @@ To get the best from the system, consider having the following settings[^1]:
 - 1GB swap
 
 !!! warning
-    If you are using a macOS machine, do not activate the experimental Docker Desktop "Use the new Virtualization framework". It will slow down builds by at least 3 times. A normal build time is around 5 seconds for this website for instance.
+    If you are using a macOS machine, do not activate the experimental Docker Desktop "Use the new Virtualization framework".
+    It will slow down builds by at least 3 times.
+    A normal build time is around 5 seconds for this documentation site for instance.
 
 [^1]:
     These settings were tested on a MacBook Pro (15-inch, 2018) - 2,6 GHz 6-Core Intel Core i7 - 16 GB 2400 MHz DDR4.
@@ -45,7 +47,7 @@ To be able to develop templates, you will have to run that repos alongside the t
 
 1. Clone the template repository from [https://github.com/ConsenSys/doctools.template-site.git](https://github.com/ConsenSys/doctools.template-site.git) on your local machine.
 
-   ```bash
+    ```bash
     git clone https://github.com/ConsenSys/doctools.template-site.git
     ```
 
@@ -137,7 +139,7 @@ docker compose down mkdocs
 ### Reloading on changes
 
 If you keep the Docker compose service running,
-the website preview will reload and display changes automatically for:
+the site preview will reload and display changes automatically for:
 
 - content (all `.md` files, modification, deletions or new pages if added to navigation)
 - configuration (changes on entries in `mkdocs.yml` and all `mkdocs.*.yml`)
