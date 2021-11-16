@@ -101,7 +101,7 @@ Create a new file in your `doctools.template-site` directory with the following 
           context: ../doctools.action-builder/
         working_dir: /workspace/
         env_file: .env.dev
-        command: ["serve", "--watch-theme" ,"--dev-addr", "0.0.0.0:8000"]
+        command: ["serve", "--watch-theme", "--dirtyreload" ,"--dev-addr", "0.0.0.0:8000"]
         volumes:
           - type: bind
             source: .
@@ -116,7 +116,15 @@ Create a new file in your `doctools.template-site` directory with the following 
 Copy your `.env` file to a `.env.dev` file
 
 !!! tip
-    This file will not be committed and you will be able to test values in it without breaking your site.
+    This file will not be committed because of the `.gitignore` and you will be able to test values in it without breaking your site.
+
+Variables that can be useful to set in your dev environment:
+
+- `DEBUG=true|false` comment, remove or set to `false` to hide debug, true to show debug inside HTML source code, default is `false`.
+- `MINIFY=true|false` comment, remove or set to `false` to generate readable HTML source code. Default is `true`.
+  Note that if you set this to `true`, debug comments in source code will not be visible.
+- `PREBUILD_INDEX=true|false` comment, remove or set to `false` to prevent search index to be generated at each build and speed up the build. Default is `true` as it's useful for production.
+- `VERSION=string` set to a specific number to simulate a version locally. This value is otherwise initialised by CI.
 
 ### Starting the preview
 
@@ -156,3 +164,4 @@ the site preview will reload and display changes automatically for:
     ```
 
 [Doctools action builder]: https://github.com/ConsenSys/doctools.action-builder
+*[CI]: Continuous Integration

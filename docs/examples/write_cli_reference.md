@@ -22,7 +22,7 @@ description: Dummy is a template doc project.
 === "Environment Variable"
 
     ```bash
-    {{name | cli_to_env }}={{example}}
+    {{ cli_to_env(name,'MYCODE') }}={{example}}
     ```
 
 === "Example Configuration File"
@@ -56,10 +56,14 @@ variable, configuration file.
 
 For each command line option, the equivalent environment variable is:
 
+* remove leading `--`
 * Upper-case
 * `_` replaces `-`
+* add the `MYCODE` prefix
 
-For example, set `--my-option` using the `MY_OPTION` environment variable.
+{% set option_name = "--my-option" %}
+
+For example, set CLI option {{ option_name | code }} using the {{ cli_to_env(option_name,'MYCODE') | code }} environment variable.
 
 ### Configuration file
 
@@ -77,7 +81,7 @@ For example, set `--my-option=42` using the `my-option=42`.
 To start the tool, run:
 
 ```bash
-deep-thought [OPTIONS] [COMMAND]
+my-command [OPTIONS] [COMMAND]
 ```
 
 {{ cli_option('my-option','INTEGER', '42', 'This option provides the expected answer to life, universe and everything.', '42') }}
