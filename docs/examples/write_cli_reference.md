@@ -36,16 +36,16 @@ The default is `{{default}}`.
 
 {%- endmacro %}
 
-# Example command line
+# Example command-line
 
-This reference describes the syntax of a sample Command Line Interface (CLI) options
+This reference describes the syntax of a sample Command-Line Interface (CLI) options
 and subcommands.
 
 ## Specifying options
 
 You can specify options:
 
-* On the command line
+* On the command-line
 * As an [environment variable](#environment-variables)
 * In a [configuration file](#configuration-file).
 
@@ -54,7 +54,7 @@ variable, configuration file.
 
 ### Environment variables
 
-For each command line option, the equivalent environment variable is:
+For each command-line option, the equivalent environment variable is:
 
 * remove leading `--`
 * Upper-case
@@ -69,7 +69,7 @@ For example, set CLI option {{ option_name | code }} using the {{ cli_to_env(opt
 
 Set one option and value per line in a text file.
 
-For each command line option, the equivalent environment variable is:
+For each command-line option, the equivalent environment variable is:
 
 * no case change
 * remove leading `--`

@@ -17,7 +17,7 @@ See https://www.katacoda.com/create and https://github.com/katacoda/scenario-exa
 
 ## Use it
 
-In your markdown file, you have to select the Katacoda template using the [Mkdocs Material Meta syntax](https://squidfunk.github.io/mkdocs-material/reference/meta-tags/).
+In your Markdown file, you have to select the Katacoda template using the [Mkdocs Material Meta syntax](https://squidfunk.github.io/mkdocs-material/reference/meta-tags/).
 
 !!! example "Example meta header"
 
@@ -31,7 +31,7 @@ In your markdown file, you have to select the Katacoda template using the [Mkdoc
 
     1.  Add the `katacoda.html` template here.
 
-Then use the following in your markdown to display the Katacoda playground:
+Then use the following in your Markdown to display the Katacoda playground:
 
 === "Syntax"
 

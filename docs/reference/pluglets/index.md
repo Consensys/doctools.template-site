@@ -5,7 +5,7 @@ hide:
   - toc
 ---
 
-# MkDocs pluglets.
+# MkDocs pluglets
 
 Pluglets are small Python scripts that your can share between doc sites and use in your Markdown content.
 
