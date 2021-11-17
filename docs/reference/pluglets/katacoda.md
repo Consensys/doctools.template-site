@@ -12,10 +12,12 @@ See https://github.com/ConsenSys/doc.katacoda/ for ConsenSys Scenarios source co
 
 See https://www.katacoda.com/create and https://github.com/katacoda/scenario-examples for inspiration.
 
+## Example
+
 !!! example "Katacoda playground rendering example"
     {{ katacoda('consensys/doctools-doc-preview', None , 'height: 300px;') }}
 
-## Use it
+## Usage
 
 In your Markdown file, you have to select the Katacoda template using the [Mkdocs Material Meta syntax](https://squidfunk.github.io/mkdocs-material/reference/meta-tags/).
 
@@ -23,13 +25,11 @@ In your Markdown file, you have to select the Katacoda template using the [Mkdoc
 
     ```yaml title="my_page.md"
     ---
-    template: katacoda.html # (1)
+    template: katacoda.html
     title: My page title
     description: My page description
     ---
     ```
-
-    1.  Add the `katacoda.html` template here.
 
 Then use the following in your Markdown to display the Katacoda playground:
 
