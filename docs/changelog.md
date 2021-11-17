@@ -40,7 +40,7 @@ The new documentation system provides a lot of features.
 - New code linter for Markdown but also all other files, config files
 - Github-pages PR preview and PR preview comment
 - [Macros and filters](reference/macros.md)
-- [Pluglets](reference/pluglets)
+- [Pluglets](reference/pluglets/index.md)
 
 !!! note
     You can also look at [the features list on the GitHub repos](https://github.com/ConsenSys/doctools.template-site/discussions/13) for an overview of what's still to be added and

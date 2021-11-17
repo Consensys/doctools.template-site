@@ -1,15 +1,15 @@
 ---
-title: Support
-description: How to get support for this project
+title: Example support page
+description: Example support page
 ---
 
-# Support
+# Example support page
 
 If you need help on using our product, you can either ask our community or request paid support.
 
 ## Professional support (paid)
 
-:envelope: ask [Quorum support](mailto:quorum@consensys.net) for a professional subscription.
+:envelope: ask [Doctools support](mailto:support@consensys.net) for a professional subscription.
 
 !!! info "Professional support detail"
     - Paid subscription (yearly or monthly)
@@ -20,7 +20,7 @@ If you need help on using our product, you can either ask our community or reque
 ## Community support (free)
 
 - :fontawesome-brands-discord: [Discord](https://discord.gg/5U9Jwp7)
-- :material-web: read more on [ConsenSys Quorum website](https://consensys.net/quorum/developers)
+- :material-web: read more on [Doctools site](https://consensys.net/docs/doctools/en/latest/)
 - :fontawesome-brands-github: [create an issue on the repository](https://github.com/Consensys/doctools.template-site/issues).
 
 !!! info "Community support detail"

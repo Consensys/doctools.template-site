@@ -43,7 +43,7 @@ Macros writen directly in a Markdown page and only available for this specific p
         === "Environment Variable"
 
             ```bash
-            {{name | cli_to_env }}={{example}}
+            {{ cli_to_env(name) }}={{example}}
             ```
 
         === "Example Configuration File"
@@ -80,7 +80,7 @@ Macros writen directly in a Markdown page and only available for this specific p
         === "Environment Variable"
 
             ```bash
-            {{name | cli_to_env }}={{example}}
+            {{ cli_to_env(name) }}={{example}}
             ```
 
         === "Example Configuration File"
@@ -164,7 +164,7 @@ Macros must be written in the root of the site inside `main.py`.
     Try to avoid complex logic, and even simple logic.
 
 !!! question "Can I use a macro in an MkDocs HTML template?"
-    No. But if you want write a template, you will have the Jinja2 syntax that can do the same,
+    No. But if you want to write a template, you will have the Jinja2 syntax that can do the same,
     see [the contribution page](../howto/advanced/contributing.md).
 
 !!! question "What's the best to reuse a macro in multiple sites?"
