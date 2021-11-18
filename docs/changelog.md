@@ -21,7 +21,7 @@ The new documentation system provides a lot of features.
 - Instant navigation (faster search and reduce bandwidth usage)
 - Easy katacoda.com integration (other to come on demand)
 - [Easy ReDoc REST API doc](examples/write_rest_api_reference.md) from a JSON or YAML spec (local or remote).
-- Integration of Youtube videos
+- Integration of YouTube videos
     - ![type:video](https://www.youtube.com/embed/ttdvxAOO50E)
 - Simpler configuration file for contributors: only nav and redirects
 - Only requires Docker to build (no more Python version issues)

@@ -24,6 +24,6 @@ If you need help on using our product, you can either ask our community or reque
 - :fontawesome-brands-github: [create an issue on the repository](https://github.com/Consensys/doctools.template-site/issues).
 
 !!! info "Community support detail"
-     - Free, no subscription
-     - Community led
-     - 24/7 worldwide coverage
+    - Free, no subscription
+    - Community led
+    - 24/7 worldwide coverage
