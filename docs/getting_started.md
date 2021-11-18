@@ -30,8 +30,8 @@ more flexible syntax. You can start browsing these features on our [MarkDown ref
 
 ## Step 3 - Write your doc
 
-Once your doc site is created and configured, that you made yourself familiar with the MarkDown syntax, you can
-start writing your doc!
+Once your doc site is created and configured, that you made yourself familiar with [Doctools MarkDown syntax](reference/markdown.md),
+you can start writing your doc!
 
 Our doc team is here to help you, not only to start the doc, but also if you need a review of your content.
 
