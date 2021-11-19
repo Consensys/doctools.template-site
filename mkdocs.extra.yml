@@ -34,3 +34,5 @@ extra:
       link: mailto:quorum@consensys.net
     - icon: material/web
       link: https://consensys.net/quorum/developers
+  version:
+    switch: true # displays the version dropdown

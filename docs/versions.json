@@ -2,7 +2,6 @@
   "comment": "This is a debug version file, must be replaced by Lambda",
   "project": "doctools",
   "versions": {
-    "en": ["latest","stable", "1.0.0","0.10.2 RC 1","0.10.1","0.9.0","0.8.0","0.7.1","0.7.0"],
-    "zh": ["latest"]
+    "en": ["latest"]
   }
 }
