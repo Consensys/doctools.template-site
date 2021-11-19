@@ -15,10 +15,17 @@ jobs:
         with:
           fetch-depth: 0 # Required for mkdocs to be able to display pages last update info
 
-      - uses: actions/checkout@v2
+      - name: set environment vars from .env file
+        uses: c-py/action-dotenv-to-setenv@a6380f4d905f42adb7c065db63e6d66d75b971ad #v3
         with:
-          repository: ConsenSys/doctools.action-builder
-          path: doctools
+          env-file: '.env'
+
+      - name: Set non empty LANGUAGE env
+        shell: sh
+        run: |
+          echo "LANGUAGE=${LANGUAGE:-en}" >> $GITHUB_ENV
 
       - name: Build and publish PR preview
         uses: ConsenSys/doctools.action-builder/actions/pr-preview-publish@main
+        with:
+          LANGUAGE: ${{ env.LANGUAGE }}
