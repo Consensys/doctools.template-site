@@ -27,6 +27,7 @@ nav:
       - Advanced use:
           - Contribute to Doctools: howto/advanced/contributing.md
           - Extra configuration: howto/advanced/extra-configuration.md
+      - Translate: howto/translate.md
   - Examples:
       - examples/index.md
       - CLI reference: examples/write_cli_reference.md
