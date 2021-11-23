@@ -1,7 +1,7 @@
 ---
 template: home.html
 title: Technical documentation for ConsenSys products
-description: Start your ConsenSys doc site project in 5 minutes.
+description: Create your doc site in a few steps then focus on writing content.
 hide:
   - toc
   - navigation
