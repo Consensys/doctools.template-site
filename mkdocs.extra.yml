@@ -25,7 +25,7 @@ extra:
   announce: 'Improved version of the Consensys doc system, read about the new features!'
   logo_is_text: false # indicates if logo is using text or is only a shape and if we have to add the project name as text.
   analytics: # information for Analytics. Default is Google Tag manager.
-    gtmid: GTM-PBFNGBR
+    gtmid: GTM-MPS9QNF
   social: # list of social media links and icons to display ion the pages footer.
   # See https://squidfunk.github.io/mkdocs-material/setup/setting-up-the-footer/?h=social#configuration
     - icon: fontawesome/brands/discord
