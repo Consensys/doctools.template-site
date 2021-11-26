@@ -21,7 +21,7 @@ The doc team will also help you to get ready:
     - [x] have [Docker](https://docs.docker.com/get-docker/) installed
     - [x] have access to [AWS](https://aws.amazon.com/) to publish the site (or ask the docOps team[^2] to configure credentials for you)
 
-    If you want to know more about the detailed process, read the [how to setup a doc site page](howto/setup_new_doc_repos).
+    If you want to know more about the detailed process, read the [how to setup a doc site page](howto/setup_new_doc_repos.md).
 
 ## Step 2 - Learn how to write MarkDown
 

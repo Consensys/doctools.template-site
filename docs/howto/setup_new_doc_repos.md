@@ -100,9 +100,14 @@ Creating a new documentation site starts by using the template site.
 
     Ask the docOps team[^2] to setup the following secrets:
 
-    * `AWS_ACCESS_KEY_ID` from `docops_doctool_doc_site_deployer` user
-    * `AWS_SECRET_ACCESS_KEY` from `docops_doctool_doc_site_deployer` user
-    * `SITE_URL_BASE`
+    * `AWS_ACCESS_KEY_ID` from `docops_doctool_doc_site_deployer` IAM user.
+    * `AWS_SECRET_ACCESS_KEY` from `docops_doctool_doc_site_deployer` IAM user.
+    * `AWS_S3_BUCKET` the s3 bucket to publish doc to.
+    * `AWS_REGION` the region where your S3 bucket is located. For example `us-east-2`
+    * `PROJECT` the project name as it will be used as folder name and key
+    * `SITE_ROOT` the doc site root path including protocol and project name and a leading /.
+      !!! example
+          https://consensys.net/docs/doctools/
 
 1. If your repository is public, setup a CLA with [cla-assistant](https://cla-assistant.io/)
 
