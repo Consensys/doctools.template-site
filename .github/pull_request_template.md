@@ -5,7 +5,7 @@
 
 ## Pull Request Description
 
-Updating PR template with new URL and testing CodeOwner at the same time
+<!-- Example: Add new feature X -->
 
 ## Fixed Issue(s)
 <!-- Please link to fixed issue(s) here using format: fixes #<Github issue number> -->
