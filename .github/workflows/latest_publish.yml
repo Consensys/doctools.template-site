@@ -11,6 +11,8 @@ jobs:
     name: Build and publish latest site
     runs-on: ubuntu-latest
     environment: production
+    permissions:
+      contents: read
     # secrets are not usable from outside ConsenSys org
     # The workflow will then be disabled for non ConsenSys repositories to prevent useless failure.
     # Restricting to refs/heads/main here to prevent workflow_dispatch to run on another branch

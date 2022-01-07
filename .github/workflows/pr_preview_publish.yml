@@ -8,6 +8,10 @@ jobs:
     name: Build and publish PR preview
     runs-on: ubuntu-latest
     environment: preview
+    permissions:
+      contents: write
+      pull-requests: write
+
     steps:
       - name: checkout code from repos
         uses: actions/checkout@v2
