@@ -10,4 +10,5 @@ common/
 .doctools.action-builder
 docker-compose.dev.yml
 .env.dev
+.env
 __pycache__
