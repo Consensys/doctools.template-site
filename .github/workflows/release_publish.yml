@@ -5,6 +5,7 @@ on:
   release:
     types: [published]
     branches: [main]
+  workflow_dispatch:
 
 jobs:
   deploy:
@@ -15,8 +16,8 @@ jobs:
       contents: read
     # secrets are not usable from outside ConsenSys org
     # The workflow will then be disabled for non ConsenSys repositories to prevent useless failure.
-    # Restricting to refs/heads/main here to prevent workflow_dispatch to run on another branch
-    if: github.event.repository.fork == false && github.repository_owner == 'ConsenSys'
+    # Restricting to refs/tags/* here to prevent workflow_dispatch to run on another branch
+    if: github.event.repository.fork == false && github.repository_owner == 'ConsenSys' && startsWith(github.ref, 'refs/tags/')
     steps:
       - name: checkout code from repos
         uses: actions/checkout@v2
