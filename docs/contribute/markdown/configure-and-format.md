@@ -31,7 +31,7 @@ Create a redirect in the configuration file (see instructions after the `redirec
 Having a standard for formatting Markdown helps writers and reviewers navigate the code and review changes.
 The following are rules for formatting Markdown in ConsenSys documentation:
 
-- Each Markdown file must contain a header composed of [metadata](https://squidfunk.github.io/mkdocs-material/extensions/metadata/) and limited by three dashes (`-`).
+- Each Markdown file must contain a header composed of [metadata](https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#metadata) and limited by three dashes (`-`).
 
   > **Example:**
   >
