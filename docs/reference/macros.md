@@ -168,4 +168,4 @@ Macros must be written in the root of the site inside `main.py`.
     see [the contribution page](../create/create-site-template.md).
 
 !!! question "What's the best to reuse a macro in multiple sites?"
-    Develop a [Pluglet](../../reference/pluglets) in the common Docker image instead.
+    Develop a Pluglet in the common Docker image instead.

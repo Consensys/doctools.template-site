@@ -26,7 +26,7 @@ nav:
       - Style guide: contribute/style-guide.md
       - Fix CircleCI errors: contribute/fix-circleci-errors.md
       - Use the common submodule: contribute/use-common-submodule.md
-      - Raise issues: raise-issues.md
+      - Raise issues: contribute/raise-issues.md
   - Preview:
       - preview/index.md
       - Preview site using the old system: preview/old-system.md

@@ -1,3 +1,7 @@
+---
+description: How to fix CircleCI errors
+---
+
 # Fix CircleCI errors
 
 ConsenSys documentation uses [CircleCI](https://circleci.com/) to verify links, Markdown syntax, writing style, and more on all documentation changes.
@@ -5,7 +9,7 @@ This page describes the four CI error types and how to fix them:
 
 - [`build` errors](#build-errors)
 - [`linkchecker` errors](#linkchecker-errors)
-- [`markdownlint` errors](#markdonwlint-errors)
+- [`markdownlint` errors](#markdownlint-errors)
 - [`vale` errors](#vale-errors)
 
 Submitting or updating a PR automatically runs all CI checks, displaying a checklist at the bottom of the PR page.
@@ -19,7 +23,7 @@ The `build` job builds the documentation using MkDocs in `strict` mode, failing 
 Select the `build` **Details**, which takes you to the CircleCI site.
 Check the error message under **Run MkDocs** and make any required fixes.
 
-The best way to reproduce the error is by running `mkdocs build -s` locally in a [virtual environment](MkDocs-and-custom-Markdown-guide/#preview-documentation).
+The best way to reproduce the error is by running `mkdocs build -s` locally in a [virtual environment](../preview/old-system.md).
 
 ## `linkchecker` errors
 
@@ -120,5 +124,5 @@ The error message under **Run Vale** displays writing errors that you must fix, 
 
 If you're introducing a new product term not recognized by Vale:
 
-1. [Make a documentation contribution](Contributing-to-documentation/#contribution-workflow) to this [`doc.common`](https://github.com/ConsenSys/doc.common) repository, adding the term to the Vale [`accept.txt`](https://github.com/ConsenSys/doc.common/blob/master/build_tools/vale/vale_styles/Vocab/Consensys/accept.txt) file.
-1. In the documentation repository in which you're making the original contribution, [update the submodule to the latest version](Contributing-to-documentation/#update-repositories-to-the-latest-submodule-version).
+1. [Make a documentation contribution](contribute-to-the-documentation.md) to this [`doc.common`](https://github.com/ConsenSys/doc.common) repository, adding the term to the Vale [`accept.txt`](https://github.com/ConsenSys/doc.common/blob/master/build_tools/vale/vale_styles/Vocab/Consensys/accept.txt) file.
+1. In the documentation repository in which you're making the original contribution, [update the submodule to the latest version](use-common-submodule.md#update-repositories-to-the-latest-submodule-version).

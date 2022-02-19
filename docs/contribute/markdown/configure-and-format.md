@@ -6,10 +6,10 @@ description: How to configure MkDocs and format Markdown
 
 ## MkDocs configuration
 
-[MkDocs] is a Python tool that generates the static HTML website that is published.
+[MkDocs](https://www.mkdocs.org/) is a Python tool that generates the static HTML website that is published.
 
-The ConsenSys documentation MkDocs setup uses the [Material for MkDocs] theme to render the HTML pages.
-It also comes with useful [extensions](#installed-markdown-extensions).
+The ConsenSys documentation MkDocs setup uses the [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) theme to render the HTML pages.
+It also comes with useful [extensions](extensions.md).
 
 MkDocs in configured in the `mdkocs.yml` file at the root of the documentation repository.
 This file configures:
@@ -60,7 +60,7 @@ The following are rules for formatting Markdown in ConsenSys documentation:
 - Use only one first level title (prefixed with a single `#`) on a page.
 
 - No HTML markup can be used inside a Markdown document.
-  There are many [extensions](#installed-markdown-extensions) you can use that have similar capabilities without HTML.
+  There are many [extensions](extensions.md) you can use that have similar capabilities without HTML.
 
   There's one exception where HTML is tolerated: tables that are too complex and already exist.
   If possible, keep the table simple without any elements other than `table`, `tr`, and `td`.
@@ -79,4 +79,4 @@ The following are rules for formatting Markdown in ConsenSys documentation:
 
   You can quickly formate tables by using [Markdown Table Formatter](http://markdowntable.com/) or create tables from scratch using [Tables Generator](https://www.tablesgenerator.com/markdown_tables).
 
-- [Code samples](#code-samples) should be written so that users can copy and paste them with minimal editing and have them work as expected.
+- [Code samples](extensions.md#code-samples) should be written so that users can copy and paste them with minimal editing and have them work as expected.

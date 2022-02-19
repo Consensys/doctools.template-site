@@ -12,10 +12,11 @@ The `docs` directory at the root of each ConsenSys documentation repository cont
 
 The documentation is automatically updated using [webhooks](https://docs.readthedocs.io/en/stable/integrations.html) linking GitHub to the Read the Docs site when you merge a pull request (PR) in the master branch of the ConsenSys documentation repository.
 
-The system also detects tags in the GitHub repository and [makes the latest stable release and previous versions available](Documentation-release-process).
+The system also detects tags in the GitHub repository and [makes the latest stable release and previous versions available](../reference/release-process.md).
 
-Documentation sites that use the old system:
+Documentation repositories that use the old system:
 
+- [doc.common](https://github.com/ConsenSys/doc.common)
 - [Tessera](https://github.com/Consensys/doc.tessera)
 - [Teku](https://github.com/Consensys/doc.teku)
 - [EthSigner](https://github.com/Consensys/doc.ethsigner)
@@ -23,13 +24,13 @@ Documentation sites that use the old system:
 - [Gnark](https://github.com/consensys/doc.gnark)
 - [Quorum Key Manager](https://github.com/consensys/doc.quorum-key-manager)
 - [ConsenSys Rollups](https://github.com/consensys/doc.rollups)
-- [Orchestrate](https://github.com/Consensys/doc.orchestrate) (private)
-- [Quorum Plugins](https://github.com/Consensys/doc.quorumplugins) (private)
-- [Quorum Blockchain Service](https://github.com/consensys/doc.qbs) (private)
+- Orchestrate (private)
+- Quorum Plugins (private)
+- Quorum Blockchain Service (private)
 
 ## New system
 
-Documentation sites that use the new system:
+Documentation repositories that use the new system:
 
 - [Doctools](https://consensys.net/docs/doctools/en/stable/) (this site)
 - [GoQuorum](https://consensys.net/docs/goquorum/en/stable/)

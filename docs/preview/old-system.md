@@ -61,4 +61,4 @@ You can find the link to this preview in the checklist at the bottom of your PR 
 The preview only works for registered and permitted Read the Docs users.
 Ask for help on [Discord](https://discord.gg/6cfyqRGbzq) if needed.
 
-[[images/rtd_pr_preview.png]]
+![PR checklist containing preview link](../assets/images/rtd_pr_preview.png)

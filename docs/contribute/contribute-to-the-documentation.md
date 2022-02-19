@@ -40,8 +40,8 @@ To contribute changes:
     ```
 
 1. Open the documentation repository in a text editor of your choice, for example [IntelliJ](https://www.jetbrains.com/idea/), and make your changes.
-   Refer to the [documentation style guide](Documentation-style-guide) and the [MkDocs and Markdown guide](MkDocs-and-Markdown-guide) when making documentation changes.
-1. [Preview your changes with MkDocs](MkDocs-and-Markdown-guide/#preview-documentation) to check that the changes render correctly.
+   Refer to the [documentation style guide](style-guide.md) and the [MkDocs and Markdown guide](markdown/configure-and-format.md) when making documentation changes.
+1. [Preview your changes with MkDocs](../preview/index.md) to check that the changes render correctly.
 1. Add and commit your changes, using a clear commit message.
    Push your changes to your remote fork (usually named `origin`).
 
@@ -60,7 +60,7 @@ To contribute changes:
     ```
 
 1. The bottom of the PR page displays a list of [CircleCI](https://circleci.com/) checks that verify links, Markdown syntax, writing style, and more.
-   If you have any [CI errors](Fixing-CircleCI-errors), make any required changes to your PR, repeating steps 5-7.
+   If you have any [CI errors](fix-circleci-errors.md), make any required changes to your PR, repeating steps 5-7.
 
 1. In the right sidebar of your PR, select the reviewer(s) who should review your PR (typically the original issue raiser).
    Ask the ConsenSys documentation team to review by selecting **ConsenSys/protocol-pliny** as a reviewer.
@@ -72,7 +72,7 @@ To contribute changes:
 
 ## Code of conduct
 
-This project and everyone participating in it is governed by the [contributor covenant code of conduct](Contributor-covenant-code-of-conduct).
+This project and everyone participating in it is governed by the [contributor covenant code of conduct](../reference/code-of-conduct.md).
 By contributing to documentation, you're expected to uphold this code.
 Please report unacceptable behavior to [private-quorum@consensys.net](mailto:private-quorum@consensys.net).
 

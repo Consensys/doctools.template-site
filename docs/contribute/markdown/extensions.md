@@ -297,7 +297,7 @@ The [Arithmatex](https://squidfunk.github.io/mkdocs-material/setup/extensions/py
 >
 > This Markdown renders as the following math formulas:
 >
-> ![Math formula rendered by MathJax](images/mathjax.png)
+> ![Math formula rendered by MathJax](../../assets/images/mathjax.png)
 
 ## Plant UML diagrams
 

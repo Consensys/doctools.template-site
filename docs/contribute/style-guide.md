@@ -18,7 +18,7 @@ These guidelines aim to keep the documentation consistent, well-organized, and e
    For example, to explain how the EVM works, link to a resource such as the [Ethereum Wiki](https://eth.wiki/en/concepts/evm/ethereum-virtual-machine-(evm)-awesome-list).
 
 1. **Be proactive and suggest good practices** - Anticipate users' needs and guide them through a process.
-   This often takes the form of [notes or tips](MkDocs-and-custom-Markdown-guide/#call-outs) alongside the main explanation.
+   This often takes the form of [notes or tips](markdown/extensions.md#call-outs) alongside the main explanation.
    Put yourself in the user's shoes and consider what questions you'd have when reading the documentation.
 
    Documenting good practices is also important.
@@ -39,7 +39,7 @@ The following are some important style recommendations:
   Use "for example" instead of "e.g," and "that is" instead of "i.e."
 - **Active voice** - Use [active voice](https://docs.microsoft.com/en-us/style-guide/grammar/verbs#active-and-passive-voice) where possible.
   Use "you" to create a personal tone.
-- **Code samples** - Provide [code samples](MkDocs-and-custom-Markdown-guide/#code-samples) that can be copied and pasted in a console or editor with minimal editing, and work as expected.
+- **Code samples** - Provide [code samples](markdown/extensions.md#code-samples) that can be copied and pasted in a console or editor with minimal editing, and work as expected.
   - When writing code samples in a programming language, refer to the programming language's style guide.
   - Always provide code samples as text in a code block; never use screenshots that would force the user to type it manually.
   - When breaking up lines in a command sample, add line breaks (`\`) to ensure it can work when pasted.
