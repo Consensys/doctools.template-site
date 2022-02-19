@@ -165,7 +165,7 @@ Macros must be written in the root of the site inside `main.py`.
 
 !!! question "Can I use a macro in an MkDocs HTML template?"
     No. But if you want to write a template, you will have the Jinja2 syntax that can do the same,
-    see [the contribution page](../howto/advanced/contributing.md).
+    see [the contribution page](../create/create-site-template.md).
 
 !!! question "What's the best to reuse a macro in multiple sites?"
     Develop a [Pluglet](../../reference/pluglets) in the common Docker image instead.

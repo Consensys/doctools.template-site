@@ -26,11 +26,11 @@ The doc team will also help you to get ready:
 ## Step 2 - Learn how to write MarkDown
 
 All the Doctools doc sites content is written using MarkDown. BUt we added some sugar and we allow some
-more flexible syntax. You can start browsing these features on our [MarkDown reference page](reference/markdown.md).
+more flexible syntax. You can start browsing these features on our [MarkDown reference page](contribute/markdown/configure-and-format.md).
 
 ## Step 3 - Write your doc
 
-Once your doc site is created and configured, that you made yourself familiar with [Doctools MarkDown syntax](reference/markdown.md),
+Once your doc site is created and configured, that you made yourself familiar with [Doctools MarkDown syntax](contribute/markdown/configure-and-format.md),
 you can start writing your doc!
 
 Our doc team is here to help you, not only to start the doc, but also if you need a review of your content.

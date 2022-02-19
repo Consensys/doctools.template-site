@@ -1,9 +1,8 @@
 ---
-title: How to create a new doc site
-description: This howto explains how to create a new doc repository from this template.
+description: How to create a new documentation repository from this template
 ---
 
-# How to create a new doc site
+# Create a new documentation site
 
 !!! info "Requirements"
     Creating a new doc site from the template requires to:
@@ -40,15 +39,15 @@ Creating a new documentation site starts by using the template site.
 1. Click the green "Use this template" button
 1. you can make this repository private or public depending on your needs. Discuss this with the documentation team[^2]!
 
-    ![Screenshot of Github create from template page](setup_new_doc_repos_images/create_from_template.png){: style='border:solid 1px'}
+    ![Screenshot of Github create from template page](../howto/setup_new_doc_repos_images/create_from_template.png){: style='border:solid 1px'}
 
 1. The new repository is created! Congrats!
 
-    ![Screenshot of Github repos created](setup_new_doc_repos_images/new_repos.png){: style='border:solid 1px'}
+    ![Screenshot of Github repos created](../howto/setup_new_doc_repos_images/new_repos.png){: style='border:solid 1px'}
 
 1. Update the "About" infos.
 
-    ![Screenshot of Github repos about form](setup_new_doc_repos_images/about.png)
+    ![Screenshot of Github repos about form](../howto/setup_new_doc_repos_images/about.png)
 
 1. In your repository global settings (`https://github.com/ConsenSys/doc.my-awesome-project/settings`), update configuration:
     * :material-checkbox-blank-outline: for `Template repository `

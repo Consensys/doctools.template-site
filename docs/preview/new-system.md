@@ -1,10 +1,9 @@
 ---
 template: katacoda.html
-title: Preview the doc site
-description: How to preview the doc site
+description: How to preview documentation using the new system
 ---
 
-# How to preview the doc site
+# Preview documentation using the new system
 
 ## Try the online demo
 
@@ -50,7 +49,7 @@ You will now have a container running locally and serving the doc site.
 
 Preview the doc site by opening [`http://0.0.0.0:8000`](http://0.0.0.0:8000)
 
-![Doctools template site screenshot](doctools_template_site_screenshot.png)
+![Doctools template site screenshot](../howto/doctools_template_site_screenshot.png)
 
 Now, you can keep the website preview running in the background. Each time you will save a change
 in your `.md` files or in the `mkdocs.yml` file, the site will rebuild and refresh to display the changes.

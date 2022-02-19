@@ -1,22 +1,19 @@
 ---
 template: home.html
 title: Technical documentation for ConsenSys products
-description: Create your doc site in a few steps then focus on writing content.
+description: Learn about and contribute to ConsenSys technical documentation.
 hide:
   - toc
   - navigation
-links:
-  - link: getting_started/
-    title: Create your doc site
 profiles:
   - link: reference/markdown
-    title: Learn how to write your doc
+    title: Contribute to the documentation
     image: assets/images/undraw_typewriter_i-8-xd.svg
   - link: howto/preview_the_doc_site/
-    title: Learn how to preview your doc
+    title: Preview the documentation
     image: assets/images/undraw_image_post_re_25wd.svg
   - link: howto/advanced/contributing/
-    title: Learn how to create templates
+    title: Create a new documentation site
     image: assets/images/undraw_web_development_0l6v.svg
 ---
 

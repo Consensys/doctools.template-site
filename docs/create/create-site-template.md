@@ -1,9 +1,8 @@
 ---
-title: Contributing to Doctools
-description: Contributing to Doctools
+description: How to create a new site template
 ---
 
-# Contributing to Doctools
+# Create a new site template
 
 Contributing to the Doctool documentation system can be done by using the [Doctools action builder].
 
@@ -39,7 +38,7 @@ Creating templates is done in the [Doctools action builder] repository in the `/
 
 !!! warning
     This process is not for users who only want to preview their doc site.
-    If you want to preview, please refer to [the preview documentation](../preview_the_doc_site.md).
+    If you want to preview, please refer to [the preview documentation](../preview/new-system.md).
 
 To be able to develop templates, you will have to run that repos alongside the template repos.
 

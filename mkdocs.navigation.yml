@@ -15,27 +15,25 @@
 INHERIT: mkdocs.extra.yml # DO NOT MODIFY THIS LINE
 
 nav:
-  - Overview: index.md
-  - New features: changelog.md
-  - Getting started: getting_started.md
-  - How To:
-      - howto/index.md
-      - Create a new doc site: howto/setup_new_doc_repos.md
-      - Configure MkDocs: howto/configure_mkdocs.md
-      - Preview the doc site: howto/preview_the_doc_site.md
-      - Publish the doc site: howto/publish_the_doc_site.md
-      - Advanced use:
-          - Contribute to Doctools: howto/advanced/contributing.md
-          - Extra configuration: howto/advanced/extra-configuration.md
-      - Translate: howto/translate.md
-  - Examples:
-      - examples/index.md
-      - CLI reference: examples/write_cli_reference.md
-      - API reference: examples/write_rest_api_reference.md
-      - Support page: examples/support.md
+  - Overview:
+      - overview/index.md
+      - New system features: overview/new-features.md
+  - Contribute:
+      - Contribute to the documentation: contribute/contribute-to-the-documentation.md
+      - MkDocs and Markdown guide:
+          - Configure and format Markdown: contribute/markdown/configure-and-format.md
+          - Markdown extensions: contribute/markdown/extensions.md
+      - Style guide: contribute/style-guide.md
+      - Fix CircleCI errors: contribute/fix-circleci-errors.md
+      - Use the common submodule: contribute/use-common-submodule.md
+      - Raise issues: raise-issues.md
+  - Preview:
+      - preview/index.md
+      - Preview site using the old system: preview/old-system.md
+      - Preview site using the new system: preview/new-system.md
+  - Create:
+      - Create a new documentation site: create/create-doc-site.md
+      - Create a new site template: create/create-site-template.md
   - Reference:
-      - MarkDown syntax: reference/markdown.md
-      - Macros: reference/macros.md
-      - Pluglets:
-          - reference/pluglets/index.md
-          - Katacoda: reference/pluglets/katacoda.md
+      - Documentation release process: reference/release-process.md
+      - Code of conduct: reference/code-of-conduct.md
