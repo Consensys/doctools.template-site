@@ -4,13 +4,13 @@ description: Documentation release process
 
 # Documentation release process
 
-For all ConsenSys documentation repositories that use this common repository, a new stable version of the documentation is released when a new version of the corresponding software is released.
+For all ConsenSys documentation repositories that use the old system, a new stable version of the documentation is released when a new version of the corresponding software is released.
 
 The process consists of one manual action and two automatically triggered actions:
 
 ## 1. Manually create a release on GitHub.
 
-When a new version of the software is released, the ConsensSys documentation team manually [creates a release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository) on the corresponding GitHub documentation repository.
+When a new version of the software is released, the ConsenSys documentation team manually [creates a release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository) on the corresponding GitHub documentation repository.
 
 Documentation versioning follows the same Calendar Versioning (CalVer) pattern as the software to help users match the documentation version to the software version easily.
 

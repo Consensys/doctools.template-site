@@ -19,12 +19,13 @@ nav:
       - overview/index.md
       - New system features: overview/new-features.md
   - Contribute:
-      - Contribute to the documentation: contribute/contribute-to-the-documentation.md
+      - contribute/index.md
       - MkDocs and Markdown guide:
+          - contribute/markdown/index.md
           - Configure and format Markdown: contribute/markdown/configure-and-format.md
           - Markdown extensions: contribute/markdown/extensions.md
       - Style guide: contribute/style-guide.md
-      - Fix CircleCI errors: contribute/fix-circleci-errors.md
+      - Fix CircleCI errors: contribute/fix-errors.md
       - Use the common submodule: contribute/use-common-submodule.md
       - Raise issues: contribute/raise-issues.md
   - Preview:

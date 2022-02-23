@@ -1,8 +1,8 @@
 ---
-description: How to fix CircleCI errors
+description: How to fix PR errors
 ---
 
-# Fix CircleCI errors
+# Fix errors
 
 ConsenSys documentation uses [CircleCI](https://circleci.com/) to verify links, Markdown syntax, writing style, and more on all documentation changes.
 This page describes the four CI error types and how to fix them:
@@ -124,5 +124,5 @@ The error message under **Run Vale** displays writing errors that you must fix, 
 
 If you're introducing a new product term not recognized by Vale:
 
-1. [Make a documentation contribution](contribute-to-the-documentation.md) to this [`doc.common`](https://github.com/ConsenSys/doc.common) repository, adding the term to the Vale [`accept.txt`](https://github.com/ConsenSys/doc.common/blob/master/build_tools/vale/vale_styles/Vocab/Consensys/accept.txt) file.
+1. [Make a documentation contribution](index.md) to this [`doc.common`](https://github.com/ConsenSys/doc.common) repository, adding the term to the Vale [`accept.txt`](https://github.com/ConsenSys/doc.common/blob/master/build_tools/vale/vale_styles/Vocab/Consensys/accept.txt) file.
 1. In the documentation repository in which you're making the original contribution, [update the submodule to the latest version](use-common-submodule.md#update-repositories-to-the-latest-submodule-version).

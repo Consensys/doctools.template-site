@@ -4,17 +4,27 @@ description: Overview of the ConsenSys technical documentation sites and systems
 
 # ConsenSys technical documentation overview
 
+At the root of each ConsenSys documentation repository, the `docs` directory contains all the site documentation, which
+is generated into a static HTML website using [MkDocs](https://www.mkdocs.org/) and the
+[Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) theme.
+
+[Documentation sites that use the old documentation system](#documentation-sites-that-use-the-old-system) are hosted by
+[Read the Docs (RTD)](https://readthedocs.org/).
+
+[Documentation sites that use the new documentation system](#documentation-sites-that-use-the-new-system), which contain
+[new features](new-features.md), are hosted by [Amazon Web Services (AWS)](https://aws.amazon.com/).
+Any [new site created](../create/create-doc-site.md) will use the new system.
+
+The documentation is automatically updated using [webhooks](https://docs.readthedocs.io/en/stable/integrations.html)
+linking GitHub to the RTD or AWS site when you merge a pull request in the master branch of the ConsenSys
+documentation repository.
+
+The system also detects tags in the GitHub repository and [makes the latest stable release and previous versions
+available](../reference/release-process.md).
+
 If you have any questions about ConsenSys products or documentation, ask us on [Discord](https://discord.gg/6cfyqRGbzq).
 
-## Old system
-
-The `docs` directory at the root of each ConsenSys documentation repository contains all the site documentation, which is generated into a static HTML website using [MkDocs] and the [Material for MkDocs] theme, and hosted by [Read the Docs].
-
-The documentation is automatically updated using [webhooks](https://docs.readthedocs.io/en/stable/integrations.html) linking GitHub to the Read the Docs site when you merge a pull request (PR) in the master branch of the ConsenSys documentation repository.
-
-The system also detects tags in the GitHub repository and [makes the latest stable release and previous versions available](../reference/release-process.md).
-
-Documentation repositories that use the old system:
+## Documentation sites that use the old system
 
 - [doc.common](https://github.com/ConsenSys/doc.common)
 - [Tessera](https://github.com/Consensys/doc.tessera)
@@ -28,9 +38,7 @@ Documentation repositories that use the old system:
 - Quorum Plugins (private)
 - Quorum Blockchain Service (private)
 
-## New system
-
-Documentation repositories that use the new system:
+## Documentation sites that use the new system:
 
 - [Doctools](https://consensys.net/docs/doctools/en/stable/) (this site)
 - [GoQuorum](https://consensys.net/docs/goquorum/en/stable/)

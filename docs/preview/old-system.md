@@ -2,9 +2,9 @@
 description: How to preview documentation using the old system
 --
 
-## Preview documentation using the old system
+# Preview documentation using the old system
 
-### Preview locally
+## Preview locally
 
 We recommend previewing your work locally before pushing your changes in a PR.
 Since the final documentation is built with MkDocs, you must build the documentation locally with MkDocs to ensure the Markdown is correctly rendered.
@@ -52,7 +52,7 @@ To preview the documentation locally:
 1. Deactivate the virtual environment if you work on another Python project, by running `deactivate`.
    You can preview the same documentation site again starting from step 3 and skipping step 4, until you update Python.
 
-### Preview on Read the Docs
+## Preview on Read the Docs
 
 When you create a PR on a documentation repository, the PR triggers [CircleCI](https://circleci.com/) checks to verify links, Markdown syntax, writing style, and more.
 The documentation is also built on [Read the Docs] as a PR preview.

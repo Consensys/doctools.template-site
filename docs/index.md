@@ -6,13 +6,13 @@ hide:
   - toc
   - navigation
 profiles:
-  - link: reference/markdown
+  - link: contribute/
     title: Contribute to the documentation
     image: assets/images/undraw_typewriter_i-8-xd.svg
-  - link: howto/preview_the_doc_site/
+  - link: preview/
     title: Preview the documentation
     image: assets/images/undraw_image_post_re_25wd.svg
-  - link: howto/advanced/contributing/
+  - link: create/create-doc-site/
     title: Create a new documentation site
     image: assets/images/undraw_web_development_0l6v.svg
 ---
