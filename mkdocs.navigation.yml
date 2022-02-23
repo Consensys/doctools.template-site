@@ -23,9 +23,11 @@ nav:
       - MkDocs and Markdown guide:
           - contribute/markdown/index.md
           - Configure and format Markdown: contribute/markdown/configure-and-format.md
-          - Markdown extensions: contribute/markdown/extensions.md
+          - Extensions: contribute/markdown/extensions.md
+          - Macros: contribute/markdown/macros.md
+          - Pluglets: contribute/markdown/pluglets.md
       - Style guide: contribute/style-guide.md
-      - Fix CircleCI errors: contribute/fix-errors.md
+      - Fix errors: contribute/fix-errors.md
       - Use the common submodule: contribute/use-common-submodule.md
       - Raise issues: contribute/raise-issues.md
   - Preview:

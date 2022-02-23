@@ -90,14 +90,16 @@ To contribute changes:
 1. After your PR is validated, all checks have passed, and your branch has no conflicts with the target branch, you can
    merge your PR.
 
-> **Tip:** You can use a Git client such as [Fork](https://fork.dev/) instead of the command line.
+!!! tip
+
+    You can use a Git client such as [Fork](https://fork.dev/) instead of the command line.
 
 ## Code of conduct
 
 This project and everyone participating in it is governed by the
 [contributor covenant code of conduct](../reference/code-of-conduct.md).
 By contributing to documentation, you're expected to uphold this code.
-Please report unacceptable behavior to [private-quorum@consensys.net](mailto:private-quorum@consensys.net).
+Please report unacceptable behavior to [`private-quorum@consensys.net`](mailto:private-quorum@consensys.net).
 
 ## Contributor License Agreement
 

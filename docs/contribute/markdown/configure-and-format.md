@@ -64,6 +64,7 @@ The following are rules for formatting Markdown in ConsenSys documentation:
         We also recommend starting each new sentence on a new line, even if the previous line didn't reach
         100 columns, for easy reviewing.
         You can set a column marker in your text editor as a heuristic.
+        ```
 
 - Use only one first level title (prefixed with a single `#`) on a page.
 

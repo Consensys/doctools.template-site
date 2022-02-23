@@ -26,9 +26,9 @@ plugins:
       support.md: examples/support.md
       changelog.md: overview/new-features.md
       reference/markdown.md: contribute/markdown/configure-and-format.md
-      reference/macros.md: contribute/markdown/extensions.md
-      reference/pluglets/index.md: contribute/markdown/extensions.md
-      reference/pluglets/katacoda.md: contribute/markdown/extensions.md
+      reference/macros.md: contribute/markdown/macros.md
+      reference/pluglets/index.md: contribute/markdown/pluglets.md
+      reference/pluglets/katacoda.md: contribute/markdown/pluglets.md
       howto/configure_mkdocs.md: contribute/markdown/configure-and-format.md
       howto/index.md: index.md
       howto/translate.md: index.md

@@ -4,6 +4,9 @@ description: Overview of the ConsenSys technical documentation sites and systems
 
 # ConsenSys technical documentation overview
 
+This site contains information about and tools for contributing to ConsenSys technical documentation.
+The following is an overview of the documentation system.
+
 At the root of each ConsenSys documentation repository, the `docs` directory contains all the site documentation, which
 is generated into a static HTML website using [MkDocs](https://www.mkdocs.org/) and the
 [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) theme.

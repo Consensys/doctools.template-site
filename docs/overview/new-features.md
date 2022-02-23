@@ -14,7 +14,7 @@ The new documentation system introduces the following new features and changes f
     - Search terms now visible in analytics
 - Last update of page on all sites
 - Home pages (like landing pages) and new [home page design](../index.md)
-- Back to top button
+- **Back to top** button
 - Instant navigation (faster search and reduced bandwidth usage)
 - Easy [Katacoda] integration
 - [Easy ReDoc REST API documentation] from a JSON or YAML specification (local or remote).

@@ -1,28 +1,26 @@
 ---
-title: Macros
-description: How to use MkDocs macros
+description: how to use MkDocs macros
 ---
 
-# MkDocs macros and filters.
+# Macros
 
-Macros and filters are scripts that your can write for your pages or whole site to make some tasks faster.
+[Documentation sites that use the new system](../../overview/index.md#documentation-sites-that-use-the-new-system)
+support macros, which are scripts that make some tasks faster.
+You can write them for a Markdown [page](#page-level-macros) or [site](#site-level-macros) and use them in your content.
 
-You can then use them in your Markdown content.
+!!! note "Notes"
 
-For instance, imagine that you are writing a CLI doc with multiple entries, all formatted the same way.
+    - You can't use macros in an [MkDocs HTML template](../../create/create-site-template.md), but the Jinja2 syntax has
+      the same functionality.
 
-Instead of repeating the same Markdown code over and over for each CLI option, with just change in the CLI option name and params, write a macro and reuse it.
+    - The best way to reuse a macro across multiple sites is to develop a [pluglet](pluglets.md) in the common Docker
+      image instead.
 
-See how we did this in our [CLI doc example](../examples/write_cli_reference.md).
+## Page-level macros
 
-## Page level macros
+Macros written directly in a Markdown page are only available for the specific page.
 
-Macros writen directly in a Markdown page and only available for this specific page.
-
-!!! example "Example of CLI option macro"
-
-    Here is an example of a page level macro. Imagine that you only have one CLI page, so you don't need it
-    to be reused in other pages.
+!!! example "Example CLI option macro"
 
 {% macro cli_option(name, type="INTEGER", example="", description="", default="") -%}
 
@@ -96,7 +94,7 @@ Macros writen directly in a Markdown page and only available for this specific p
         {% endraw %}
         ```
 
-    === "Macro call cade in Markdown"
+    === "Macro call code in Markdown"
 
         ```Django
         {% raw %}
@@ -108,18 +106,13 @@ Macros writen directly in a Markdown page and only available for this specific p
 
         {{ cli_option('my-option','INTEGER', '42', 'This option provides the expected answer to life, universe and everything.', '42') }}
 
-        !!! tip
-            See also how it renders in the [CLI doc example](../examples/write_cli_reference.md#options).
+## Site-level macros
 
-## Site level macros
+Site level macros are written in Python and are available for any page in the documentation site.
 
-Site level macros are writen in Python and are available for any page in the documentation site.
+Macros must be written in the `main.py` file at the root of the project.
 
-Macros must be written in the root of the site inside `main.py`.
-
-!!! example
-
-    This macro helps writing an email link.
+!!! example "Example email link macro"
 
     === "Macro definition code"
 
@@ -136,7 +129,7 @@ Macros must be written in the root of the site inside `main.py`.
             return 'Send email at [{address}@{domain}](mailto:{address}@{domain})'.format(address=address, domain=domain)
         ```
 
-    === "Macro call cade in Markdown"
+    === "Macro call code in Markdown"
 
         ```Django
         {% raw %}
@@ -144,28 +137,6 @@ Macros must be written in the root of the site inside `main.py`.
         {% endraw %}
         ```
 
-        What you would have had to type without macro:
-
-        ```markdown
-        Send email at [jane.doe@consensys.net](mailto:jane.doe@consensys.net)
-        ```
-
-
     === "Rendered result"
+
         {{ email("jane.doe") }}
-
-## FAQ
-
-!!! question "Can this break my site?"
-    Yes, it's code, so you will have to test it first.
-
-    Keep it very simple, only formatting.
-
-    Try to avoid complex logic, and even simple logic.
-
-!!! question "Can I use a macro in an MkDocs HTML template?"
-    No. But if you want to write a template, you will have the Jinja2 syntax that can do the same,
-    see [the contribution page](../create/create-site-template.md).
-
-!!! question "What's the best to reuse a macro in multiple sites?"
-    Develop a Pluglet in the common Docker image instead.
