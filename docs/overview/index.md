@@ -4,7 +4,7 @@ description: Overview of the ConsenSys technical documentation sites and systems
 
 # ConsenSys technical documentation
 
-This site contains information about and tools for contributing to ConsenSys technical documentation.
+This site contains information about contributing to ConsenSys technical documentation.
 This site is also the template to [create new documentation sites](../create/create-doc-site.md).
 
 ## Documentation system overview
@@ -27,7 +27,7 @@ documentation repository.
 The system also detects tags in the GitHub repository and [makes the latest stable release and previous versions
 available](../reference/release-process.md).
 
-If you have any questions about ConsenSys products or documentation, ask us on [Discord](https://discord.gg/6cfyqRGbzq).
+If you have any questions about ConsenSys products or documentation, ask on [Discord](https://discord.gg/6cfyqRGbzq).
 
 ## Documentation sites that use the old system
 
