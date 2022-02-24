@@ -118,10 +118,10 @@ but don't prevent the tests from passing.
     ```bash
     docs/Reference/CLI/CLI-Syntax.md
     1349:34  error    Did you really mean             Vale.Spelling
-                       'attestions'?
+                      'attestions'?
     1436:19  warning  'is used' may be passive        write-good.Passive
-                        voice. Use active voice if you
-                        can.
+                      voice. Use active voice if you
+                      can.
 
     ✖ 1 error, 1 warnings and 0 suggestions in 1 file.
 
