@@ -54,7 +54,7 @@ To preview the documentation locally:
     It updates the local website automatically when you save changes in your Markdown files.
 
 1. Deactivate the virtual environment if you work on another Python project, by running `deactivate`.
-   You can preview the same documentation site again starting from step 3 and skipping step 4, until you update Python.
+    You can preview the same documentation site again starting from step 3 and skipping step 4, until you update Python.
 
 ## Preview on Read the Docs
 

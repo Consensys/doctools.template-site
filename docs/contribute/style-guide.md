@@ -10,25 +10,25 @@ These guidelines aim to keep the documentation consistent, well-organized, and e
 ## General guidelines
 
 1. **Be consistent** - Consistency helps users follow and understand the documentation.
-   By being consistent with your word choices, visual formatting, and style of communication, users know what to expect when they read the documentation.
-   For example, use consistent sentence structures when [writing step-by-step instructions](https://docs.microsoft.com/en-us/style-guide/procedures-instructions/writing-step-by-step-instructions).
+    By being consistent with your word choices, visual formatting, and style of communication, users know what to expect when they read the documentation.
+    For example, use consistent sentence structures when [writing step-by-step instructions](https://docs.microsoft.com/en-us/style-guide/procedures-instructions/writing-step-by-step-instructions).
 
 1. **Be simple but technically correct** - Avoid technical jargon and assume the user isn't an Ethereum expert.
-   When an understanding of a complex Ethereum concept is required, you can refer users to external resources.
-   For example, to explain how the EVM works, link to a resource such as the [Ethereum Wiki](https://eth.wiki/en/concepts/evm/ethereum-virtual-machine-(evm)-awesome-list).
+    When an understanding of a complex Ethereum concept is required, you can refer users to external resources.
+    For example, to explain how the EVM works, link to a resource such as the [Ethereum Wiki](https://eth.wiki/en/concepts/evm/ethereum-virtual-machine-(evm)-awesome-list).
 
 1. **Be proactive and suggest good practices** - Anticipate users' needs and guide them through a process.
-   This often takes the form of [notes or tips](markdown/extensions.md#call-outs) alongside the main explanation.
-   Put yourself in the user's shoes and consider what questions you'd have when reading the documentation.
+    This often takes the form of [notes or tips](markdown/extensions.md#call-outs) alongside the main explanation.
+    Put yourself in the user's shoes and consider what questions you'd have when reading the documentation.
 
     Documenting good practices is also important.
     For example, instruct users to secure private keys and protect RPC endpoints in production environments.
 
 1. **Be informative but concise** - Provide enough information to help users develop a mental model of how the software works without forcing them to read too much text or redundant detail.
-   Cut down your text by [using simple words and concise sentences](https://docs.microsoft.com/en-us/style-guide/word-choice/use-simple-words-concise-sentences).
+    Cut down your text by [using simple words and concise sentences](https://docs.microsoft.com/en-us/style-guide/word-choice/use-simple-words-concise-sentences).
 
 1. **Be inclusive** - ConsenSys documentation aims to be inclusive to all users.
-   Refer to the [Google inclusive documentation guide](https://developers.google.com/style/inclusive-documentation) and the [Microsoft bias-free communication guide](https://docs.microsoft.com/en-us/style-guide/bias-free-communication) as starting points.
+    Refer to the [Google inclusive documentation guide](https://developers.google.com/style/inclusive-documentation) and the [Microsoft bias-free communication guide](https://docs.microsoft.com/en-us/style-guide/bias-free-communication) as starting points.
 
 ## Writing style guide
 

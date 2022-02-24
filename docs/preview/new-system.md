@@ -50,7 +50,7 @@ With Docker running, follow these steps to preview your documentation site local
     Each time you save changes, the site rebuilds and refreshes to display the changes.
 
 1. Stop the preview by running `docker-compose down` in the project directory.
-   You can preview the same documentation site again starting from step 3.
+    You can preview the same documentation site again starting from step 3.
 
 ### Try the online demo
 

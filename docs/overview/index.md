@@ -43,7 +43,7 @@ If you have any questions about ConsenSys products or documentation, ask us on [
 - Quorum Plugins (private)
 - Quorum Blockchain Service (private)
 
-## Documentation sites that use the new system:
+## Documentation sites that use the new system
 
 - [Doctools](https://consensys.net/docs/doctools/en/stable/) (this site)
 - [GoQuorum](https://consensys.net/docs/goquorum/en/stable/)

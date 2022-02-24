@@ -130,18 +130,18 @@ This helps reduce the content length and enables a faster overview of the whole 
     ```markdown
     ???+ note "Collapsible note"
 
-         This is a collapsible note.
-         The plus sign makes it open by default.
-         Remove the plus sign and it will be collapsed by default.
+        This is a collapsible note.
+        The plus sign makes it open by default.
+        Remove the plus sign and it will be collapsed by default.
     ```
 
 === "Example rendering"
 
     ???+ note "Collapsible note"
 
-         This is a collapsible note.
-         The plus sign makes it open by default.
-         Remove the plus sign and it will be collapsed by default.
+        This is a collapsible note.
+        The plus sign makes it open by default.
+        Remove the plus sign and it will be collapsed by default.
 
 ## Checklists
 
@@ -342,9 +342,9 @@ the end of a page.
     ... more text ...
 
     [^1]:
-       The footnote goes here.
-       A clickable arrow displays that takes the user back to the original text.
-       When writing multi-line footnotes, indent each line with four spaces.
+        The footnote goes here.
+        A clickable arrow displays that takes the user back to the original text.
+        When writing multi-line footnotes, indent each line with four spaces.
     ```
 
 ## Global content
@@ -486,6 +486,7 @@ extra:
   support:
     email: quorum@consensys.net
 ```
+
 You can display the email in any documentation page using:
 
 ```Django

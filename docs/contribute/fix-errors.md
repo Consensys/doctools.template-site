@@ -118,10 +118,10 @@ but don't prevent the tests from passing.
     ```bash
     docs/Reference/CLI/CLI-Syntax.md
     1349:34  error    Did you really mean             Vale.Spelling
-                      'attestions'?
+                       'attestions'?
     1436:19  warning  'is used' may be passive        write-good.Passive
-                       voice. Use active voice if you
-                       can.
+                        voice. Use active voice if you
+                        can.
 
     ✖ 1 error, 1 warnings and 0 suggestions in 1 file.
 
@@ -138,7 +138,7 @@ but don't prevent the tests from passing.
 If you're introducing a new product term not recognized by Vale:
 
 1. [Make a documentation contribution](index.md) to the [`doc.common`](https://github.com/ConsenSys/doc.common)
-   repository, adding the term to the Vale [`accept.txt`](https://github.com/ConsenSys/doc.common/blob/master/build_tools/vale/vale_styles/Vocab/Consensys/accept.txt)
-   file.
+    repository, adding the term to the Vale [`accept.txt`](https://github.com/ConsenSys/doc.common/blob/master/build_tools/vale/vale_styles/Vocab/Consensys/accept.txt)
+    file.
 1. In the documentation repository in which you're making the original contribution,
-   [update the submodule to the latest version](use-common-submodule.md#update-repositories-to-the-latest-submodule-version).
+    [update the submodule to the latest version](use-common-submodule.md#update-repositories-to-the-latest-submodule-version).

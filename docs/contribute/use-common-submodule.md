@@ -12,9 +12,9 @@ include the [`doc.common`](https://github.com/ConsenSys/doc.common) repository a
 `doc.common` includes:
 
 - [`build_tools`](https://github.com/ConsenSys/doc.common/tree/master/build_tools) directory - Contains all the [CircleCI](https://circleci.com/)-related scripts and configuration files used to verify links, Markdown syntax, writing style, and more.
-  - [`scripts`](https://github.com/Consensys/doc.common/tree/master/build_tools/scripts) subdirectory - Contains shortcut scripts to run the CI jobs locally to test your changes.
-  - [`package.json`](https://github.com/ConsenSys/doc.common/blob/master/build_tools/package.json) and [`package-lock.json`](https://github.com/ConsenSys/doc.common/blob/master/build_tools/package-lock.json) - Files that must be in the documentation project root.
-    The real files are in the common repository and symbolic links point to them from the documentation project root.
+    - [`scripts`](https://github.com/Consensys/doc.common/tree/master/build_tools/scripts) subdirectory - Contains shortcut scripts to run the CI jobs locally to test your changes.
+    - [`package.json`](https://github.com/ConsenSys/doc.common/blob/master/build_tools/package.json) and [`package-lock.json`](https://github.com/ConsenSys/doc.common/blob/master/build_tools/package-lock.json) - Files that must be in the documentation project root.
+      The real files are in the common repository and symbolic links point to them from the documentation project root.
 - [`custom_theme`](https://github.com/Consensys/doc.common/tree/master/custom_theme) directory - Contains the [MkDocs](https://www.mkdocs.org/) custom HTML templates, CSS and JS scripts, and images for the ConsenSys documentation custom design.
 
 ## Retrieve the submodule

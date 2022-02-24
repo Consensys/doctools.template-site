@@ -19,9 +19,9 @@ You can also [create a new site template](create-site-template.md).
 1. Select the green **Use this template** button.
 
 1. Create the new documentation repository.
-   For consistency across documentation sites, name the repository in the format `doc.<project-name>`, with
-   `<project-name>` lowercase.
-   You can make this repository private or public depending on the project's needs.
+    For consistency across documentation sites, name the repository in the format `doc.<project-name>`, with
+    `<project-name>` lowercase.
+    You can make this repository private or public depending on the project's needs.
 
     ![Screenshot of Github create from template page](../assets/images/create_from_template.png){: style='border:solid 1px'}
 

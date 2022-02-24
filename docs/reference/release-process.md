@@ -9,7 +9,7 @@ of the corresponding software is released.
 
 The process consists of one manual action and two automatically triggered actions:
 
-## 1. Manually create a release on GitHub.
+## 1. Manually create a release on GitHub
 
 When a new version of the software is released, the ConsenSys documentation team manually
 [creates a release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository)
@@ -20,7 +20,7 @@ documentation version to the software version easily.
 
 The GitHub release creation process tags the Git repository with the new version (for example, `21.1.4`).
 
-## 2. Automatically build the documentation on RTD or AWS.
+## 2. Automatically build the documentation on RTD or AWS
 
 When [Read the Docs (RTD)](https://readthedocs.org/) (if using the
 [old system](../overview/index.md#documentation-sites-that-use-the-old-system)) or
@@ -37,7 +37,7 @@ RTD or AWS builds all three versions, all showing the same content from the same
 As contributors continue to work on the documentation, RTD or AWS rebuilds the latest version from the latest master
 commit each time a new PR is merged, and the CalVer and stable versions remain behind latest.
 
-## 3. Automatically activate the documentation version on RTD or AWS.
+## 3. Automatically activate the documentation version on RTD or AWS
 
 For old-system sites, by default, RTD doesn't activate or publish new CalVer versions, but ConsenSys documentation has
 custom rules for RTD to automatically do so.

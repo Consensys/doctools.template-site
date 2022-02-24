@@ -40,7 +40,7 @@ We recommend the following configuration:
     ```
 
 1. Clone the [builder repository](https://github.com/ConsenSys/doctools.action-builder.git) on your local machine in the
-   same directory as the template repository:
+    same directory as the template repository:
 
     ```bash
     git clone https://github.com/ConsenSys/doctools.action-builder.git
@@ -131,7 +131,7 @@ We recommend the following configuration:
     ```
 
 1. To stop the service, press ++ctrl+c++.
-   Remove containers by running:
+    Remove containers by running:
 
     ```bash
     docker compose down mkdocs
