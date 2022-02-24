@@ -5,7 +5,7 @@ description: How to preview documentation using the new system
 
 # Preview documentation using the new system
 
-Preview [documentation sites that use the new system](../../overview/index.md#documentation-sites-that-use-the-new-system)
+Preview [documentation sites that use the new system](../overview/index.md#documentation-sites-that-use-the-new-system)
 on your [local machine](#preview-locally) and on [GitHub Pages](#preview-on-github-pages).
 
 ## Preview locally
@@ -42,7 +42,7 @@ With Docker running, follow these steps to preview your documentation site local
 
     You now have a container running locally and serving the documentation site.
 
-1. Preview the site at [`http://0.0.0.0:8000`](http://0.0.0.0:8000).
+1. Preview the site at `http://0.0.0.0:8000`.
 
     ![Doctools template site screenshot](../assets/images/doctools_template_site_screenshot.png)
 

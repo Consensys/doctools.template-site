@@ -4,7 +4,7 @@ description: How to fix PR errors
 
 # Fix errors
 
-[Documentation sites that use the old system](../../overview/index.md#documentation-sites-that-use-the-old-system) use
+[Documentation sites that use the old system](../overview/index.md#documentation-sites-that-use-the-old-system) use
 [CircleCI](https://circleci.com/) to verify links, Markdown syntax, writing style, and more on all documentation changes.
 This section describes the four CI error types and how to fix them:
 

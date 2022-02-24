@@ -119,7 +119,7 @@ We recommend the following configuration:
     docker compose -f docker-compose.dev.yml --env-file ./.env.dev up
     ```
 
-    You can see the preview at [`http://0.0.0.0:8000`](http://0.0.0.0:8000){: target="_blank}.
+    You can see the preview at `http://0.0.0.0:8000`.
 
 1. If you keep the Docker compose service running, the site preview automatically reloads and displays most changes.
 

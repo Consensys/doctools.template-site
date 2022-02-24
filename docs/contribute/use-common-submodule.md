@@ -4,7 +4,7 @@ description: How to use the common submodule
 
 # Use the common submodule
 
-[Documentation sites that use the old system](../../overview/index.md#documentation-sites-that-use-the-old-system)
+[Documentation sites that use the old system](../overview/index.md#documentation-sites-that-use-the-old-system)
 include the [`doc.common`](https://github.com/ConsenSys/doc.common) repository as a
 [Git submodule](https://git-scm.com/book/en/v2/Git-Tools-Submodules).
 `doc.common` contains templates and scripts used by the documentation repositories, and is a single place to update.
