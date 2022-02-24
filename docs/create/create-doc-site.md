@@ -4,110 +4,92 @@ description: How to create a new documentation repository from this template
 
 # Create a new documentation site
 
-!!! info "Requirements"
-    Creating a new doc site from the template requires to:
+The following guidelines explain how to create a new ConsenSys documentation site from the existing template.
+New documentation sites use the [new documentation system](../overview/index.md#documentation-sites-that-use-the-new-system).
 
-    * have access to [Github](https://github.com/).
-    * have [the tools to handle Git repositories](https://git-scm.com/downloads/guis).
-    * have the right to create a new repository in the [ConsenSys Github organisation](https://github.com/ConsenSys).
-    * have a modern text editor[^1], preferably with MarkDown[^3] and YAML[^4] support.
+To create a new site, you must have permission to create a new repository in the
+[ConsenSys GitHub organization](https://github.com/ConsenSys).
 
-[^1]:
-    UFT-8 and linux end-of-lines capable.
-    We use intelliJ, Atom, Sublime but feel free to use your favourite one.
-    It has to be raw text capable, no Word or Google Docs
+You can also [create a new site template](create-site-template.md).
 
-[^2]:
-    Ask on ConsenSys Slack #documentation channel.
+## Steps
 
-[^3]:
-    [https://daringfireball.net/projects/markdown/](https://daringfireball.net/projects/markdown/)
+1. Go to the [template repository](https://github.com/ConsenSys/doctools.template-site) (this Doctool site's repository).
 
-[^4]:
-    [https://yaml.org/](https://yaml.org/)
+1. Select the green **Use this template** button.
 
-## Create a new repos from the template
+1. Create the new documentation repository.
+   For consistency across documentation sites, name the repository in the format `doc.<project-name>`, with
+   `<project-name>` lowercase.
+   You can make this repository private or public depending on the project's needs.
 
-Creating a new documentation site starts by using the template site.
+    ![Screenshot of Github create from template page](../assets/images/create_from_template.png){: style='border:solid 1px'}
 
-!!! important
-    For the doc sites to be easy to spot, we prefer that you name the new repos using the pattern `doc.[projet_name]`
-    where `[project_name]` is your project name, lower-cased.
+    The new repository is created.
 
-1. Navigate to the template repos: https://github.com/ConsenSys/doctools.template-site
+    ![Screenshot of Github repos created](../assets/images/new_repos.png){: style='border:solid 1px'}
 
-1. Click the green "Use this template" button
-1. you can make this repository private or public depending on your needs. Discuss this with the documentation team[^2]!
+1. Update the **About** information.
 
-    ![Screenshot of Github create from template page](../howto/setup_new_doc_repos_images/create_from_template.png){: style='border:solid 1px'}
+    ![Screenshot of Github repos about form](../assets/images/about.png)
 
-1. The new repository is created! Congrats!
+1. In your repository's **Settings**, update the configuration as follows:
+    * :material-checkbox-blank-outline: Template repository
+    * :material-checkbox-blank-outline: Wikis
+    * :material-checkbox-outline: Restrict editing to users in teams with push access only
+    * :material-checkbox-outline: Issues
+    * :material-checkbox-outline: Allow forking
+    * :material-checkbox-blank-outline: Sponsorships
+    * :material-checkbox-blank-outline: or :material-checkbox-outline: Projects (depends on your needs)
+    * :material-checkbox-blank-outline: or :material-checkbox-outline: Discussions (depends on your needs)
+    * :material-checkbox-blank-outline: Allow merge commits
+    * :material-checkbox-outline: Allow squash merging
+    * :material-checkbox-blank-outline: Allow rebase merging
+    * :material-checkbox-outline: Allow auto-merge
+    * :material-checkbox-blank-outline: Automatically delete head branches
+    * :material-checkbox-blank-outline: Include Git LFS objects in archives
 
-    ![Screenshot of Github repos created](../howto/setup_new_doc_repos_images/new_repos.png){: style='border:solid 1px'}
+1. In the **Access** settings:
+    * You should already be an admin on this repository.
+      Add the documentation team **ConsenSys/protocol-pliny** as an admin too.
+    * Add your team as maintainers (add the GitHub team instead of individual users).
 
-1. Update the "About" infos.
+1. In the **Branches** settings:
+    * Add a new branch protection rule for the `main` branch with the following configuration:
+        * **Branch name pattern** is `main`
+        * :material-checkbox-outline: Require a pull request before merging
+        * :material-checkbox-outline: Require status checks to pass before merging
+        * :material-checkbox-outline: Require branches to be up to date before merging
+        * :material-checkbox-outline: Require conversation resolution before merging
+        * :material-checkbox-outline: Include administrators
+        * The rest are unchecked
 
-    ![Screenshot of Github repos about form](../howto/setup_new_doc_repos_images/about.png)
-
-1. In your repository global settings (`https://github.com/ConsenSys/doc.my-awesome-project/settings`), update configuration:
-    * :material-checkbox-blank-outline: for `Template repository `
-    * :material-checkbox-blank-outline: for `Wiki`
-    * :material-checkbox-outline: for `Restrict editing to users in teams with push access only`
-    * :material-checkbox-outline: for `Issues`
-    * :material-checkbox-outline: for `Allow forking`
-    * :material-checkbox-blank-outline: for `Sponsorships`
-    * :material-checkbox-blank-outline: or :material-checkbox-outline: for `Projects` (depends on your needs)
-    * :material-checkbox-blank-outline: or :material-checkbox-outline: `Discussions` (depends on your needs)
-    * :material-checkbox-blank-outline: for `Allow merge commits`
-    * :material-checkbox-outline: for `Allow squash merging`
-    * :material-checkbox-blank-outline: for `Allow rebase merging`
-    * :material-checkbox-outline: for `Allow auto-merge`
-    * :material-checkbox-blank-outline: for `Automatically delete head branches`
-    * :material-checkbox-blank-outline: for `Include Git LFS objects in archives`
-1. In your repository **access** settings (`https://github.com/ConsenSys/doc.my-awesome-project/settings/access`):
-    * You should already be `admin` on this repository, but to make sure the doc team can help you, add `@ConsenSys/protocol-pliny` as admin too.
-    * Add your team as `maintainers` (use team instead of adding individuals)
-1. In your repository **branches** settings (`https://github.com/ConsenSys/doc.my-awesome-project/settings/branches`):
-    * Add a new branch protection rule for the `main` branch (Github now creates repos with `main` as default branch name)
-        * set `Branch name pattern` to `main`
-        * :material-checkbox-outline: for `Require a pull request before merging`
-        * :material-checkbox-outline: for `Require status checks to pass before merging`
-        * :material-checkbox-outline: for `Require branches to be up to date before merging`
-        * :material-checkbox-outline: for `Require conversation resolution before merging`
-        * :material-checkbox-outline: for `Include administrators`
-        * keep the remaining unchecked and click `Create`.
-1. In your project **webhooks** settings (`https://github.com/ConsenSys/doc.my-awesome-project/settings/hooks`):
+1. In the **Webhooks** settings:
     * TODO (notifications)
-1. In your repository **actions** settings (`https://github.com/ConsenSys/doc.my-awesome-project/settings/actions`):
-    * if your repository is private, check `Allow all actions`.
-    * if your repository is public, select `Allow select actions`:
-        * :material-checkbox-outline: for `Allow actions created by GitHub`
-        * Add the following to the `Allow specified actions` field:
 
-          ```text
-          FranzDiebold/github-env-vars-action@*,
-          JamesIves/github-pages-deploy-action@*,
-          actions/checkout@v2,
-          c-py/action-dotenv-to-setenv@*,
-          gaurav-nelson/github-action-markdown-link-check@*,
-          github/super-linter/slim@*,
-          jakejarvis/s3-sync-action@*,
-          marocchino/sticky-pull-request-comment@*,
-          ```
+1. In the **Actions** settings:
+    * If the repository is private, select **Allow all actions**.
+    * If the repository is public, select **Allow select actions** and add the following configuration:
+        * :material-checkbox-outline: Allow actions created by GitHub
 
-1. In your repository **secrets** settings (`https://github.com/ConsenSys/doc.my-awesome-project/settings/secrets/actions`):
+        ```text title="Allow specified actions"
+        FranzDiebold/github-env-vars-action@*,
+        JamesIves/github-pages-deploy-action@*,
+        actions/checkout@v2,
+        c-py/action-dotenv-to-setenv@*,
+        gaurav-nelson/github-action-markdown-link-check@*,
+        github/super-linter/slim@*,
+        jakejarvis/s3-sync-action@*,
+        marocchino/sticky-pull-request-comment@*,
+        ```
 
-    Ask the docOps team[^2] to setup the following secrets:
+1. In the **Secrets** settings, ask the ConsenSys docOps team to set up the following secrets:
+    * `AWS_ACCESS_KEY_ID` from `docops_doctool_doc_site_deployer` IAM user
+    * `AWS_SECRET_ACCESS_KEY` from `docops_doctool_doc_site_deployer` IAM user
+    * `AWS_S3_BUCKET`, the S3 bucket to which to publish the documentation site
+    * `AWS_REGION`, the region where your S3 bucket is located (for example, `us-east-2`)
+    * `PROJECT`, the project name to be used as folder name and key
+    * `SITE_ROOT`, the documentation site root path including the project name and a leading `/` (for example,
+      `https://consensys.net/docs/doctools/`)
 
-    * `AWS_ACCESS_KEY_ID` from `docops_doctool_doc_site_deployer` IAM user.
-    * `AWS_SECRET_ACCESS_KEY` from `docops_doctool_doc_site_deployer` IAM user.
-    * `AWS_S3_BUCKET` the s3 bucket to publish doc to.
-    * `AWS_REGION` the region where your S3 bucket is located. For example `us-east-2`
-    * `PROJECT` the project name as it will be used as folder name and key
-    * `SITE_ROOT` the doc site root path including protocol and project name and a leading /.
-      !!! example
-          https://consensys.net/docs/doctools/
-
-1. If your repository is public, setup a CLA with [cla-assistant](https://cla-assistant.io/)
-
-*[CLA]: Contributor License Agreement
+1. If your repository is public, set up a Contributor License Agreement with [cla-assistant](https://cla-assistant.io/).

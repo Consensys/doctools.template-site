@@ -5,65 +5,64 @@ description: How to preview documentation using the new system
 
 # Preview documentation using the new system
 
-## Try the online demo
-
-Learn how to preview using our Katacoda playgound.
-
-No requirement at all to test this in the playgound.
-
-<!-- The followin uses the Katacoda pluglet available for all sites using the build image. -->
-{{ katacoda('consensys/doctools-doc-preview') }}
+Preview [documentation sites that use the new system](../../overview/index.md#documentation-sites-that-use-the-new-system)
+on your [local machine](#preview-locally) and on [GitHub Pages](#preview-on-github-pages).
 
 ## Preview locally
 
-The following is the same process as explained in the Katacoda playground but on your local computer.
+We recommend previewing your work locally before pushing your changes in a PR.
+With Docker running, follow these steps to preview your documentation site locally.
 
-### Requirements
+!!! note
 
-Previewing a doc site requires to:
+    Previewing the site locally uses the port `8000`.
+    If you already have a service running on this port, stop it first.
 
-* have [Docker](https://docs.docker.com/get-docker/) installed
+1. Pull the latest Doctools Docker image:
 
-!!! important
+    ```bash
+    docker pull ghcr.io/consensys/doctools-builder:latest
+    ```
 
-    Previewing the doc site on your local machine will use the local port `8000`. If you already
-    have a service running on this port, you have to stop it first.
+1. Make a copy of the `.env.template` file provided, naming it `.env`:
 
-### Pull latest Doctools Docker image
+    ```bash
+    cp .env.template .env
+    ```
 
-```bash
-docker pull ghcr.io/consensys/doctools-builder:latest
-```
+    !!! note
 
-### Run the container with Docker-compose
+        You can update this environment variable file as described in the template.
 
-Change to your website project directory, for instance `doc.my-awesome-project` and
-run the `docker-compose` command with `up` subcommand in a background process `-d`
+1. In the project directory, run:
 
-```bash
-cd doc.my-awesome-project
-docker-compose up -d
-```
+    ```bash
+    docker-compose up -d
+    ```
 
-You will now have a container running locally and serving the doc site.
+    You now have a container running locally and serving the documentation site.
 
-Preview the doc site by opening [`http://0.0.0.0:8000`](http://0.0.0.0:8000)
+1. Preview the site at [`http://0.0.0.0:8000`](http://0.0.0.0:8000).
 
-![Doctools template site screenshot](../howto/doctools_template_site_screenshot.png)
+    ![Doctools template site screenshot](../assets/images/doctools_template_site_screenshot.png)
 
-Now, you can keep the website preview running in the background. Each time you will save a change
-in your `.md` files or in the `mkdocs.yml` file, the site will rebuild and refresh to display the changes.
+    You can keep the website preview running in the background.
+    Each time you save changes, the site rebuilds and refreshes to display the changes.
 
-### Stop the preview
+1. Stop the preview by running `docker-compose down` in the project directory.
+   You can preview the same documentation site again starting from step 3.
 
-Still in your website project directory, run the following command:
+### Try the online demo
 
-```bash
-docker-compose down
-```
+The following interactive tutorial demonstrates previewing documentation locally.
 
-!!! tip
-    If running Docker compose in the background uses too many resources for your computer (when the fan runs full speed),
-    you can keep it down and only make it up when you have enough content to preview, check your site, make the changes
-    and bring it down again. No need to keep it up all the time if you are fine with writing markdown without previewing
-    too often.
+{{ katacoda('consensys/doctools-doc-preview') }}
+
+## Preview on GitHub Pages
+
+When you create a PR on a documentation repository, the PR triggers checks to verify links, Markdown syntax, and more.
+The documentation is also built on [GitHub Pages](https://pages.github.com/) as a PR preview.
+
+You can find the link to this preview in the latest comment from the **github-actions** bot.
+
+![github-actions bot comment containing preview link](../assets/images/github_pages_pr_preview.png)

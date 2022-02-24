@@ -4,12 +4,13 @@ description: Documentation contribution guide
 
 # Contribute to the documentation
 
-The following guidelines explain how to contribute to ConsenSys documentation repositories.
+The following guidelines explain how to contribute to existing ConsenSys documentation repositories.
+You can also [create new documentation sites](../create/create-doc-site.md).
 
 ## Your first contribution
 
-Start by choosing a [documentation repository](../overview/index.md) and looking for issues that have a
-`Good First Issue` label.
+Start by choosing a [documentation repository](../overview/index.md#documentation-system-overview) and looking for
+issues that have a `Good First Issue` label.
 `Good First Issues` might require only a few lines of documentation, or have enough information for a newcomer to easily
 document.
 
@@ -56,7 +57,7 @@ To contribute changes:
    Refer to the [documentation style guide](style-guide.md) and the
    [MkDocs and Markdown guide](markdown/index.md) when making documentation changes.
 
-1. [Preview your changes with MkDocs](../preview/index.md) to check that the changes render correctly.
+1. [Preview your changes with MkDocs](../preview/old-system.md) to check that the changes render correctly.
 
 1. Add and commit your changes, using a clear commit message.
    Push your changes to your remote fork (usually named `origin`).

@@ -29,14 +29,12 @@ nav:
       - Style guide: contribute/style-guide.md
       - Fix errors: contribute/fix-errors.md
       - Use the common submodule: contribute/use-common-submodule.md
-      - Raise issues: contribute/raise-issues.md
   - Preview:
-      - preview/index.md
       - Preview site using the old system: preview/old-system.md
       - Preview site using the new system: preview/new-system.md
   - Create:
       - Create a new documentation site: create/create-doc-site.md
-      - Create a new site template: create/create-site-template.md
+      - Update or create a site template: create/create-site-template.md
   - Reference:
       - Documentation release process: reference/release-process.md
       - Code of conduct: reference/code-of-conduct.md

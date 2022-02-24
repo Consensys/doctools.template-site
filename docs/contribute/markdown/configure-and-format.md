@@ -10,6 +10,8 @@ ConsenSys documentation uses the [Material for MkDocs](https://squidfunk.github.
 HTML pages.
 It also comes with useful [extensions](extensions.md).
 
+## MkDocs configuration
+
 For [sites using the old documentation system](../../overview/index.md#documentation-sites-that-use-the-old-system),
 MkDocs is configured in the `mdkocs.yml` file at the root of the repository.
 This file configures:

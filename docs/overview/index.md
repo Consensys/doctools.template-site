@@ -2,10 +2,12 @@
 description: Overview of the ConsenSys technical documentation sites and systems
 ---
 
-# ConsenSys technical documentation overview
+# ConsenSys technical documentation
 
 This site contains information about and tools for contributing to ConsenSys technical documentation.
-The following is an overview of the documentation system.
+This site is also the template to [create new documentation sites](../create/create-doc-site.md).
+
+## Documentation system overview
 
 At the root of each ConsenSys documentation repository, the `docs` directory contains all the site documentation, which
 is generated into a static HTML website using [MkDocs](https://www.mkdocs.org/) and the
@@ -29,7 +31,7 @@ If you have any questions about ConsenSys products or documentation, ask us on [
 
 ## Documentation sites that use the old system
 
-- [doc.common](https://github.com/ConsenSys/doc.common)
+- [`doc.common`](https://github.com/ConsenSys/doc.common)
 - [Tessera](https://github.com/Consensys/doc.tessera)
 - [Teku](https://github.com/Consensys/doc.teku)
 - [EthSigner](https://github.com/Consensys/doc.ethsigner)

@@ -2,61 +2,51 @@
 description: How to create a new site template
 ---
 
-# Create a new site template
+# Update or create a site template
 
-Contributing to the Doctool documentation system can be done by using the [Doctools action builder].
+The following guidelines explain how to update or create a documentation site template.
+[Documentation sites that use the new system](../overview/index.md#documentation-sites-that-use-the-new-system) use this
+Doctools template.
 
-## Requirement
+You might update the template because of a bug or to add a new feature that should be used by all documentation sites
+that use the template.
 
-- have [Docker](https://docs.docker.com/get-docker/) installed
+You might create a new template for a new need, a new tool, or a variant only used on some sites.
 
-## Docker settings
+## Prerequisites
 
-Docker configuration will change the speed at which your site preview is rebuilt.
-To get the best from the system, consider having the following settings[^1]:
+You must have [Docker](https://docs.docker.com/get-docker/) installed.
+
+The Docker configuration affects the speed at which your [site preview](#preview-the-template) is rebuilt.
+For example, a normal build time for this Doctools site is around five seconds.
+
+We recommend the following configuration:
 
 - 6 CPUs
 - 6GB RAM
 - 1GB swap
 
 !!! warning
-    If you are using a macOS machine, do not activate the experimental Docker Desktop "Use the new Virtualization framework".
-    It will slow down builds by at least 3 times.
-    A normal build time is around 5 seconds for this documentation site for instance.
 
-[^1]:
-    These settings were tested on a MacBook Pro (15-inch, 2018) - 2,6 GHz 6-Core Intel Core i7 - 16 GB 2400 MHz DDR4.
+    If using macOS, don't activate the experimental Docker Desktop Virtualization framework.
+    It slows down builds by at least three times.
 
-## Modify or create new templates
+## Steps
 
-The Doctools system enables to contribute to the templates by updating them or creating new ones.Doctools
-
-- Update a template in case of a bug or to add a new feature that should be used by all doc sites already using this template
-- Create a new template for a new need, a new tool or a variant only used on some sites
-
-Creating templates is done in the [Doctools action builder] repository in the `/common/custom_theme` folder.
-
-!!! warning
-    This process is not for users who only want to preview their doc site.
-    If you want to preview, please refer to [the preview documentation](../preview/new-system.md).
-
-To be able to develop templates, you will have to run that repos alongside the template repos.
-
-### Prepare the workspace
-
-1. Clone the template repository from [https://github.com/ConsenSys/doctools.template-site.git](https://github.com/ConsenSys/doctools.template-site.git) on your local machine.
+1. Clone the [template repository](https://github.com/ConsenSys/doctools.template-site.git) on your local machine:
 
     ```bash
     git clone https://github.com/ConsenSys/doctools.template-site.git
     ```
 
-1. Clone the builder repository from [https://github.com/ConsenSys/doctools.action-builder.git](https://github.com/ConsenSys/doctools.action-builder.git) on your local machine at the same level as the template repos.
+1. Clone the [builder repository](https://github.com/ConsenSys/doctools.action-builder.git) on your local machine in the
+   same directory as the template repository:
 
     ```bash
     git clone https://github.com/ConsenSys/doctools.action-builder.git
     ```
 
-1. Resulting directory tree is:
+    The resulting directory tree is:
 
     ```text
     your-base-dir
@@ -64,102 +54,87 @@ To be able to develop templates, you will have to run that repos alongside the t
     └── doctools.action-builder
     ```
 
-1. Pull latest docker image
+1. Pull latest Docker image:
 
     ```bash
     docker pull ghcr.io/consensys/doctools-builder:latest
     ```
 
-!!!important
-    If you are using the `latest` docker image tag, remember to pull the latest version before to have the latest version!
+    !!! note
+
+        Pull the latest Docker image when using the `latest` Docker image tag.
+
+1. Create a new file name `docker-compose.dev.yml` in the `doctools.template-site` directory with the following content:
+
+    !!! example "`docker-compose.dev.yml`"
+
+        ```yml
+        ---
+        version: '3.2'
+        services:
+          mkdocs:
+            container_name: mkdocs-serve-dev-${PROJECT:-project}
+            ports:
+              - "0.0.0.0:8000:8000"
+            image: ghcr.io/consensys/doctools-builder:${DOCTOOLS_IMAGE_VERSION:-dev}
+            build:
+              context: ../doctools.action-builder/
+            working_dir: /workspace/
+            env_file: .env.dev
+            command: ["serve", "--watch-theme", "--dirtyreload" ,"--dev-addr", "0.0.0.0:8000"]
+            volumes:
+              - type: bind
+                source: .
+                target: /workspace
+              - type: bind
+                source: ../doctools.action-builder/common
+                target: /common
+        ```
+
+1. In the `doctools.template-site` directory, make a copy of the `.env.template` file, naming it `.env.dev`:
 
     ```bash
-    docker pull ghcr.io/consensys/doctools-builder:latest
+    cp .env.template .env.dev
     ```
 
-### Create the `docker-compose.dev.yml` file
+    You can make the following changes to the development environment variables:
 
-!!! question "Why do I have to create this manually?"
-    This file will not be committed and is only useful for advanced usage,
-    we don't want it to interfere with every day content editing.
+    - `DEBUG=true|false` - Remove or set to `false` to hide debug comments, set to `true` to show debug comments inside
+      the HTML source code.
+      The default is `false`.
+    - `MINIFY=true|false` - Remove or set to `false` to generate readable HTML source code.
+      The default is `true`.
+      If set to `true`, debug comments in the source code are hidden.
+    - `PREBUILD_INDEX=true|false` - Remove or set to `false` to prevent the search index to be generated at each build
+      and speed up the build.
+      The default is `true` as it's useful for production.
+    - `VERSION=string` - Set to a specific number to simulate a version locally.
+      This value is otherwise initialized by CI.
 
-Create a new file in your `doctools.template-site` directory with the following content:
+## Preview the template
 
-!!! Example "`docker-compose.dev.yml` file"
+1. To preview the documentation site template locally, go to your site directory and run:
 
-    ```yml
-    ---
-    version: '3.2'
-    services:
-      mkdocs:
-        container_name: mkdocs-serve-dev-${PROJECT:-project}
-        ports:
-          - "0.0.0.0:8000:8000"
-        image: ghcr.io/consensys/doctools-builder:${DOCTOOLS_IMAGE_VERSION:-dev}
-        build:
-          context: ../doctools.action-builder/
-        working_dir: /workspace/
-        env_file: .env.dev
-        command: ["serve", "--watch-theme", "--dirtyreload" ,"--dev-addr", "0.0.0.0:8000"]
-        volumes:
-          - type: bind
-            source: .
-            target: /workspace
-          - type: bind
-            source: ../doctools.action-builder/common
-            target: /common
+    ```bash
+    docker compose -f docker-compose.dev.yml --env-file ./.env.dev up
     ```
 
-### Create the `.env.dev` file
+    You can see the preview at [`http://0.0.0.0:8000`](http://0.0.0.0:8000){: target="_blank}.
 
-Copy your `.env` file to a `.env.dev` file
+1. If you keep the Docker compose service running, the site preview automatically reloads and displays most changes.
 
-!!! tip
-    This file will not be committed because of the `.gitignore` and you will be able to test values in it without breaking your site.
-
-Variables that can be useful to set in your dev environment:
-
-- `DEBUG=true|false` comment, remove or set to `false` to hide debug, true to show debug inside HTML source code, default is `false`.
-- `MINIFY=true|false` comment, remove or set to `false` to generate readable HTML source code. Default is `true`.
-  Note that if you set this to `true`, debug comments in source code will not be visible.
-- `PREBUILD_INDEX=true|false` comment, remove or set to `false` to prevent search index to be generated at each build and speed up the build. Default is `true` as it's useful for production.
-- `VERSION=string` set to a specific number to simulate a version locally. This value is otherwise initialised by CI.
-
-### Starting the preview
-
-To preview the doc site locally, go to your doc site code source directory and run:
-
-```bash
-docker compose -f docker-compose.dev.yml --env-file ./.env.dev up
-```
-
-Then open [`http://0.0.0.0:8000`](http://0.0.0.0:8000){: target="_blank} in your browser and navigate the preview.
-
-### Stropping the preview
-
-To stop the service, type ++ctrl+c++ and then remove containers by running
-
-```bash
-docker compose down mkdocs
-```
-
-### Reloading on changes
-
-If you keep the Docker compose service running,
-the site preview will reload and display changes automatically for:
-
-- content (all `.md` files, modification, deletions or new pages if added to navigation)
-- configuration (changes on entries in `mkdocs.yml` and all `mkdocs.*.yml`)
-- theme templates and assets ( all files in the ``../doctools.action-builder/common/custom_theme` directory)
-
-!!!important
-    If you make changes on the `.env.dev` or assets outside of your repos `docs` folder,
-    the system is not yet able to reload automatically and you will have to restart the docker-compose service.
-
-    Run:
+    If you make changes to `.env.dev` or assets outside of the `docs` folder, the system doesn't reload automatically and
+    you must restart Docker compose to view the changes:
 
     ```bash
     docker compose restart mkdocs
+    ```
+
+1. To stop the service, press ++ctrl+c++.
+   Remove containers by running:
+
+    ```bash
+    docker compose down mkdocs
     ```
 
 [Doctools action builder]: https://github.com/ConsenSys/doctools.action-builder

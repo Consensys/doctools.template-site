@@ -1,8 +1,8 @@
 ---
-description: how to use MkDocs macros
+description: How to use MkDocs macros
 ---
 
-# Macros
+# Markdown macros
 
 [Documentation sites that use the new system](../../overview/index.md#documentation-sites-that-use-the-new-system)
 support macros, which are scripts that make some tasks faster.
@@ -13,7 +13,7 @@ You can write them for a Markdown [page](#page-level-macros) or [site](#site-lev
     - You can't use macros in an [MkDocs HTML template](../../create/create-site-template.md), but the Jinja2 syntax has
       the same functionality.
 
-    - The best way to reuse a macro across multiple sites is to develop a [pluglet](pluglets.md) in the common Docker
+    - The best way to reuse a script across multiple sites is to develop a [pluglet](pluglets.md) in the common Docker
       image instead.
 
 ## Page-level macros
@@ -38,13 +38,13 @@ Macros written directly in a Markdown page are only available for the specific p
             --{{name}}={{example}}
             ```
 
-        === "Environment Variable"
+        === "Environment variable"
 
             ```bash
             {{ cli_to_env(name) }}={{example}}
             ```
 
-        === "Example Configuration File"
+        === "Configuration file"
 
             ```bash
             {{name}}={{example}}
@@ -75,13 +75,13 @@ Macros written directly in a Markdown page are only available for the specific p
             --{{name}}={{example}}
             ```
 
-        === "Environment Variable"
+        === "Environment variable"
 
             ```bash
             {{ cli_to_env(name) }}={{example}}
             ```
 
-        === "Example Configuration File"
+        === "Configuration file"
 
             ```bash
             {{name}}={{example}}

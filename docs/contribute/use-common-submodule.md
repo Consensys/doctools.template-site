@@ -4,10 +4,12 @@ description: How to use the common submodule
 
 # Use the common submodule
 
-Every [listed ConsenSys documentation repository](#consensys-documentation-repositories) includes this common repository as a [Git submodule](https://git-scm.com/book/en/v2/Git-Tools-Submodules).
-This repository contains templates and scripts used by each documentation repository, and is a single place to update.
+[Documentation sites that use the old system](../../overview/index.md#documentation-sites-that-use-the-old-system)
+include the [`doc.common`](https://github.com/ConsenSys/doc.common) repository as a
+[Git submodule](https://git-scm.com/book/en/v2/Git-Tools-Submodules).
+`doc.common` contains templates and scripts used by the documentation repositories, and is a single place to update.
 
-Apart from the usual license and `README` files at the root of the repository, this repository includes:
+`doc.common` includes:
 
 - [`build_tools`](https://github.com/ConsenSys/doc.common/tree/master/build_tools) directory - Contains all the [CircleCI](https://circleci.com/)-related scripts and configuration files used to verify links, Markdown syntax, writing style, and more.
   - [`scripts`](https://github.com/Consensys/doc.common/tree/master/build_tools/scripts) subdirectory - Contains shortcut scripts to run the CI jobs locally to test your changes.
@@ -17,17 +19,20 @@ Apart from the usual license and `README` files at the root of the repository, t
 
 ## Retrieve the submodule
 
-When you clone a ConsenSys documentation repository, use the `--recursive` option to retrieve the submodule.
+When you clone a documentation repository that uses the old system, use the `--recursive` option to retrieve the submodule.
 
 ```bash
 git clone --recursive <FORKED-REPO>
 ```
 
-If you didn't use the `--recursive` option when first cloning the repository, or if you removed the common submodule directory and links, you can fix this and update your local repository by running [`git submodule update --init`](https://git-scm.com/docs/git-submodule#Documentation/git-submodule.txt-update--init--remote-N--no-fetch--no-recommend-shallow-f--force--checkout--rebase--merge--referenceltrepositorygt--depthltdepthgt--recursive--jobsltngt--no-single-branch--ltpathgt82308203).
+If you didn't use the `--recursive` option when first cloning the repository, or if you removed the common submodule
+directory and links, you can fix this and update your local repository by running
+[`git submodule update --init`](https://git-scm.com/docs/git-submodule#Documentation/git-submodule.txt-update--init--remote-N--no-fetch--no-recommend-shallow-f--force--checkout--rebase--merge--referenceltrepositorygt--depthltdepthgt--recursive--jobsltngt--no-single-branch--ltpathgt82308203).
 
 ## Update repositories to the latest submodule version
 
-When someone updates the code files in this common repository, you must update any forked documentation repositories to the latest common submodule version in order to incorporate the common changes into your repository.
+When someone updates `doc.common`, you must update any forked old-system documentation repositories to the latest common
+submodule version in order to incorporate the common changes into your repository.
 You can do this by running the following commands in your project's root directory:
 
 ```bash

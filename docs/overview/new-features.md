@@ -12,32 +12,28 @@ The new documentation system introduces the following new features and changes f
     - Search sharing
     - Searched terms highlighted on page
     - Search terms now visible in analytics
-- Last update of page on all sites
-- Home pages (like landing pages) and new [home page design](../index.md)
-- **Back to top** button
-- Instant navigation (faster search and reduced bandwidth usage)
-- Easy [Katacoda] integration
-- [Easy ReDoc REST API documentation] from a JSON or YAML specification (local or remote).
-- Integration of YouTube videos using `![type:video](<YouTube link>)`
-- Simpler configuration file for contributors: only navigation and redirects
-- Only requires Docker to build (no more Python version issues)
-- New consistent branding
-- No [commmon Git submodule](../contribute/use-common-submodule.md): build, tests, and preview are included in the
-  Docker image
 - New version selector in the header
 - New language selector (only when a translation exists)
+- Last update of page
+- Sticky navigation tabs
+- Home pages (like landing pages) and new [home page design](../index.md)
+- Section index pages
+- **Back to top** button
+- Instant navigation (faster search and reduced bandwidth usage)
+- [Macros](../contribute/markdown/macros.md) and [pluglets](../contribute/markdown/pluglets.md)
+- Integrated [ReDoc REST API documentation](../examples/write_rest_api_reference.md) from a JSON or YAML specification
+  (local or remote)
+- Integration of YouTube videos using `![type:video](<YouTube link>)`
+- Per page table of contents depth configuration
+- Simpler [configuration file](../contribute/markdown/configure-and-format.md#mkdocs-configuration) for contributors
+- No [commmon Git submodule](../contribute/use-common-submodule.md): build, tests, and preview are included in the
+  Docker image
 - New hosting with AWS S3 instead of Read the Docs
 - Sites hosted under `consensys.net/docs/<project name>/<language>/<version>` instead of
   `docs.<project name>.consensys.net/<language>/<version>`
-- Standard compliant sites accessibility
-- Sticky navigation tabs
-- Section index pages
 - Accessibility compliance tool (via AccessiBe)
-- Per page table of contents depth configuration
 - New code linter for Markdown and all other files
-- GitHub-pages PR preview and PR preview comment
-- [Macros and filters]
-- [Pluglets]
+- GitHub Pages PR preview and PR preview comment
 
 !!! note
 

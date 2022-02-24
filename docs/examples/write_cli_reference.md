@@ -19,13 +19,13 @@ description: Dummy is a template doc project.
     --{{name}}={{example}}
     ```
 
-=== "Environment Variable"
+=== "Environment variable"
 
     ```bash
     {{ cli_to_env(name,'MYCODE') }}={{example}}
     ```
 
-=== "Example Configuration File"
+=== "Configuration file"
 
     ```bash
     {{name}}={{example}}

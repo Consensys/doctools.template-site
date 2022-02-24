@@ -1,29 +1,33 @@
 ---
 template: katacoda.html
+description: How to use MkDocs pluglets
 ---
 
-# Katacoda pluglet for mkdocs-macros
+# Markdown pluglets
 
-This is a Katacoda **pluglet** for mkdocs-macros.
+[Documentation sites that use the new system](../../overview/index.md#documentation-sites-that-use-the-new-system)
+support pluglets, which are small Python scripts that you can share between documentation sites.
 
-It helps adding Katacoda code into Markdown pages without having to write HTML.
+You can use the existing pluglets or [write your own](https://mkdocs-macros-plugin.readthedocs.io/).
 
-See https://github.com/ConsenSys/doc.katacoda/ for ConsenSys Scenarios source code or https://www.katacoda.com/consensys for the rendered versions
+## Katacoda
 
-See https://www.katacoda.com/create and https://github.com/katacoda/scenario-examples for inspiration.
+The [Katacoda](https://www.katacoda.com/create) pluglet helps you create interactive content and guides without writing
+HTML in Markdown pages.
 
-## Example
+ConsenSys documentation has existing [Katacoda scenarios](https://github.com/ConsenSys/doc.katacoda/) to use with this
+pluglet.
 
-!!! example "Katacoda playground rendering example"
-    {{ katacoda('consensys/doctools-doc-preview', None , 'height: 300px;') }}
+See more [Katacoda scenario examples](https://github.com/katacoda/scenario-examples).
 
-## Usage
+### Usage
 
-In your Markdown file, you have to select the Katacoda template using the [Mkdocs Material Meta syntax](https://squidfunk.github.io/mkdocs-material/reference/meta-tags/).
+In the Markdown file, select the Katacoda template using the
+[metadata](https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#metadata) syntax.
 
-!!! example "Example meta header"
+!!! example "Example metadata header"
 
-    ```yaml title="my_page.md"
+    ```markdown
     ---
     template: katacoda.html
     title: My page title
@@ -43,44 +47,30 @@ Then use the following in your Markdown to display the Katacoda playground:
 
     Parameters are the following:
 
-    - **scenario** _(required)_: the name of the Katacoda scenario to load. It's in the format `account/scenario`.
-    - **color** _(optional)_: the hexadecimal color (no need to add `#`). Default is `213fa4`
-    - **style** _(optional)_: the CSS style to make the playground fit your doc. Default is `height: 600px;`
-    - **hide_intro** _(optional)_: true or false to hide or keep the intro page. Default is false.
-    - **hide_finish** _(optional)_: true or false to hide or keep the finish page. Default is false.
-    - **id** _(optional)_: an integer if you have multiple Katacoda playgrounds on the same page. Default is 1.
+    - `scenario` - (required) The name of the Katacoda scenario to load, in the format `account/scenario`.
+    - `color` - (optional) The hexadecimal color (no need to add `#`).
+      The default is `213fa4`.
+    - `style` - (optional) The CSS style to make the playground fit your documentation.
+      The default is `height: 600px;`.
+    - `hide_intro` - (optional) Indicates whether to hide or keep the intro page.
+      The default is `false`.
+    - `hide_finish` - (optional) Indicates whether to hide or keep the finish page.
+      The default is `false`.
+    - `id` - (optional) An integer if you have multiple Katacoda playgrounds on the same page.
+      The default is `1`.
 
-=== "Example using default values"
-
-    ```django
-    {% raw %}
-    {{ katacoda('consensys/doctools-doc-preview') }}
-    {% endraw %}
-    ```
-
-=== "Example using optional parameters"
+=== "Example markdown"
 
     ```django
     {% raw %}
-    {{ katacoda('consensys/doctools-doc-preview', 'AABBCC', 'height: 400px;', false, true, 42) }}
+    {{ katacoda('consensys/doctools-doc-preview', None, 'height: 800px;') }}
     {% endraw %}
     ```
-
-    - Playground uses the scenario `consensys/doctools-doc-preview`
-    - Main color is {{ color_block('#FF0000') }}
-    - CSS style is `height: 800px;`
-    - Do not hide intro page
-    - Hide finish page
-    - The Katacoda embeded `<div>` id is 42
 
     !!! tip
-        If you want to set some optional parameters but not all, you can use `None` as value to skip
-        a parameter. The Pluglet will then use the default value for the parameter.
 
-        !!! example
+        If you want to set some optional parameters but not all, you can use `None` as value to skip a parameter.
 
-            ```django
-            {% raw %}
-            {{ katacoda('consensys/doctools-doc-preview', None, None, false, None, 1337) }}
-            {% endraw %}
-            ```
+=== "Example playground rendering"
+
+    {{ katacoda('consensys/doctools-doc-preview', None, 'height: 700px;') }}
