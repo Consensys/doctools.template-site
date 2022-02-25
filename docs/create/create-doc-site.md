@@ -64,9 +64,6 @@ You can also [create a new site template](create-site-template.md).
         * :material-checkbox-outline: Include administrators
         * The rest are unchecked
 
-1. In the **Webhooks** settings:
-    * TODO (notifications)
-
 1. In the **Actions** settings:
     * If the repository is private, select **Allow all actions**.
     * If the repository is public, select **Allow select actions** and add the following configuration:
@@ -76,7 +73,6 @@ You can also [create a new site template](create-site-template.md).
         FranzDiebold/github-env-vars-action@*,
         JamesIves/github-pages-deploy-action@*,
         actions/checkout@v2,
-        c-py/action-dotenv-to-setenv@*,
         gaurav-nelson/github-action-markdown-link-check@*,
         github/super-linter/slim@*,
         jakejarvis/s3-sync-action@*,
