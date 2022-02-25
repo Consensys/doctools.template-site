@@ -90,6 +90,7 @@ To contribute changes:
 
 1. After your PR is validated, all checks have passed, and your branch has no conflicts with the target branch, you can
     merge your PR.
+    You can delete the topic branch after merging your PR.
 
 !!! tip
 

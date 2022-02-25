@@ -10,7 +10,7 @@ New documentation sites use the [new documentation system](../overview/index.md#
 To create a new site, you must have permission to create a new repository in the
 [ConsenSys GitHub organization](https://github.com/ConsenSys).
 
-You can also [create a new site template](create-site-template.md).
+You can also [create a new site template](advanced/create-site-template.md).
 
 ## Steps
 

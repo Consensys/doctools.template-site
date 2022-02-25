@@ -5,7 +5,7 @@ description: How to create a new site template
 # Update or create a site template
 
 The following guidelines explain how to update or create a documentation site template.
-[Documentation sites that use the new system](../overview/index.md#documentation-sites-that-use-the-new-system) use this
+[Documentation sites that use the new system](../../overview/index.md#documentation-sites-that-use-the-new-system) use this
 Doctools template.
 
 You might update the template because of a bug or to add a new feature that should be used by all documentation sites

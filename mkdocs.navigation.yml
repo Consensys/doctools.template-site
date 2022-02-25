@@ -34,7 +34,8 @@ nav:
       - Preview site using the new system: preview/new-system.md
   - Create:
       - Create a new documentation site: create/create-doc-site.md
-      - Update or create a site template: create/create-site-template.md
+      - Advanced:
+          - Update or create a site template: advanced/create/create-site-template.md
   - Reference:
       - Documentation release process: reference/release-process.md
       - Code of conduct: reference/code-of-conduct.md
