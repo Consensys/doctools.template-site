@@ -37,4 +37,4 @@ plugins:
       howto/preview_the_doc_site.md: preview/new-system.md
       howto/setup_new_doc_repos.md: create/create-doc-site.md
       howto/publish_the_doc_site.md: create/create-doc-site.md
-      howto/advanced/contributing.md: create/create-site-template.md
+      howto/advanced/contributing.md: create/advanced/create-site-template.md

@@ -12,8 +12,8 @@ You can write macros for a Markdown [page](#page-level-macros) or [site](#site-l
 
 !!! note "Notes"
 
-    - You can't use macros in an [MkDocs HTML template](../../create/create-site-template.md), but the Jinja2 syntax has
-      the same functionality.
+    - You can't use macros in an [MkDocs HTML template](../../create/advanced/create-site-template.md), but the Jinja2
+      syntax has the same functionality.
 
     - The best way to reuse a script across multiple sites is to develop a [pluglet](pluglets.md) in the common Docker
       image instead.
