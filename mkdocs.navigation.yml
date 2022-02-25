@@ -35,7 +35,7 @@ nav:
   - Create:
       - Create a new documentation site: create/create-doc-site.md
       - Advanced:
-          - Update or create a site template: advanced/create/create-site-template.md
+          - Update or create a site template: create/advanced/create-site-template.md
   - Reference:
       - Documentation release process: reference/release-process.md
       - Code of conduct: reference/code-of-conduct.md
