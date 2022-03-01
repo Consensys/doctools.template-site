@@ -29,7 +29,7 @@ available](../reference/release-process.md).
 
 If you have any questions about ConsenSys products or documentation, ask on [Discord](https://discord.gg/6cfyqRGbzq).
 
-## Documentation sites that use the old system
+## Documentation repositories that use the old system
 
 - [`doc.common`](https://github.com/ConsenSys/doc.common)
 - [Tessera](https://github.com/Consensys/doc.tessera)
@@ -43,7 +43,7 @@ If you have any questions about ConsenSys products or documentation, ask on [Dis
 - Quorum Plugins (private)
 - Quorum Blockchain Service (private)
 
-## Documentation sites that use the new system
+## Documentation repositories that use the new system
 
-- [Doctools](https://consensys.net/docs/doctools/en/stable/) (this site)
-- [GoQuorum](https://consensys.net/docs/goquorum/en/stable/)
+- [Doctools](https://github.com/ConsenSys/doctools.template-site) (this site)
+- [GoQuorum](https://github.com/consensys/doc.goquorum)
