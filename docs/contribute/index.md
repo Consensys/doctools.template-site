@@ -30,7 +30,7 @@ To contribute changes:
 
 1. [Clone](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) your fork to
     your computer.
-    For [repositories using the old system](../overview/index.md#documentation-sites-that-use-the-old-system), add the
+    For repositories using the [old system](../overview/index.md#old-documentation-system), add the
     `--recursive` option to retrieve the [common submodule](use-common-submodule.md).
 
     ```bash
@@ -79,7 +79,7 @@ To contribute changes:
     ```
 
 1. The bottom of the PR page displays a list of checks that verify links, Markdown syntax, and more.
-    If you have any [errors](fix-errors.md), make any required changes to your PR, repeating steps 5-7.
+    If you have any [errors](fix-cicd-errors.md), make any required changes to your PR, repeating steps 5-7.
 
 1. In the right sidebar of your PR, select the reviewer(s) who should review your PR (typically the original issue raiser).
     Ask the ConsenSys documentation team to review by selecting **ConsenSys/protocol-pliny** as a reviewer.

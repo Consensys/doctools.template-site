@@ -2,9 +2,9 @@
 description: How to fix PR errors
 ---
 
-# Fix errors
+# Fix CI/CD errors
 
-[Documentation sites that use the old system](../overview/index.md#documentation-sites-that-use-the-old-system) use
+Documentation sites that use the [old system](../overview/index.md#old-documentation-system) use
 [CircleCI](https://circleci.com/) to verify links, Markdown syntax, writing style, and more on all documentation changes.
 This section describes the four CI error types and how to fix them:
 
@@ -20,7 +20,7 @@ Anyone can run the CI checks on their local machine using the [local tests helpe
 
 !!! important
 
-    The [new documentation system](../overview/index.md#documentation-sites-that-use-the-new-system) doesn't use
+    The [new documentation system](../overview/index.md#new-documentation-system) doesn't use
     CircleCI, but runs [Markdown](#markdownlint-errors) and [link](#linkchecker-errors) tests that you can view and fix
     in a similar way.
 

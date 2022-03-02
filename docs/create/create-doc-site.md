@@ -5,7 +5,7 @@ description: How to create a new documentation repository from this template
 # Create a new documentation site
 
 The following guidelines explain how to create a new ConsenSys documentation site from the existing template.
-New documentation sites use the [new documentation system](../overview/index.md#documentation-sites-that-use-the-new-system).
+New documentation sites use the [new documentation system](../overview/index.md#new-documentation-system).
 
 To create a new site, you must have permission to create a new repository in the
 [ConsenSys GitHub organization](https://github.com/ConsenSys).

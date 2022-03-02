@@ -50,4 +50,4 @@ The following are some important style recommendations:
 - **"We recommend"** - In general, don't use first person. However, use "we recommend" to introduce a product recommendation.
   Don't use "ConsenSys recommends" or "it is recommended."
 
-Refer to the Microsoft Guide for any other questions on style.
+Refer to the [Microsoft Guide](https://docs.microsoft.com/en-us/style-guide/welcome/) for any other questions on style.

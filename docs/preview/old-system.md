@@ -4,7 +4,7 @@ description: How to preview documentation using the old system
 
 # Preview documentation using the old system
 
-Preview [documentation sites that use the old system](../overview/index.md#documentation-sites-that-use-the-old-system)
+Preview documentation sites that use the [old system](../overview/index.md#old-documentation-system)
 on your [local machine](#preview-locally) and on [Read the Docs](#preview-on-read-the-docs).
 
 ## Preview locally

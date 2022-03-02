@@ -23,10 +23,9 @@ The GitHub release creation process tags the Git repository with the new version
 ## 2. Automatically build the documentation on RTD or AWS
 
 When [Read the Docs (RTD)](https://readthedocs.org/) (if using the
-[old system](../overview/index.md#documentation-sites-that-use-the-old-system)) or
-[Amazon Web Services (AWS)](https://aws.amazon.com/) (if using the
-[new system](../overview/index.md#documentation-sites-that-use-the-new-system)) detects a new tag on a documentation
-repository, RTD or AWS automatically generates the following documentation versions:
+[old system](../overview/index.md#old-documentation-system)) or [Amazon Web Services (AWS)](https://aws.amazon.com/) (if
+using the [new system](../overview/index.md#new-documentation-system)) detects a new tag on a documentation repository,
+RTD or AWS automatically generates the following documentation versions:
 
 - **Latest** - Corresponds to the latest commit in the master branch of the documentation repository.
 - **CalVer** - Corresponds to the tag in the master branch that was created during the release (for example, `21.1.4`).

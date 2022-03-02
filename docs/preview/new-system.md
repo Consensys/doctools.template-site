@@ -5,7 +5,7 @@ description: How to preview documentation using the new system
 
 # Preview documentation using the new system
 
-Preview [documentation sites that use the new system](../overview/index.md#documentation-sites-that-use-the-new-system)
+Preview documentation sites that use the [new system](../overview/index.md#new-documentation-system)
 on your [local machine](#preview-locally) and on [GitHub Pages](#preview-on-github-pages).
 
 ## Preview locally

@@ -5,8 +5,8 @@ description: How to use MkDocs pluglets
 
 # Markdown pluglets
 
-[Documentation sites that use the new system](../../overview/index.md#documentation-sites-that-use-the-new-system)
-support pluglets, which are small Python scripts that you can share between documentation sites.
+Documentation sites that use the [new system](../../overview/index.md#new-documentation-system) support pluglets, which
+are small Python scripts that you can share between documentation sites.
 
 You can use the existing pluglets or [write your own](https://mkdocs-macros-plugin.readthedocs.io/).
 

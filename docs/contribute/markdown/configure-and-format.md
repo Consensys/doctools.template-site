@@ -10,9 +10,9 @@ ConsenSys documentation uses the [Material for MkDocs](https://squidfunk.github.
 HTML pages.
 It also comes with useful [extensions](extensions.md).
 
-## MkDocs configuration
+## Old system MkDocs configuration
 
-For [sites using the old documentation system](../../overview/index.md#documentation-sites-that-use-the-old-system),
+For sites using the [old documentation system](../../overview/index.md#old-documentation-system),
 MkDocs is configured in the `mdkocs.yml` file at the root of the repository.
 This file configures:
 
@@ -23,14 +23,21 @@ This file configures:
 - Plugins.
 - Page redirects.
 
-For [sites using the new documentation system](../../overview/index.md#documentation-sites-that-use-the-new-system), the
+If you add pages to the documentation (rather than updating existing pages), add your new pages to the `nav` section
+of `mkdocs.yml`.
+
+If you move an existing page to another location or rename it, the public path changes.
+Create a redirect in the `redirects` section of `mkdocs.yml`.
+
+## New system MkDocs configuration
+
+For sites using the [new documentation system](../../overview/index.md#new-documentation-system), the
 MkDocs configuration is separated into several `mkdocs.*.yml` files.
 
-**If you add pages to the documentation** (rather than updating existing pages), add your new pages to the `nav` section
-of `mkdocs.yml` or, if using the new system, to `mkdocs.navigation.yml`.
+If you add pages to the documentation (rather than updating existing pages), add your new pages to `mkdocs.navigation.yml`.
 
-**If you move an existing page to another location or rename it**, the public path changes.
-Create a redirect in the `redirects` section of `mkdocs.yml` or, if using the new system, in `mkdocs.redirects.yml`.
+If you move an existing page to another location or rename it, the public path changes.
+Create a redirect in `mkdocs.redirects.yml`.
 
 ## Format Markdown for documentation
 

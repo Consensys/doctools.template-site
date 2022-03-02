@@ -4,8 +4,8 @@ description: How to use MkDocs macros
 
 # Markdown macros
 
-[Documentation sites that use the new system](../../overview/index.md#documentation-sites-that-use-the-new-system)
-support macros, which are scripts that make some tasks faster.
+Documentation sites that use the [new system](../../overview/index.md#new-documentation-system) support macros, which
+are scripts that make some tasks faster.
 For example, use macros to format repeated content such as CLI option documentation.
 
 You can write macros for a Markdown [page](#page-level-macros) or [site](#site-level-macros) and use them in your content.
