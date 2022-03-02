@@ -24,3 +24,17 @@ plugins:
       # you can't use an already redirected path as an old_path.
       # new_path can be a file inside the docs/ folder or any URL (http://...)
       support.md: examples/support.md
+      changelog.md: overview/new-features.md
+      reference/markdown.md: contribute/markdown/configure-and-format.md
+      reference/macros.md: contribute/markdown/macros.md
+      reference/pluglets/index.md: contribute/markdown/pluglets.md
+      reference/pluglets/katacoda.md: contribute/markdown/pluglets.md
+      howto/configure_mkdocs.md: contribute/markdown/configure-and-format.md
+      howto/index.md: index.md
+      howto/translate.md: index.md
+      howto/advanced/extra-configuration.md: contribute/markdown/configure-and-format.md
+      getting_started.md: index.md
+      howto/preview_the_doc_site.md: preview/new-system.md
+      howto/setup_new_doc_repos.md: create/create-doc-site.md
+      howto/publish_the_doc_site.md: create/create-doc-site.md
+      howto/advanced/contributing.md: create/advanced/create-site-template.md
