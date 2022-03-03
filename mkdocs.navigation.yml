@@ -36,6 +36,7 @@ nav:
       - Create a new documentation site: create/create-doc-site.md
       - Advanced:
           - Update or create a site template: create/advanced/create-site-template.md
+          - Add custom CSS and Javascript: create/advanced/add-css-and-js.md
   - Reference:
       - Documentation release process: reference/release-process.md
       - Code of conduct: reference/code-of-conduct.md
