@@ -37,7 +37,7 @@ extra:
   version:
     switch: true # displays the version dropdown
 
-# Uncomment and add path if needed to have custom extra scripts and CSS
+# Uncomment and update the path if you're using custom scripts and CSS
 #extra_css:
 #  - assets/stylesheets/a_custom_style.css
 #extra_javascript:
