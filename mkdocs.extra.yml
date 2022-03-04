@@ -36,3 +36,9 @@ extra:
       link: https://consensys.net/quorum/developers
   version:
     switch: true # displays the version dropdown
+
+# Uncomment and update the path if you're using custom scripts and CSS
+#extra_css:
+#  - assets/stylesheets/a_custom_style.css
+#extra_javascript:
+#  - assets/javascripts/a_custom_script.js
