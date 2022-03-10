@@ -495,6 +495,21 @@ You can display the email in any documentation page using:
 {% endraw %}
 ```
 
+## Videos
+
+We include the [MkDocs Video extension](https://github.com/soulless-viewer/mkdocs-video)
+so you can add YouTube Hosted videos in your pages.
+
+=== "Example syntax"
+
+    ```markdown
+    ![type:video](https://www.youtube.com/embed/rDFGvMIzHWE)
+    ```
+
+=== "Example rendering"
+
+    ![type:video](https://www.youtube.com/embed/rDFGvMIzHWE)
+
 [MkDocs]: https://www.mkdocs.org/
 [Read the Docs]: https://readthedocs.org/
 [Material for MkDocs]: https://squidfunk.github.io/mkdocs-material/
