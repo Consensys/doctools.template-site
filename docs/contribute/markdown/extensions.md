@@ -497,8 +497,11 @@ You can display the email in any documentation page using:
 
 ## Videos
 
-We include the [MkDocs Video extension](https://github.com/soulless-viewer/mkdocs-video)
-so you can add YouTube Hosted videos in your pages.
+!!! important
+
+    The Video extension is only supported on the [new documentation system](../../overview#new-documentation-system).
+
+The [MkDocs Video extension](https://github.com/soulless-viewer/mkdocs-video) enables embedding YouTube videos.
 
 === "Example syntax"
 
