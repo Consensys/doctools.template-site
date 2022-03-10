@@ -98,7 +98,7 @@ To contribute changes:
 
 The following is a video demonstration of the contribution workflow:
 
-![type:video](https://www.youtube.com/watch?v=rDFGvMIzHWE)
+![type:video](https://youtu.be/rDFGvMIzHWE)
 
 ## Code of conduct
 
