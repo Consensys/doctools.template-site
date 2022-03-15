@@ -96,6 +96,10 @@ To contribute changes:
 
     You can use a Git client such as [Fork](https://fork.dev/) instead of the command line.
 
+The following is a video demonstration of the contribution workflow:
+
+![type:video](https://www.youtube.com/embed/rDFGvMIzHWE)
+
 ## Code of conduct
 
 This project and everyone participating in it is governed by the
