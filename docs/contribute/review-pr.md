@@ -12,7 +12,7 @@ To
 1. Select the **Files changed** tab and read through the documentation changes.
 
 1. View the rendered changes in the [Read the Docs link](../preview/old-system.md#preview-on-read-the-docs) or the
-   [Github Pages link](../preview/new-system.md#preview-on-github-pages).
+    [Github Pages link](../preview/new-system.md#preview-on-github-pages).
 
 1. Evaluate the changes to the best of your ability, including if:
 
@@ -33,6 +33,7 @@ To
 
     - **Comment** if you have comments or suggestions you want the PR author to consider.
     - **Approve** if you think the PR is OK to merge.
-    - **Request changes** if you require changes to be made.
+    - **Request changes** if you require the author to make changes.
+      Selecting this option requires you to re-review the PR later before the author can merge it.
 
 1. Submit your review.
