@@ -33,7 +33,7 @@ For content changes:
 
 For tool changes:
 
-- [ ] Build and QA tools (e.g., lint or vale)
+- [ ] Build and QA tools
 - [ ] MkDocs templates
 - [ ] MkDocs configuration
 - [ ] Python dependencies
