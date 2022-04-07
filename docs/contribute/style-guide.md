@@ -51,3 +51,8 @@ The following are some important style recommendations:
   Don't use "ConsenSys recommends" or "it is recommended."
 
 Refer to the [Microsoft Guide](https://docs.microsoft.com/en-us/style-guide/welcome/) for any other questions on style.
+
+## Documentation system guide
+
+Refer to the [Divio documentation system guide](https://documentation.divio.com/) for how to structure, classify, and
+arrange the different functional elements of documentation (for example, tutorials, how-to guides, and references).

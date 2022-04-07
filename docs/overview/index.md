@@ -23,7 +23,7 @@ is generated into a static HTML website using [MkDocs](https://www.mkdocs.org/) 
 [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) theme.
 
 The documentation is automatically updated using [webhooks](https://docs.readthedocs.io/en/stable/integrations.html)
-linking GitHub to the site when you merge a pull request in the master branch of the ConsenSys documentation repository.
+linking GitHub to the site when you merge a pull request in the main branch of the ConsenSys documentation repository.
 
 The system also detects tags in the GitHub repository and [makes the latest stable release and previous versions
 available](../reference/release-process.md).
