@@ -44,7 +44,6 @@ The following documentation repositories currently use the old system:
 - [ConsenSys Rollups](https://github.com/consensys/doc.rollups)
 - Orchestrate (private)
 - Quorum Plugins (private)
-- Quorum Blockchain Service (private)
 
 ## New documentation system
 
@@ -55,3 +54,4 @@ The following documentation repositories use the new system:
 
 - [Doctools](https://github.com/ConsenSys/doctools.template-site) (this site)
 - [GoQuorum](https://github.com/consensys/doc.goquorum)
+- Quorum Blockchain Service (private)
