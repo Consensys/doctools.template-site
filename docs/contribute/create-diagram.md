@@ -10,8 +10,8 @@ You must have access to the ConsenSys **Quorum Diagrams** template files on Figm
 Create diagrams to illustrate:
 
 - Detailed or simplified product architecture.
-- Technical processes or flows.
-- Concept charts or tables.
+- Technical processes and flows.
+- Concept charts and tables.
 
 The following video demonstrates creating a diagram for the GoQuorum documentation using Figma:
 
@@ -62,7 +62,7 @@ Figma design elements, and more.
 - Use straight arrows and lines, with right-angle bends if needed.
   Don't use diagonal arrows and lines.
   If possible, don't overlap arrows and lines.
-  To create additional bends in an arrow or line , **detach instance** (if applicable), double-click the arrow or line,
+  To create additional bends in an arrow or line, **detach instance** (if applicable), double-click the arrow or line,
   and click and drag the anchor points.
 - Leave about 3px of space between arrow heads and the elements they point to.
   Line ends without arrow heads should touch the connecting element.
@@ -86,7 +86,7 @@ To export your diagram:
 1. Scroll to the bottom of the right sidebar.
     In the **Export** section, choose **2x** scale (for retina screens) and **PNG** file format.
 
-1. Select **Export <file name>**.
+1. Export the diagram.
 
 See [Figma's guide to exports](https://help.figma.com/hc/en-us/articles/360040028114-Guide-to-exports-in-Figma) for more
 information.
