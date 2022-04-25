@@ -2,7 +2,7 @@
 description: Overview of the ConsenSys technical documentation sites and systems
 ---
 
-# ConsenSys technical documentation
+# ConsenSys Quorum technical documentation
 
 This site contains information about contributing to ConsenSys technical documentation.
 This site is also the template to [create new documentation sites](../create/create-doc-site.md).
