@@ -17,6 +17,8 @@ Create diagrams to illustrate:
 
 The following video demonstrates creating a diagram for the GoQuorum documentation using Figma:
 
+![type:video](https://www.youtube.com/embed/s-_I96vzR2k)
+
 ## Figma diagram guidelines
 
 Use the following general guidelines when creating ConsenSys diagrams on Figma.
@@ -44,7 +46,9 @@ Figma design elements, and more.
 ### Style
 
 - Use the premade diagram assets as starting points.
-  You can right-click a component and **detach instance** and **remove auto layout** to freely customize it.
+  By default, you can adjust the width of the premade labels, but the height is automatically sized to the number of
+  lines of text.
+  To free customize a component, right-click on it and **detach instance** and **remove auto layout**.
 - Use font **Roboto** for all text.
   In general, use font sizes between 10-18.
 - In general, use the pre-defined color styles.
