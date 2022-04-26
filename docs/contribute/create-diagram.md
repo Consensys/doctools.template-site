@@ -15,9 +15,11 @@ Create diagrams to illustrate:
 - Technical processes and flows.
 - Concept charts and tables.
 
+## Demo
+
 The following video demonstrates creating a diagram for the GoQuorum documentation using Figma:
 
-![type:video](https://www.youtube.com/embed/s-_I96vzR2k)
+![type:video](https://www.youtube.com/embed/2H-OeBkVOws)
 
 ## Figma diagram guidelines
 
@@ -51,7 +53,7 @@ Figma design elements, and more.
   To freely customize a component, right-click on it and **detach instance** and **remove auto layout**.
 - Use font **Roboto** for all text.
   In general, use font sizes between 10-18.
-- In general, use the pre-defined color styles.
+- Use the pre-defined [color styles](https://help.figma.com/hc/en-us/articles/360039820134-Manage-and-share-styles).
 - Use rounded corners of radius 2 for rectangular labels and containers.
 - Evenly [align](https://help.figma.com/hc/en-us/articles/360039956914-Adjust-alignment-rotation-and-position) elements.
 - Represent similar conceptual elements using similar styles.
