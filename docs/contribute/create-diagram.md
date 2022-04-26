@@ -6,6 +6,8 @@ description: how to create a Figma diagram
 
 ConsenSys documentation sites contain diagrams created using [Figma](https://figma.com/).
 You must have access to the ConsenSys **Quorum Diagrams** template files on Figma to create a diagram.
+You can add a diagram to the documentation using the normal [contribution workflow](index.md#contribution-workflow) of
+creating a pull request (PR).
 
 Create diagrams to illustrate:
 
@@ -23,7 +25,7 @@ Figma design elements, and more.
 
 ### Basics
 
-- In the **Quorum Diagrams** files, each page contains diagrams for a different product.
+- In the **Quorum Diagrams** file on Figma, each page contains diagrams for a different product.
 - When creating a new diagram, create a new white frame in the product's page.
   Add frames within the white frame for each iteration of the diagram.
     - For each diagram, create a frame 756px wide using the **Global Background** color (#F6F6F6).
@@ -35,14 +37,14 @@ Figma design elements, and more.
 
 !!! tip
 
-    Hold down the Command key on Mac or the Ctrl key on Windows to
+    Hold down ++cmd++ on Mac or ++ctrl++ on Windows to
     [select](https://help.figma.com/hc/en-us/articles/360040449873-Select-layers-and-objects) elements excluding the
     frame.
 
 ### Style
 
 - Use the premade diagram assets as starting points.
-  You can right-click a component and **detach instance** to freely customize it.
+  You can right-click a component and **detach instance** and **remove auto layout** to freely customize it.
 - Use font **Roboto** for all text.
   In general, use font sizes between 10-18.
 - In general, use the pre-defined color styles.
@@ -53,7 +55,7 @@ Figma design elements, and more.
 
 !!! tip
 
-    Hold down the Shift key when drawing to create perfect horizontal and vertical lines, squares, circles, etc.
+    Hold down ++shift++ when drawing, resizing, and rotating to create perfect horizontal and vertical lines.
 
 #### Arrows and lines
 
@@ -84,11 +86,12 @@ To export your diagram:
     The name of this frame will be the name of the exported image.
 
 1. Scroll to the bottom of the right sidebar.
-    In the **Export** section, choose **2x** scale (for retina screens) and **PNG** file format.
+    In the **Export** section, choose **2x** scale (for retina screens) and **PNG** or **JPG** file format.
 
-1. Export the diagram.
+1. Export the diagram to the image folder of the documentation site (for example, `doc.goquorum/docs/images`).
 
 See [Figma's guide to exports](https://help.figma.com/hc/en-us/articles/360040028114-Guide-to-exports-in-Figma) for more
 information.
 
+Embed the diagram into a documentation page using `![](<path to your image file>)`, then create your PR.
 When your diagram is finalized and merged into the documentation, list the finalization date next to the diagram in Figma.
