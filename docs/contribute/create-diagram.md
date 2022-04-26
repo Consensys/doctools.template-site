@@ -39,7 +39,7 @@ Figma design elements, and more.
 - You can [group](https://help.figma.com/hc/en-us/articles/360039832054-Frames-and-Groups) and
   [rename and organize](https://help.figma.com/hc/en-us/articles/360038663994-Name-and-organize-components) elements.
 
-!!! tips
+!!! tip "Tips"
 
     - Hold down ++cmd++ on Mac or ++ctrl++ on Windows to
       [select](https://help.figma.com/hc/en-us/articles/360040449873-Select-layers-and-objects) elements excluding the
@@ -65,6 +65,12 @@ Figma design elements, and more.
 
     Hold down ++shift++ when drawing, resizing, and rotating to create perfect horizontal and vertical lines.
 
+#### Text
+
+- Use font **Roboto** for all text.
+- Use font sizes between 10-18.
+- Use [sentence-style capitalization](https://docs.microsoft.com/en-us/style-guide/capitalization) in labels and titles.
+
 #### Arrows and lines
 
 - Use a thickness of 2 for arrows, lines, borders, and other strokes.
@@ -84,12 +90,6 @@ Figma design elements, and more.
 See the
 [Figma documentation on the Arrow Tool](https://help.figma.com/hc/en-us/articles/360040450133-Using-Shape-Tools#h_677f8eba-73c4-4987-a64b-c0226aaec392)
 for more information.
-
-#### Text
-
-- Use font **Roboto** for all text.
-- Use font sizes between 10-18.
-- Use [sentence-style capitalization](https://docs.microsoft.com/en-us/style-guide/capitalization) in labels and titles.
 
 ### Export
 
