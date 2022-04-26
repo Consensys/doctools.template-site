@@ -48,7 +48,7 @@ Figma design elements, and more.
 - Use the premade diagram assets as starting points.
   By default, you can adjust the width of the premade labels, but the height is automatically sized to the number of
   lines of text.
-  To free customize a component, right-click on it and **detach instance** and **remove auto layout**.
+  To freely customize a component, right-click on it and **detach instance** and **remove auto layout**.
 - Use font **Roboto** for all text.
   In general, use font sizes between 10-18.
 - In general, use the pre-defined color styles.
