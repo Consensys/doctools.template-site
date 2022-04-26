@@ -39,25 +39,27 @@ Figma design elements, and more.
 - You can [group](https://help.figma.com/hc/en-us/articles/360039832054-Frames-and-Groups) and
   [rename and organize](https://help.figma.com/hc/en-us/articles/360038663994-Name-and-organize-components) elements.
 
-!!! tip
+!!! tips
 
-    Hold down ++cmd++ on Mac or ++ctrl++ on Windows to
-    [select](https://help.figma.com/hc/en-us/articles/360040449873-Select-layers-and-objects) elements excluding the
-    frame.
+    - Hold down ++cmd++ on Mac or ++ctrl++ on Windows to
+      [select](https://help.figma.com/hc/en-us/articles/360040449873-Select-layers-and-objects) elements excluding the
+      frame.
+    - Hold down ++opt++ and drag to duplicate an element.
 
 ### Style
 
 - Use the premade diagram assets as starting points.
   By default, you can adjust the width of the premade labels, but the height is automatically sized to the number of
   lines of text.
-  To freely customize a component, right-click on it and **detach instance** and **remove auto layout**.
-- Use font **Roboto** for all text.
-  In general, use font sizes between 10-18.
-- Use the pre-defined [color styles](https://help.figma.com/hc/en-us/articles/360039820134-Manage-and-share-styles).
+  To freely customize a component, right-click on it, **detach instance**, and **remove auto layout**.
+- Use the pre-defined [color styles](https://help.figma.com/hc/en-us/articles/360039820134-Manage-and-share-styles) or
+  black (#00000).
 - Use rounded corners of radius 2 for rectangular labels and containers.
 - Evenly [align](https://help.figma.com/hc/en-us/articles/360039956914-Adjust-alignment-rotation-and-position) elements.
 - Represent similar conceptual elements using similar styles.
   For example, represent two nodes using a dark gradient, and represent two external components using a light gradient.
+- You can reuse existing icons from any diagram on any page.
+  For example, there are already icons to represent databases, dapps, keys, locks, and logos.
 
 !!! tip
 
@@ -82,6 +84,12 @@ Figma design elements, and more.
 See the
 [Figma documentation on the Arrow Tool](https://help.figma.com/hc/en-us/articles/360040450133-Using-Shape-Tools#h_677f8eba-73c4-4987-a64b-c0226aaec392)
 for more information.
+
+#### Text
+
+- Use font **Roboto** for all text.
+- Use font sizes between 10-18.
+- Use [sentence-style capitalization](https://docs.microsoft.com/en-us/style-guide/capitalization) in labels and titles.
 
 ### Export
 
