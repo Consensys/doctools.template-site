@@ -100,12 +100,13 @@ To export your diagram:
     The name of this frame will be the name of the exported image.
 
 1. Scroll to the bottom of the right sidebar.
-    In the **Export** section, choose **2x** scale (for retina screens) and **PNG** or **JPG** file format.
+    In the **Export** section, choose **2x** scale (for retina screens) and **PNG** or **SVG** file format.
 
 1. Export the diagram to the image folder of the documentation site (for example, `doc.goquorum/docs/images`).
 
 See [Figma's guide to exports](https://help.figma.com/hc/en-us/articles/360040028114-Guide-to-exports-in-Figma) for more
 information.
 
-Embed the diagram into a documentation page using `![](<path to your image file>)`, then create your PR.
+Embed the diagram into a documentation page using `![<alternative description of your image>](<path to your image file>
+"optional image title")`, then create your PR.
 When your diagram is finalized and merged into the documentation, list the finalization date next to the diagram in Figma.
