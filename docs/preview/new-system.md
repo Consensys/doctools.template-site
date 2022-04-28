@@ -24,16 +24,6 @@ With Docker running, follow these steps to preview your documentation site local
     docker pull ghcr.io/consensys/doctools-builder:latest
     ```
 
-1. Make a copy of the `.env.template` file provided, naming it `.env`:
-
-    ```bash
-    cp .env.template .env
-    ```
-
-    !!! note
-
-        You can update this environment variable file as described in the template.
-
 1. In the project directory, run:
 
     ```bash
