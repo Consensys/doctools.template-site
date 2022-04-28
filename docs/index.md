@@ -9,7 +9,7 @@ profiles:
   - link: contribute/
     title: Contribute to the documentation
     image: assets/images/undraw_typewriter_i-8-xd.svg
-  - link: preview/old-system.md
+  - link: preview/old-system/
     title: Preview the documentation
     image: assets/images/undraw_image_post_re_25wd.svg
   - link: create/create-doc-site/

@@ -23,7 +23,7 @@ The new documentation system introduces the following new features and changes f
 - [Macros](../contribute/markdown/macros.md) and [pluglets](../contribute/markdown/pluglets.md)
 - Integrated [ReDoc REST API documentation](../examples/write_rest_api_reference.md) from a JSON or YAML specification
   (local or remote)
-- Integration of YouTube videos using `![type:video](<YouTube link>)`
+- [Integration of YouTube videos](../contribute/markdown/extensions.md#videos)
 - Per page table of contents depth configuration
 - Simpler [configuration file](../contribute/markdown/configure-and-format.md#mkdocs-configuration) for contributors
 - No [commmon Git submodule](../contribute/use-common-submodule.md): build, tests, and preview are included in the

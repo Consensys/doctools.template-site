@@ -27,13 +27,13 @@ When [Read the Docs (RTD)](https://readthedocs.org/) (if using the
 using the [new system](../overview/index.md#new-documentation-system)) detects a new tag on a documentation repository,
 RTD or AWS automatically generates the following documentation versions:
 
-- **Latest** - Corresponds to the latest commit in the master branch of the documentation repository.
-- **CalVer** - Corresponds to the tag in the master branch that was created during the release (for example, `21.1.4`).
+- **Latest** - Corresponds to the latest commit in the main branch of the documentation repository.
+- **CalVer** - Corresponds to the tag in the main branch that was created during the release (for example, `21.1.4`).
 - **Stable** - Corresponds to the last created tag.
 
 RTD or AWS builds all three versions, all showing the same content from the same commit.
 
-As contributors continue to work on the documentation, RTD or AWS rebuilds the latest version from the latest master
+As contributors continue to work on the documentation, RTD or AWS rebuilds the latest version from the latest main
 commit each time a new PR is merged, and the CalVer and stable versions remain behind latest.
 
 ## 3. Automatically activate the documentation version on RTD or AWS

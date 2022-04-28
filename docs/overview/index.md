@@ -23,7 +23,7 @@ is generated into a static HTML website using [MkDocs](https://www.mkdocs.org/) 
 [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) theme.
 
 The documentation is automatically updated using [webhooks](https://docs.readthedocs.io/en/stable/integrations.html)
-linking GitHub to the site when you merge a pull request in the master branch of the ConsenSys documentation repository.
+linking GitHub to the site when you merge a pull request in the main branch of the ConsenSys documentation repository.
 
 The system also detects tags in the GitHub repository and [makes the latest stable release and previous versions
 available](../reference/release-process.md).
@@ -44,7 +44,6 @@ The following documentation repositories currently use the old system:
 - [ConsenSys Rollups](https://github.com/consensys/doc.rollups)
 - Orchestrate (private)
 - Quorum Plugins (private)
-- Quorum Blockchain Service (private)
 
 ## New documentation system
 
@@ -55,3 +54,4 @@ The following documentation repositories use the new system:
 
 - [Doctools](https://github.com/ConsenSys/doctools.template-site) (this site)
 - [GoQuorum](https://github.com/consensys/doc.goquorum)
+- Quorum Blockchain Service (private)

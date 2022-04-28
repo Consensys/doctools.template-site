@@ -81,7 +81,8 @@ To contribute changes:
 1. The bottom of the PR page displays a list of checks that verify links, Markdown syntax, and more.
     If you have any [errors](fix-cicd-errors.md), make any required changes to your PR, repeating steps 5-7.
 
-1. In the right sidebar of your PR, select the reviewer(s) who should review your PR (typically the original issue raiser).
+1. In the right sidebar of your PR, select the reviewer(s) who should [review your PR](review-pr.md) (typically the
+    original issue raiser).
     Ask the ConsenSys documentation team to review by selecting **ConsenSys/protocol-pliny** as a reviewer.
     If you don't know who to choose or can't because you're not a maintainer yet, select the reviewers listed by GitHub
     or keep the default value.
@@ -95,6 +96,10 @@ To contribute changes:
 !!! tip
 
     You can use a Git client such as [Fork](https://fork.dev/) instead of the command line.
+
+The following is a video demonstration of the contribution workflow:
+
+![type:video](https://www.youtube.com/embed/rDFGvMIzHWE)
 
 ## Code of conduct
 

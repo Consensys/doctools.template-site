@@ -29,6 +29,8 @@ nav:
       - Style guide: contribute/style-guide.md
       - Fix CI/CD errors: contribute/fix-cicd-errors.md
       - Use the common submodule: contribute/use-common-submodule.md
+      - Review a pull request: contribute/review-pr.md
+      - Create a diagram: contribute/create-diagram.md
   - Preview:
       - Preview site using the old system: preview/old-system.md
       - Preview site using the new system: preview/new-system.md
@@ -36,6 +38,7 @@ nav:
       - Create a new documentation site: create/create-doc-site.md
       - Advanced:
           - Update or create a site template: create/advanced/create-site-template.md
+          - Add custom CSS and JavaScript: create/advanced/add-css-and-js.md
   - Reference:
       - Documentation release process: reference/release-process.md
       - Code of conduct: reference/code-of-conduct.md
