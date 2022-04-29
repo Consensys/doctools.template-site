@@ -53,16 +53,6 @@ We recommend the following configuration:
     └── doctools.action-builder
     ```
 
-1. Pull latest Docker image:
-
-    ```bash
-    docker pull ghcr.io/consensys/doctools-builder:latest
-    ```
-
-    !!! note
-
-        Pull the latest Docker image when using the `latest` Docker image tag.
-
 1. Create a new file name `docker-compose.dev.yml` in the `doctools.template-site` directory with the following content:
 
     !!! example "`docker-compose.dev.yml`"
@@ -72,14 +62,13 @@ We recommend the following configuration:
         version: '3.2'
         services:
           mkdocs:
-            container_name: mkdocs-serve-dev-${PROJECT:-project}
+            container_name: mkdocs-serve-dev-doctools
             ports:
               - "0.0.0.0:8000:8000"
-            image: ghcr.io/consensys/doctools-builder:${DOCTOOLS_IMAGE_VERSION:-dev}
+            image: ghcr.io/consensys/doctools-builder:dev
             build:
               context: ../doctools.action-builder/
             working_dir: /workspace/
-            env_file: .env.dev
             command: ["serve", "--watch-theme", "--dirtyreload" ,"--dev-addr", "0.0.0.0:8000"]
             volumes:
               - type: bind
@@ -88,13 +77,17 @@ We recommend the following configuration:
               - type: bind
                 source: ../doctools.action-builder/common
                 target: /common
+            environment:
+              # uncomment to output debug infos in HTML source code. Requires MINIFY=false
+              # - DEBUG=true
+              # uncomment to prevent HTML/CSS/JS code to be minified. Useful for debugging theme.
+              - MINIFY=false
+              # uncomment to prevent search index prebuild, speeds up large sites build time.
+              - PREBUILD_INDEX=false
+              # uncomment and change to modify the preview port
+              # useful if running more than one local preview at the same time.
+              # - PORT=8001
         ```
-
-1. In the `doctools.template-site` directory, make a copy of the `.env.template` file, naming it `.env.dev`:
-
-    ```bash
-    cp .env.template .env.dev
-    ```
 
     You can make the following changes to the development environment variables:
 
@@ -107,33 +100,32 @@ We recommend the following configuration:
     - `PREBUILD_INDEX=true|false` - Remove or set to `false` to prevent the search index to be generated at each build
       and speed up the build.
       The default is `true` as it's useful for production.
-    - `VERSION=string` - Set to a specific number to simulate a version locally.
-      This value is otherwise initialized by CI.
+    - `PORT=number` - Set to a specific port number. useful if running more than one local preview at the same time.
 
 ## Preview the template
 
 1. To preview the documentation site template locally, go to your site directory and run:
 
     ```bash
-    docker compose -f docker-compose.dev.yml --env-file ./.env.dev up
+    docker compose -f docker-compose.dev.yml up
     ```
 
-    You can see the preview at `http://0.0.0.0:8000`.
+    You can see the preview at `http://0.0.0.0:8000` by default.
 
 1. If you keep the Docker compose service running, the site preview automatically reloads and displays most changes.
 
-    If you make changes to `.env.dev` or assets outside of the `docs` folder, the system doesn't reload automatically and
-    you must restart Docker compose to view the changes:
+    If you make changes to environment variables in `docker-compose.dev.yml`,
+    the system doesn't reload automatically and you must restart Docker compose to view the changes:
 
     ```bash
-    docker compose restart mkdocs
+    docker compose -f docker-compose.dev.yml restart
     ```
 
 1. To stop the service, press ++ctrl+c++.
     Remove containers by running:
 
     ```bash
-    docker compose down mkdocs
+    docker compose -f docker-compose.dev.yml down
     ```
 
 [Doctools action builder]: https://github.com/ConsenSys/doctools.action-builder
