@@ -12,16 +12,12 @@
 
 # This configuration must inherit the base configuration file available in the Doctools docker image.
 # See source at https://github.com/ConsenSys/doctools.action-builder/blob/main/common/custom_theme/base.yml
-INHERIT: mkdocs.watch.yml # DO NOT MODIFY THIS LINE
+INHERIT: mkdocs.theme.yml # DO NOT MODIFY THIS LINE
 
-# Project information
-site_name: Doctools
-site_description: Doctools documentation template
-
-# Software Repository
-repo_name: Consensys/doctools.template-site
-repo_url: https://github.com/Consensys/doctools.template-site
-
-# Project information
-site_author: ConsenSys
-copyright: This documentation is hosted by <a href="https://consensys.net/">ConsenSys</a> and licensed under Apache 2.0 license
+watch:
+  - mkdocs.exclude.yml
+  - mkdocs.extra.yml
+  - mkdocs.navigation.yml
+  - mkdocs.redirects.yml
+  - mkdocs.theme.yml
+  - mkdocs.watch.yml
