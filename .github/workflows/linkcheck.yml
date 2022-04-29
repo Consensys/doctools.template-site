@@ -1,13 +1,12 @@
 ---
 name: Test the links
 
-on: [push, pull_request]
+on: [pull_request]
 
 jobs:
   links-check:
     name: Check links
     runs-on: ubuntu-latest
-    environment: no-secret
     permissions:
       contents: read
     steps:

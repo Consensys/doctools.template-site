@@ -9,7 +9,6 @@ jobs:
   deploy:
     name: Remove PR preview from pages
     runs-on: ubuntu-latest
-    environment: no-secret
     permissions:
       contents: write
       pull-requests: write
