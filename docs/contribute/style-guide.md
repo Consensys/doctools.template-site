@@ -50,7 +50,8 @@ The following are some important style recommendations:
 - **"We recommend"** - In general, don't use first person. However, use "we recommend" to introduce a product recommendation.
   Don't use "ConsenSys recommends" or "it is recommended."
 - **GitHub permalinks** - When linking to a GitHub file, use the
-  [permanent link (permalink)](https://ethereum.github.io/keymanager-APIs/) to the file.
+  [permanent link (permalink)](https://docs.github.com/en/repositories/working-with-files/using-files/getting-permanent-links-to-files)
+  to the file.
   You can copy the permalink by selecting the three dots (`...`) in the upper right corner of the file page, and
   selecting **Copy permalink**.
 
