@@ -52,7 +52,7 @@ The following are some important style recommendations:
 - **GitHub permalinks** - When linking to a GitHub file, use the
   [permanent link (permalink)](https://docs.github.com/en/repositories/working-with-files/using-files/getting-permanent-links-to-files)
   to the file.
-  You can copy the permalink by selecting the three dots (`...`) in the upper right corner of the file page, and
+  You can copy the permalink by selecting the ellipses (`...`) in the upper right corner of the file page, and
   selecting **Copy permalink**.
 
     ![permalink](../assets/images/permalink.png)
