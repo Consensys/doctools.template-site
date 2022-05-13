@@ -49,6 +49,14 @@ The following are some important style recommendations:
 - **Sentence case for headings** - Use sentence case instead of title case for headings.
 - **"We recommend"** - In general, don't use first person. However, use "we recommend" to introduce a product recommendation.
   Don't use "ConsenSys recommends" or "it is recommended."
+- **GitHub permalinks** - When linking to a GitHub file, use the
+<!-- markdown-link-check-disable-next-line -->
+  [permanent link (permalink)](https://docs.github.com/en/repositories/working-with-files/using-files/getting-permanent-links-to-files)
+  to the file.
+  You can copy the permalink by selecting the ellipses (`...`) in the upper right corner of the file page, and
+  selecting **Copy permalink**.
+
+    ![permalink](../assets/images/permalink.png)
 
 Refer to the [Microsoft Guide](https://docs.microsoft.com/en-us/style-guide/welcome/) for any other questions on style.
 
