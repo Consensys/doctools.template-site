@@ -16,15 +16,16 @@ jobs:
       contents: read
     steps:
       - uses: actions/checkout@v2
-      - name: create style dir
-        run: |
-          mkdir .github/styles
-        shell: sh
-      - name: Vale
-        uses: errata-ai/vale-action@v2
-        env:
-          # Required, set by GitHub actions automatically:
-          # https://docs.github.com/en/actions/security-guides/automatic-token-authentication#about-the-github_token-secret
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-        with:
-          vale_flags: "--config .github/vale/.vale.ini --glob='!docs/assets/*'"
+      - run: |
+          docker run --rm \
+                       -v $(pwd):/docs \
+                       -w /docs \
+                       jdkato/vale --config /docs/.github/vale/.vale.ini --glob='!docs/assets/*' ./docs/
+#      - name: Vale
+#        uses: errata-ai/vale-action@v2
+#        env:
+#          # Required, set by GitHub actions automatically:
+#          # https://docs.github.com/en/actions/security-guides/automatic-token-authentication#about-the-github_token-secret
+#          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+#        with:
+#          vale_flags: "--config /github/home/vale.github/vale/.vale.ini --glob='!docs/assets/*'"
