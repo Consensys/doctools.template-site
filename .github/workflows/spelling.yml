@@ -20,12 +20,12 @@ jobs:
       - name: Sync styles
         run: |
           docker run --rm \
-                       -v $(pwd):/docs \
-                       -w /docs \
-                       jdkato/vale --config $CONFIG sync
+          -v "$(pwd)":"/docs" \
+          -w "/docs" \
+          jdkato/vale --config "$CONFIG" sync
       - name: Run Vale check
         run: |
           docker run --rm \
-                       -v $(pwd):/docs \
-                       -w /docs \
-                       jdkato/vale --config $CONFIG --glob='!docs/assets/*' ./docs/
+          -v "$(pwd)":"/docs" \
+          -w "/docs" \
+          jdkato/vale --config "$CONFIG" --glob='!docs/assets/*' ./docs/
