@@ -1,11 +1,11 @@
 ---
-name: Test the links
+name: Verify links
 
 on: [pull_request]
 
 jobs:
-  links-check:
-    name: Check links
+  check:
+    name: Run check
     runs-on: ubuntu-latest
     permissions:
       contents: read

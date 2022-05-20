@@ -1,7 +1,5 @@
 ---
-name: Test spelling and guidelines
-
-# TODO configure and move to common actions
+name: Verify spelling and guidelines
 
 on: [pull_request]
 
@@ -9,19 +7,21 @@ env:
   CONFIG: /docs/.github/vale/.vale.ini
 
 jobs:
-  spelling:
-    name: Vale
+  check:
+    name: Run check
     runs-on: ubuntu-latest
     permissions:
       contents: read
     steps:
       - uses: actions/checkout@v2
-      - name: Sync styles
+
+      - name: Sync Vale styles
         run: |
           docker run --rm \
           -v "$(pwd)":"/docs" \
           -w "/docs" \
           jdkato/vale --config "$CONFIG" sync
+
       - name: Run Vale check
         run: |
           docker run --rm \

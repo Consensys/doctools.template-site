@@ -5,7 +5,7 @@ on: [ pull_request_target ]
 
 jobs:
   deploy:
-    name: Build and publish PR preview
+    name: Deploy
     runs-on: ubuntu-latest
     environment: preview
     permissions:
