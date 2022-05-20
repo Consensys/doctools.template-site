@@ -22,7 +22,7 @@ description: Dummy is a template doc project.
 === "Environment variable"
 
     ```bash
-    {{ cli_to_env(name,'MYCODE') }}={{example}}
+    {{ cli_to_env(name,env_prefix) }}={{example}}
     ```
 
 === "Configuration file"
@@ -56,14 +56,15 @@ variable, configuration file.
 
 For each command-line option, the equivalent environment variable is:
 
+{% set option_name = "--my-option" %}
+{% set env_prefix = "ENVPREFIX" %}
+
 * remove leading `--`
 * Upper-case
 * `_` replaces `-`
-* add the `MYCODE` prefix
+* add the `{{env_prefix}}` prefix
 
-{% set option_name = "--my-option" %}
-
-For example, set CLI option {{ option_name | code }} using the {{ cli_to_env(option_name,'MYCODE') | code }} environment variable.
+For example, set CLI option `{{ option_name }}` using the `{{ cli_to_env(option_name,env_prefix) }}` environment variable.
 
 ### Configuration file
 

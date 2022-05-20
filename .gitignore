@@ -14,3 +14,4 @@ docker-compose.dev.yml
 __pycache__
 /.github/vale/styles/*
 !/.github/vale/styles/Consensys/
+!/.github/vale/styles/Vocab/

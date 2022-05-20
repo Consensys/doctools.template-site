@@ -79,7 +79,7 @@ To contribute changes:
     ```
 
 1. The bottom of the PR page displays a list of checks that verify links, Markdown syntax, and more.
-    If you have any [errors](fix-cicd-errors.md), make any required changes to your PR, repeating steps 5-7.
+    If you have any [errors](fix-cicd-errors.md), make any required changes to your PR, repeating steps 5--7.
 
 1. In the right sidebar of your PR, select the reviewer(s) who should [review your PR](review-pr.md) (typically the
     original issue raiser).
@@ -87,7 +87,7 @@ To contribute changes:
     If you don't know who to choose or can't because you're not a maintainer yet, select the reviewers listed by GitHub
     or keep the default value.
 
-1. Make any required changes to your PR based on reviewer feedback, repeating steps 5-7.
+1. Make any required changes to your PR based on reviewer feedback, repeating steps 5--7.
 
 1. After your PR is validated, all checks have passed, and your branch has no conflicts with the target branch, you can
     merge your PR.

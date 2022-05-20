@@ -3,9 +3,10 @@ name: Test spelling and guidelines
 
 # TODO configure and move to common actions
 
-on:
-  push:
-    branches: [testCI]
+on: [pull_request]
+
+env:
+  CONFIG: /docs/.github/vale/.vale.ini
 
 jobs:
   spelling:
@@ -16,21 +17,15 @@ jobs:
       contents: read
     steps:
       - uses: actions/checkout@v2
-      - run: |
+      - name: Sync styles
+        run: |
           docker run --rm \
                        -v $(pwd):/docs \
                        -w /docs \
-                       jdkato/vale --config /docs/.github/vale/.vale.ini sync
-      - run: |
+                       jdkato/vale --config $CONFIG sync
+      - name: Run Vale check
+        run: |
           docker run --rm \
                        -v $(pwd):/docs \
                        -w /docs \
-                       jdkato/vale --config /docs/.github/vale/.vale.ini --glob='!docs/assets/*' ./docs/
-#      - name: Vale
-#        uses: errata-ai/vale-action@v2
-#        env:
-#          # Required, set by GitHub actions automatically:
-#          # https://docs.github.com/en/actions/security-guides/automatic-token-authentication#about-the-github_token-secret
-#          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-#        with:
-#          vale_flags: "--config /github/home/vale.github/vale/.vale.ini --glob='!docs/assets/*'"
+                       jdkato/vale --config $CONFIG --glob='!docs/assets/*' ./docs/

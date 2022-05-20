@@ -26,7 +26,7 @@ The new documentation system introduces the following new features and changes f
 - [Integration of YouTube videos](../contribute/markdown/extensions.md#videos)
 - Per page table of contents depth configuration
 - Simpler [configuration file](../contribute/markdown/configure-and-format.md#mkdocs-configuration) for contributors
-- No [commmon Git submodule](../contribute/use-common-submodule.md): build, tests, and preview are included in the
+- No [common Git submodule](../contribute/use-common-submodule.md): build, tests, and preview are included in the
   Docker image
 - New hosting with AWS S3 instead of Read the Docs
 - Sites hosted under `consensys.net/docs/<project name>/<language>/<version>` instead of

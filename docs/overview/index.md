@@ -39,7 +39,7 @@ The following documentation repositories currently use the old system:
 - [Teku](https://github.com/Consensys/doc.teku)
 - [EthSigner](https://github.com/Consensys/doc.ethsigner)
 - [Web3Signer](https://github.com/Consensys/doc.web3signer)
-- [Gnark](https://github.com/consensys/doc.gnark)
+- [gnark](https://github.com/consensys/doc.gnark)
 - [Quorum Key Manager](https://github.com/consensys/doc.quorum-key-manager)
 - [ConsenSys Rollups](https://github.com/consensys/doc.rollups)
 - Orchestrate (private)
