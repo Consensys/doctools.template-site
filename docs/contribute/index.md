@@ -2,7 +2,7 @@
 description: Documentation contribution guide
 ---
 
-# Contribute to the documentation
+# Contribute to the Doctools documentation
 
 The following guidelines explain how to contribute to existing ConsenSys documentation repositories.
 You can also [create new documentation sites](../create/create-doc-site.md).
@@ -14,8 +14,8 @@ issues that have a `Good First Issue` label.
 `Good First Issues` might require only a few lines of documentation, or have enough information for a newcomer to easily
 document.
 
-When you've identified an issue you want to work on, assign it to yourself, or message us on that project's channel on
-[Discord](https://discord.gg/6cfyqRGbzq) and we'll assign it to you.
+When you've identified an issue you want to work on, assign it to yourself, or message ConsenSys team on that project's channel on
+[Discord](https://discord.gg/6cfyqRGbzq) and a maintainer will assign it to you.
 
 ## Contribution workflow
 
@@ -103,7 +103,7 @@ The following is a video demonstration of the contribution workflow:
 
 ## Code of conduct
 
-This project and everyone participating in it is governed by the
+This project and, everyone participating in it, are governed by the
 [contributor covenant code of conduct](../reference/code-of-conduct.md).
 By contributing to documentation, you're expected to uphold this code.
 Please report unacceptable behavior to [`private-quorum@consensys.net`](mailto:private-quorum@consensys.net).
