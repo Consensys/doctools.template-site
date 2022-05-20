@@ -20,6 +20,11 @@ jobs:
           docker run --rm \
                        -v $(pwd):/docs \
                        -w /docs \
+                       jdkato/vale --config /docs/.github/vale/.vale.ini sync
+      - run: |
+          docker run --rm \
+                       -v $(pwd):/docs \
+                       -w /docs \
                        jdkato/vale --config /docs/.github/vale/.vale.ini --glob='!docs/assets/*' ./docs/
 #      - name: Vale
 #        uses: errata-ai/vale-action@v2
