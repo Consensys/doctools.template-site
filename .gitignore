@@ -12,3 +12,5 @@ docker-compose.dev.yml
 .env.dev
 .env
 __pycache__
+/.github/vale/styles/*
+!/.github/vale/styles/Consensys/
