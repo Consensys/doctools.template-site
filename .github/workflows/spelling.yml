@@ -12,7 +12,6 @@ jobs:
   spelling:
     name: Vale
     runs-on: ubuntu-latest
-    environment: no-secret
     permissions:
       contents: read
     steps:
