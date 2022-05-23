@@ -103,7 +103,7 @@ The following is a video demonstration of the contribution workflow:
 
 ## Code of conduct
 
-This project and, everyone participating in it, are governed by the
+This project and everyone participating in it are governed by the
 [contributor covenant code of conduct](../reference/code-of-conduct.md).
 By contributing to documentation, you're expected to uphold this code.
 Please report unacceptable behavior to [`private-quorum@consensys.net`](mailto:private-quorum@consensys.net).
