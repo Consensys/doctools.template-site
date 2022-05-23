@@ -2,7 +2,7 @@
 description: Documentation contribution guide
 ---
 
-# Contribute to the Doctools documentation
+# Contribute to the documentation
 
 The following guidelines explain how to contribute to existing ConsenSys documentation repositories.
 You can also [create new documentation sites](../create/create-doc-site.md).
