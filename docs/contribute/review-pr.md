@@ -12,7 +12,7 @@ To
 1. Select the **Files changed** tab and read through the documentation changes.
 
 1. View the rendered changes in the [Read the Docs link](../preview/old-system.md#preview-on-read-the-docs) or the
-    [Github Pages link](../preview/new-system.md#preview-on-github-pages).
+    [GitHub Pages link](../preview/new-system.md#preview-on-github-pages).
 
 1. Evaluate the changes to the best of your ability, including if:
 

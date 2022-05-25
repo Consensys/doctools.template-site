@@ -68,7 +68,7 @@ Figma design elements, and more.
 #### Text
 
 - Use font **Roboto** for all text.
-- Use font sizes between 10-18.
+- Use font sizes between 10--18.
 - Use [sentence-style capitalization](https://docs.microsoft.com/en-us/style-guide/capitalization) in labels and titles.
 
 #### Arrows and lines

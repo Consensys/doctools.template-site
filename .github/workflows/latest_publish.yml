@@ -8,7 +8,7 @@ on:
 
 jobs:
   deploy:
-    name: Build and publish latest site
+    name: Deploy
     runs-on: ubuntu-latest
     environment: production
     permissions:

@@ -447,8 +447,8 @@ You can add diagrams using [Plant UML](https://plantuml.com/) syntax.
 
 ## Strikethrough
 
-The [Tilde](https://facelessuser.github.io/pymdown-extensions/extensions/tilde/) extension enables displaying text
-strikethrough by surrounding the text with double tildes (`~`).
+The [Tilde](https://facelessuser.github.io/pymdown-extensions/extensions/tilde/) extension enables
+displaying text strikethrough by surrounding the text with double tildes (`~`).
 
 === "Example syntax"
 
