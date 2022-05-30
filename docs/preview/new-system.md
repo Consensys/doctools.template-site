@@ -30,7 +30,7 @@ With Docker running, follow these steps to preview your documentation site local
     docker-compose up -d
     ```
 
-    If you don't already have a `.env` file this will throw an error and you'll need to create one:
+    If you don't already have a `.env` file this will throw an error. To resolve the error you can just create an empty file before rerunning the `docker-compose` command:
 
     ```bash
     touch .env
