@@ -32,7 +32,7 @@ With Docker running, follow these steps to preview your documentation site local
 
     If you don't already have a `.env` file this will throw an error and you'll need to create one:
 
-    ```
+    ```bash
     touch .env
     ```
 
