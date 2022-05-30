@@ -31,11 +31,11 @@ With Docker running, follow these steps to preview your documentation site local
     ```
 
     If you don't already have a `.env` file this will throw an error and you'll need to create one:
-    
+
     ```
     touch .env
     ```
-    
+
     You now have a container running locally and serving the documentation site.
 
 1. Preview the site at `http://0.0.0.0:8000`.
