@@ -14,7 +14,7 @@ You can also [create a new site template](advanced/create-site-template.md).
 
 ## Steps
 
-1. Go to the [template repository](https://github.com/ConsenSys/doctools.template-site) (this Doctool site's repository).
+1. Go to the [template repository](https://github.com/ConsenSys/doctools.template-site) (this Doctools site's repository).
 
 1. Select the green **Use this template** button.
 
@@ -23,15 +23,15 @@ You can also [create a new site template](advanced/create-site-template.md).
     `<project-name>` lowercase.
     You can make this repository private or public depending on the project's needs.
 
-    ![Screenshot of Github create from template page](../assets/images/create_from_template.png){: style='border:solid 1px'}
+    ![Screenshot of GitHub create from template page](../assets/images/create_from_template.png){: style='border:solid 1px'}
 
     The new repository is created.
 
-    ![Screenshot of Github repos created](../assets/images/new_repos.png){: style='border:solid 1px'}
+    ![Screenshot of GitHub repository created](../assets/images/new_repos.png){: style='border:solid 1px'}
 
 1. Update the **About** information.
 
-    ![Screenshot of Github repos about form](../assets/images/about.png)
+    ![Screenshot of GitHub repository about form](../assets/images/about.png)
 
 1. In your repository's **Settings**, update the configuration as follows:
     * :material-checkbox-blank-outline: Template repository

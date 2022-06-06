@@ -1,11 +1,11 @@
 ---
-name: Lint codebase
+name: Lint Code Base
 
 on: [pull_request]
 
 jobs:
-  lint:
-    name: Lint Code Base
+  check:
+    name: Run check
     runs-on: ubuntu-latest
     permissions:
       contents: read

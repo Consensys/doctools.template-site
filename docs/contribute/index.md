@@ -14,8 +14,8 @@ issues that have a `Good First Issue` label.
 `Good First Issues` might require only a few lines of documentation, or have enough information for a newcomer to easily
 document.
 
-When you've identified an issue you want to work on, assign it to yourself, or message us on that project's channel on
-[Discord](https://discord.gg/6cfyqRGbzq) and we'll assign it to you.
+When you've identified an issue you want to work on, assign it to yourself, or message the ConsenSys team on that project's channel on
+[Discord](https://discord.gg/6cfyqRGbzq) and a maintainer will assign it to you.
 
 ## Contribution workflow
 
@@ -79,7 +79,7 @@ To contribute changes:
     ```
 
 1. The bottom of the PR page displays a list of checks that verify links, Markdown syntax, and more.
-    If you have any [errors](fix-cicd-errors.md), make any required changes to your PR, repeating steps 5-7.
+    If you have any [errors](fix-cicd-errors.md), make any required changes to your PR, repeating steps 5--7.
 
 1. In the right sidebar of your PR, select the reviewer(s) who should [review your PR](review-pr.md) (typically the
     original issue raiser).
@@ -87,7 +87,7 @@ To contribute changes:
     If you don't know who to choose or can't because you're not a maintainer yet, select the reviewers listed by GitHub
     or keep the default value.
 
-1. Make any required changes to your PR based on reviewer feedback, repeating steps 5-7.
+1. Make any required changes to your PR based on reviewer feedback, repeating steps 5--7.
 
 1. After your PR is validated, all checks have passed, and your branch has no conflicts with the target branch, you can
     merge your PR.
@@ -103,7 +103,7 @@ The following is a video demonstration of the contribution workflow:
 
 ## Code of conduct
 
-This project and everyone participating in it is governed by the
+This project and everyone participating in it are governed by the
 [contributor covenant code of conduct](../reference/code-of-conduct.md).
 By contributing to documentation, you're expected to uphold this code.
 Please report unacceptable behavior to [`private-quorum@consensys.net`](mailto:private-quorum@consensys.net).

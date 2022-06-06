@@ -53,6 +53,6 @@ The following interactive tutorial demonstrates previewing documentation locally
 When you create a PR on a documentation repository, the PR triggers checks to verify links, Markdown syntax, and more.
 The documentation is also built on [GitHub Pages](https://pages.github.com/) as a PR preview.
 
-You can find the link to this preview in the latest comment from the **github-actions** bot.
+You can find the link to this preview in the latest comment from the `github-actions` bot.
 
-![github-actions bot comment containing preview link](../assets/images/github_pages_pr_preview.png)
+![GitHub bot comment containing preview link](../assets/images/github_pages_pr_preview.png)

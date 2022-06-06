@@ -6,8 +6,8 @@ on:
     types: [closed]
 
 jobs:
-  deploy:
-    name: Remove PR preview from pages
+  remove:
+    name: Remove
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -24,5 +24,5 @@ jobs:
         with:
           path: actions
 
-      - name: Delete PR preview
+      - name: Remove PR preview from pages
         uses: ConsenSys/doctools.action-builder/actions/pr_preview_delete@main

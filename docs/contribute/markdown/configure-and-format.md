@@ -78,7 +78,7 @@ The following are rules for formatting Markdown in ConsenSys documentation:
 - Use only one first level title (prefixed with a single `#`) on a page.
 
 - No HTML markup can be used inside a Markdown document.
-  There are many [extensions](extensions.md) you can use that have similar capabilities without HTML.
+  You can use many [extensions](extensions.md) that have similar capabilities without HTML.
 
     There's one exception where HTML is tolerated: tables that are too complex and already exist.
     If possible, keep the table simple without any elements other than `table`, `tr`, and `td`.
