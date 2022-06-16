@@ -20,6 +20,7 @@ When you've identified an issue you want to work on, assign it to yourself, or m
 ## Contribution workflow
 
 The documentation contribution workflow consists of
+<!-- markdown-link-check-disable-next-line -->
 [forking repositories and submitting pull requests (PRs)](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/getting-started/about-collaborative-development-models#fork-and-pull-model)
 using Git[^1].
 This facilitates social contribution, easy testing, and peer review.
