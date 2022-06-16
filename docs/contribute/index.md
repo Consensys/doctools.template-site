@@ -20,7 +20,8 @@ When you've identified an issue you want to work on, assign it to yourself, or m
 ## Contribution workflow
 
 The documentation contribution workflow consists of
-[forking repositories and submitting pull requests (PRs)](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/getting-started/about-collaborative-development-models#fork-and-pull-model).
+[forking repositories and submitting pull requests (PRs)](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/getting-started/about-collaborative-development-models#fork-and-pull-model)
+using Git[^1].
 This facilitates social contribution, easy testing, and peer review.
 
 To contribute changes:
@@ -71,6 +72,7 @@ To contribute changes:
 1. Navigate to the original ConsenSys documentation repository, and you'll see a banner prompting you to create a PR
     with your recent changes.
     Create a PR, filling out the description according to the template.
+    <!-- markdown-link-check-disable-next-line -->
     Remember to [link the issue](https://help.github.com/en/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue)
     that the PR fixes in the description.
 
@@ -113,3 +115,6 @@ Please report unacceptable behavior to [`private-quorum@consensys.net`](mailto:p
 When you submit a PR for your first contribution to a documentation repository, you must read and sign the
 [ConsenSys Individual Contributor License Agreement (CLA)](https://gist.github.com/rojotek/978b48a5e8b68836856a8961d6887992)
 when prompted before you can merge the PR.
+
+[^1]: If you're new to Git, you can try the [Learn Git Branching interactive
+tutorial](https://learngitbranching.js.org/).
