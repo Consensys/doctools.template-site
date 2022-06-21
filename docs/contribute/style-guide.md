@@ -60,7 +60,29 @@ The following are some important style recommendations:
 
 Refer to the [Microsoft Guide](https://docs.microsoft.com/en-us/style-guide/welcome/) for any other questions on style.
 
-## Documentation system guide
+## Documentation categories
 
-Refer to the [Divio documentation system guide](https://documentation.divio.com/) for how to structure, classify, and
-arrange the different functional elements of documentation (for example, tutorials, how-to guides, and references).
+A typical documentation page falls into one of the following four categories:
+
+1. [**How to**](https://documentation.divio.com/how-to-guides/) - How-to content provides
+    instructions to achieve a specific outcome.
+    How-to content assumes users already have some basic knowledge or understanding of the product.
+
+1. [**Concepts**](https://documentation.divio.com/explanation/) - Conceptual content provides
+    background information and context about a feature.
+    Conceptual content can explain what the feature is, how it works at a high level, why it's
+    needed, and when and where it's used.
+
+1. [**Tutorials**](https://documentation.divio.com/tutorials/) - Tutorials provide a set of
+    end-to-end steps to complete a project.
+    Tutorials are complete and reproducible.
+    They don't assume users have prior knowledge of the subject or required tools.
+
+1. [**Reference**](https://documentation.divio.com/reference/) - Reference content provides
+    technical descriptions of APIs, command line options, and other elements of code.
+    Reference content is straightforward and doesn't include long explanations or guides.
+
+A page in each category should link to the related pages in the other categories, if they exist.
+
+For more information about these documentation types and the differences between them, refer to the
+[Divio documentation system guide](https://documentation.divio.com/).
