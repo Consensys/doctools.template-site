@@ -28,12 +28,11 @@ Learn about how IPFS keeps your NFT immutable and permanent through
 
 ConsenSys NFT currently supports **ERC-721** and **ERC-1155** asset standards on **Rinkeby**,
 **Mainnet**, and **Polygon**.
-We're working towards supporting all EVM-compatible sidechains.
 
 The platform supports:
 
-- Custom design of token metadata via [Item Types](item-types.md).
-- [Sending NFTs via email](email-claims.md).
-- Custom split of [fees and royalties](fees-royalties.md).
-- Multiple ways to [sell your NFTs](../primary-sales/index.md).
-- [Webhooks](webhooks.md) to subscribe to events from ConsenSys NFT.
+- Custom design of token metadata via Item Types.
+- Sending NFTs via email.
+- Custom split of fees and royalties.
+- Multiple ways to sell your NFTs.
+- Webhooks to subscribe to events from ConsenSys NFT.
