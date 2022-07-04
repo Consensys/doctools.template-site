@@ -19,7 +19,7 @@ jobs:
     if: github.event.repository.fork == false && github.repository_owner == 'ConsenSys' && github.ref == 'refs/heads/main'
     steps:
       - name: checkout code from repos
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0 # Required for mkdocs to be able to display pages last update info
 
