@@ -44,6 +44,10 @@ Create a redirect in `mkdocs.redirects.yml`.
 Having a standard for formatting Markdown helps writers and reviewers navigate the code and review changes.
 The following are rules for formatting Markdown in ConsenSys documentation:
 
+- The name of each documentation folder and Markdown file must contain only lowercase letters and
+  dashes (`-`).
+  For example, `get-started`, `truffle.md`, and `performance-best-practices.md`.
+
 - Each Markdown file must contain a header composed of
   [metadata](https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#metadata) and limited by
   three dashes (`-`).
