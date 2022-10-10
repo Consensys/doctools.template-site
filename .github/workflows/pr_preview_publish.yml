@@ -3,6 +3,10 @@ name: Publish PR preview
 
 on: [ pull_request_target ]
 
+concurrency:
+  group: preview-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   deploy:
     name: Deploy

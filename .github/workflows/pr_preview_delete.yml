@@ -5,6 +5,10 @@ on:
   pull_request_target:
     types: [closed]
 
+concurrency:
+  group: preview-delete-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   remove:
     name: Remove
