@@ -30,3 +30,8 @@ links:
     title: Link title
 ---
 ```
+
+
+## Testing internal link
+
+[Testing internal links](#testing-internal-links)
