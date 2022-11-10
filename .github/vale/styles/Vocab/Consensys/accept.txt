@@ -3,6 +3,7 @@ Ansible
 [aA]rithmetization
 [aA]utogenerat(?:ing|ed)?
 [aA]ttester[s]?
+API[s]?
 Arithmatex
 arity
 auto-merge
@@ -21,6 +22,7 @@ Codefi
 ConsenSys
 [Cc]onsortiums
 [cC]ounterpart(?:y|ies)
+CPU[s]?
 [cC]rafter
 [cC]ryptocurrenc(?:y|ies)
 [dD]app[s]?
@@ -30,6 +32,7 @@ ConsenSys
 [dD]eserialization
 [dD]esynchronization
 Divio
+[dD]ocOps
 Doctools
 [eE]ncryptor[s]?
 [eE]ncrypt(?:ing|ed)?
@@ -87,6 +90,7 @@ MkDocs
 [mM]ultiaddresse[s]?
 [mM]ultikey[s]?
 [nN]amespace[s]?
+NFT[s]?
 Nginx
 Nodejs
 [nN]once[s]?
@@ -125,6 +129,7 @@ Ropsten
 [sS]erializ(?:e|ing)
 [sS]erialization
 Schnorr
+SLA[s]?
 Slack
 [sS]lashable
 Splunk
