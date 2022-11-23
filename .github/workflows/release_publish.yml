@@ -4,8 +4,10 @@ name: Publish doc site release
 on:
   release:
     types: [published]
-    branches: [main]
-  workflow_dispatch:
+
+concurrency:
+  group: publish-release-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   release:
