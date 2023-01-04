@@ -15,7 +15,7 @@ issues that have a `Good First Issue` label.
 document.
 
 When you've identified an issue you want to work on, assign it to yourself, or message the ConsenSys team on that project's channel on
-[Discord](https://discord.gg/6cfyqRGbzq) and a maintainer will assign it to you.
+[Discord](https://discord.com/invite/consensys) and a maintainer will assign it to you.
 
 ## Contribution workflow
 

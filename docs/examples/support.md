@@ -19,7 +19,7 @@ If you need help on using our product, you can either ask our community or reque
 
 ## Community support (free)
 
-- :fontawesome-brands-discord: [Discord](https://discord.gg/5U9Jwp7)
+- :fontawesome-brands-discord: [Discord](https://discord.com/invite/consensys)
 - :material-web: read more on [Doctools site](https://consensys.net/docs/doctools/en/latest/)
 - :fontawesome-brands-github: [create an issue on the repository](https://github.com/Consensys/doctools.template-site/issues).
 

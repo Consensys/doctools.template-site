@@ -64,6 +64,6 @@ The documentation is also built on [Read the Docs (RTD)](https://readthedocs.org
 
 You can find the link to this preview in the checklist at the bottom of your PR page.
 The preview only works for registered and permitted RTD users.
-Ask for help on [Discord](https://discord.gg/6cfyqRGbzq) if needed.
+Ask for help on [Discord](https://discord.com/invite/consensys) if needed.
 
 ![PR checklist containing preview link](../assets/images/rtd_pr_preview.png)
