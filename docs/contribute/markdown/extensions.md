@@ -516,5 +516,5 @@ The [MkDocs Video extension](https://github.com/soulless-viewer/mkdocs-video) en
 [MkDocs]: https://www.mkdocs.org/
 [Read the Docs]: https://readthedocs.org/
 [Material for MkDocs]: https://squidfunk.github.io/mkdocs-material/
-[Discord]: https://discord.gg/6cfyqRGbzq
+[Discord]: https://discord.com/invite/consensys
 [SuperFences]: https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#superfences

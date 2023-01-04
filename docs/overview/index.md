@@ -7,7 +7,7 @@ description: Overview of the ConsenSys technical documentation sites and systems
 This site contains information about contributing to ConsenSys technical documentation.
 This site is also the template to [create new documentation sites](../create/create-doc-site.md).
 
-If you have any questions about ConsenSys products or documentation, ask on [Discord](https://discord.gg/6cfyqRGbzq).
+If you have any questions about ConsenSys products or documentation, ask on [Discord](https://discord.com/invite/consensys).
 
 ## Documentation system overview
 
