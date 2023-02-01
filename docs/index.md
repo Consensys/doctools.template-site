@@ -30,5 +30,3 @@ links:
     title: Link title
 ---
 ```
-
-<!-- debug comment -->
