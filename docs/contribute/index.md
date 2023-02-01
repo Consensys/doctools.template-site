@@ -20,17 +20,14 @@ When you've identified an issue you want to work on, assign it to yourself, or m
 ## Contribution workflow
 
 The documentation contribution workflow consists of
-[forking repositories and submitting pull requests (PRs)](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/getting-started/about-collaborative-development-models#fork-and-pull-model)
+[submitting pull requests (PRs)](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)
 using Git[^1].
 This facilitates social contribution, easy testing, and peer review.
 
 To contribute changes:
 
-1. [Fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) the documentation repository in which you want
-    to make a change.
-
-1. [Clone](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) your fork to
-    your computer.
+1. [Clone](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
+    the documentation repository in which you want to make a change to your computer.
     For repositories using the [old system](../overview/index.md#old-documentation-system), add the
     `--recursive` option to retrieve the [common submodule](use-common-submodule.md).
 
