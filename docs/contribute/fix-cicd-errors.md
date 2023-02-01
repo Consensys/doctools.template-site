@@ -64,6 +64,11 @@ HTTP error codes include:
     These errors mean the two links in `./docs/index.md` to the `consensys.net` site don't work because the server has issues.
     The `503` code means `Service Unavailable`.
 
+!!! note
+
+    If your link is working but doesn't pass the `linkchecker` job, you can bypass the check by
+    adding `<!-- markdown-link-check-disable-next-line -->` to the line above the link.
+
 ## `markdownlint` errors
 
 The `markdownlint` job verifies Markdown syntax.

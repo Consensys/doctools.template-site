@@ -54,4 +54,7 @@ The following documentation repositories use the new system:
 
 - [Doctools](https://github.com/ConsenSys/doctools.template-site) (this site)
 - [GoQuorum](https://github.com/consensys/doc.goquorum)
+- ConsenSys NFT (private)
+- ConsenSys zkEVM (private)
+- MetaMask Fiat On-Ramp (private)
 - Quorum Blockchain Service (private)
